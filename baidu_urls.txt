@@ -1,0 +1,5 @@
+http://wiki.yanick.site/wiki/virtualmachine/mount-file/
+http://wiki.yanick.site/wiki/linux/build-and-debug-kernel/
+http://wiki.yanick.site/wiki/linux/xbindkey/
+http://wiki.yanick.site/wiki/tools/rustup/
+http://wiki.yanick.site/wiki/tools/net-debug/

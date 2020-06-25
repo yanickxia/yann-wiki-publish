@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wiki.yanick.site/wiki/linux/build-and-debug-kernel/</loc>
+    
+    <lastmod>2020-06-25T13:59:35.970Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/linux/ldd/</loc>
+    
+    <lastmod>2020-06-25T13:59:35.970Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/tips/inoreader-can-not-show-pic/</loc>
+    
+    <lastmod>2020-06-25T13:59:35.970Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/virtualmachine/mount-file/</loc>
+    
+    <lastmod>2020-06-25T13:59:35.970Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/tools/ide/work-with-makefile-in-clion/</loc>
+    
+    <lastmod>2020-06-25T13:59:35.970Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wiki.yanick.site/wiki/java/classloader/</loc>
     
     <lastmod>2020-06-17T07:24:40.967Z</lastmod>
@@ -23,13 +58,6 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/learn/book-review/</loc>
-    
-    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://wiki.yanick.site/wiki/java/future/</loc>
     
     <lastmod>2020-06-17T07:24:40.967Z</lastmod>
@@ -44,7 +72,14 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/linux/xbindkey/</loc>
+    <loc>http://wiki.yanick.site/wiki/learn/book-review/</loc>
+    
+    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/learn/how-to-work/</loc>
     
     <lastmod>2020-06-17T07:24:40.967Z</lastmod>
     
@@ -58,7 +93,14 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/linux/build-and-debug-kernel/</loc>
+    <loc>http://wiki.yanick.site/wiki/linux/xbindkey/</loc>
+    
+    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/microservice/service_discovery/</loc>
     
     <lastmod>2020-06-17T07:24:40.967Z</lastmod>
     
@@ -79,13 +121,6 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/virtualmachine/mount-file/</loc>
-    
-    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://wiki.yanick.site/wiki/tools/rustup/</loc>
     
     <lastmod>2020-06-17T07:24:40.967Z</lastmod>
@@ -93,14 +128,7 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/learn/how-to-work/</loc>
-    
-    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/microservice/service_discovery/</loc>
+    <loc>http://wiki.yanick.site/books/index.html</loc>
     
     <lastmod>2020-06-17T07:24:40.967Z</lastmod>
     
@@ -108,13 +136,6 @@
   
   <url>
     <loc>http://wiki.yanick.site/about/index.html</loc>
-    
-    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/books/index.html</loc>
     
     <lastmod>2020-06-17T07:24:40.967Z</lastmod>
     

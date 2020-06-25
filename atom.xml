@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wiki.yanick.site/"/>
-  <updated>2020-06-17T07:24:40.967Z</updated>
+  <updated>2020-06-25T13:59:35.970Z</updated>
   <id>http://wiki.yanick.site/</id>
   
   <author>
@@ -17,13 +17,60 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>inoreader 无法显示图片</title>
+    <link href="http://wiki.yanick.site/wiki/tips/inoreader-can-not-show-pic/"/>
+    <id>http://wiki.yanick.site/wiki/tips/inoreader-can-not-show-pic/</id>
+    <published>2020-06-23T16:27:50.000Z</published>
+    <updated>2020-06-25T13:59:35.970Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>安装 <code>referer control</code> 禁止 inoreader 向第三方站点发送 referrer</p><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul><li><a href="https://www.v2ex.com/amp/t/562142" rel="external nofollow noopener noreferrer" target="_blank">inoreader 图片不显示是什么情况</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;解决办法&quot;&gt;&lt;a href=&quot;#解决办法&quot; class=&quot;headerlink&quot; title=&quot;解决办法&quot;&gt;&lt;/a&gt;解决办法&lt;/h1&gt;&lt;p&gt;安装 &lt;code&gt;referer control&lt;/code&gt; 禁止 inoreader 向第三方站点发送 referrer
+      
+    
+    </summary>
+    
+      <category term="tips" scheme="http://wiki.yanick.site/categories/tips/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Linux Device Driver 笔记</title>
+    <link href="http://wiki.yanick.site/wiki/linux/ldd/"/>
+    <id>http://wiki.yanick.site/wiki/linux/ldd/</id>
+    <published>2020-06-20T16:09:25.000Z</published>
+    <updated>2020-06-25T13:59:35.970Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Prepare"><a href="#Prepare" class="headerlink" title="Prepare"></a>Prepare</h1><p>先下载 Linux 源码，然后准备到开发驱动的必须前置工作</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">make oldconfig</span><br><span class="line">make prepare</span><br><span class="line">make modules_prepare</span><br></pre></td></tr></table></figure><h1 id="编译-Helloworld"><a href="#编译-Helloworld" class="headerlink" title="编译 Helloworld"></a>编译 Helloworld</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/vigith/Linux-Device-Drivers.git</span><br><span class="line"></span><br><span class="line">make -C /root/linux-2.6.32.4/ M=`<span class="built_in">pwd</span>` modules</span><br></pre></td></tr></table></figure><p>-C: 指定 Linux 源码位置</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Prepare&quot;&gt;&lt;a href=&quot;#Prepare&quot; class=&quot;headerlink&quot; title=&quot;Prepare&quot;&gt;&lt;/a&gt;Prepare&lt;/h1&gt;&lt;p&gt;先下载 Linux 源码，然后准备到开发驱动的必须前置工作&lt;/p&gt;
+&lt;figure class=&quot;h
+      
+    
+    </summary>
+    
+      <category term="linux" scheme="http://wiki.yanick.site/categories/linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>常见虚拟机挂载共享目录问题</title>
     <link href="http://wiki.yanick.site/wiki/virtualmachine/mount-file/"/>
     <id>http://wiki.yanick.site/wiki/virtualmachine/mount-file/</id>
     <published>2020-06-06T16:27:50.000Z</published>
-    <updated>2020-06-17T07:24:40.967Z</updated>
+    <updated>2020-06-25T13:59:35.970Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="VMware-Functions"><a href="#VMware-Functions" class="headerlink" title="VMware Functions"></a>VMware Functions</h1><p>试试这个</p><p><img src="https://s1.ax1x.com/2020/06/15/NPe0PS.png" alt="NPe0PS.png"></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /usr/bin/vmhgfs-fuse .host:/ /mnt/hgfs -o subtype=vmhgfs-fuse,allow_other</span><br></pre></td></tr></table></figure><h1 id="Virtualbox"><a href="#Virtualbox" class="headerlink" title="Virtualbox"></a>Virtualbox</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo modprobe -a vboxguest vboxsf vboxvideo</span><br><span class="line">sudo mount -t vboxsf &lt;NAME&gt; /mnt/shared/</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h1 id="VMware-Functions"><a href="#VMware-Functions" class="headerlink" title="VMware Functions"></a>VMware Functions</h1><p>试试这个</p><p><img src="https://s1.ax1x.com/2020/06/15/NPe0PS.png" alt="NPe0PS.png"></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /usr/bin/vmhgfs-fuse .host:/ /mnt/hgfs -o subtype=vmhgfs-fuse,allow_other</span><br></pre></td></tr></table></figure><h1 id="Virtualbox"><a href="#Virtualbox" class="headerlink" title="Virtualbox"></a>Virtualbox</h1><h2 id="装载-Additions"><a href="#装载-Additions" class="headerlink" title="装载 Additions"></a>装载 Additions</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo mount /dev/cdrom /media/ -o loop</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /media</span><br><span class="line"></span><br><span class="line">sudo ./VBoxLinuxAdditions.run</span><br><span class="line"></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure><h2 id="载入"><a href="#载入" class="headerlink" title="载入"></a>载入</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo modprobe -a vboxguest vboxsf vboxvideo</span><br><span class="line">sudo mount -t vboxsf &lt;NAME&gt; /mnt/shared/</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -41,13 +88,40 @@
   </entry>
   
   <entry>
+    <title>Clion中管理Makefile项目</title>
+    <link href="http://wiki.yanick.site/wiki/tools/ide/work-with-makefile-in-clion/"/>
+    <id>http://wiki.yanick.site/wiki/tools/ide/work-with-makefile-in-clion/</id>
+    <published>2020-06-06T16:27:50.000Z</published>
+    <updated>2020-06-25T13:59:35.970Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Tut"><a href="#Tut" class="headerlink" title="Tut"></a>Tut</h1><h2 id="安装-PIP"><a href="#安装-PIP" class="headerlink" title="安装 PIP"></a>安装 PIP</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install python-pip</span><br></pre></td></tr></table></figure><h2 id="install-compiledb"><a href="#install-compiledb" class="headerlink" title="install compiledb"></a>install compiledb</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install compiledb</span><br></pre></td></tr></table></figure><h2 id="compile-db"><a href="#compile-db" class="headerlink" title="compile db"></a>compile db</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">compiledb -n make</span><br></pre></td></tr></table></figure><h2 id="install-plugin-for-clion"><a href="#install-plugin-for-clion" class="headerlink" title="install plugin for clion"></a>install plugin for clion</h2><p>skip</p><h2 id="open-project"><a href="#open-project" class="headerlink" title="open project"></a>open project</h2><p>CLion will detect the compile_commands.json file and look in there for its project information. You may see it think about it for a few seconds, then show the “Compiler Info” tab on the Build tool window, telling you that everything finished ok (there were any errors or warnings you’ll see them in the “Sync” tab).</p><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul><li><a href="https://blog.jetbrains.com/clion/2018/08/working-with-makefiles-in-clion-using-compilation-db/" rel="external nofollow noopener noreferrer" target="_blank">Working with Makefiles in CLion using Compilation DB</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Tut&quot;&gt;&lt;a href=&quot;#Tut&quot; class=&quot;headerlink&quot; title=&quot;Tut&quot;&gt;&lt;/a&gt;Tut&lt;/h1&gt;&lt;h2 id=&quot;安装-PIP&quot;&gt;&lt;a href=&quot;#安装-PIP&quot; class=&quot;headerlink&quot; title=&quot;安装 PIP&quot;&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="tools" scheme="http://wiki.yanick.site/categories/tools/"/>
+    
+      <category term="ide" scheme="http://wiki.yanick.site/categories/tools/ide/"/>
+    
+      <category term="clion" scheme="http://wiki.yanick.site/categories/tools/ide/clion/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>构建与调试 Linux 内核</title>
     <link href="http://wiki.yanick.site/wiki/linux/build-and-debug-kernel/"/>
     <id>http://wiki.yanick.site/wiki/linux/build-and-debug-kernel/</id>
     <published>2020-05-15T16:09:25.000Z</published>
-    <updated>2020-06-17T07:24:40.967Z</updated>
+    <updated>2020-06-25T13:59:35.970Z</updated>
     
-    <content type="html"><![CDATA[<p>本文以读者的 Linux 4.19 为构建目标</p><h1 id="构建Linux内核"><a href="#构建Linux内核" class="headerlink" title="构建Linux内核"></a>构建Linux内核</h1><h2 id="安装-GCC"><a href="#安装-GCC" class="headerlink" title="安装 GCC"></a>安装 GCC</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install gcc</span><br></pre></td></tr></table></figure><h2 id="构建配置"><a href="#构建配置" class="headerlink" title="构建配置"></a>构建配置</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">make menuconfig</span><br><span class="line"><span class="comment"># 选择 kernel hacking —&gt; [*] compile the kernel with debug info 让其携带调试信息</span></span><br><span class="line">make defconfig 生成配置文件</span><br><span class="line">make 编译kernel</span><br></pre></td></tr></table></figure><h1 id="准备运行环境"><a href="#准备运行环境" class="headerlink" title="准备运行环境"></a>准备运行环境</h1><p>因为我们只有一个 <code>Kerenl</code>，我们还需要可以运行的 <code>rootfs</code> 等，最简单的方式是基于已经成熟的 Linux 发行版进行替换内核的方式进行运行。</p><h2 id="准备-Ubuntu-镜像"><a href="#准备-Ubuntu-镜像" class="headerlink" title="准备 Ubuntu 镜像"></a>准备 Ubuntu 镜像</h2><p>在 <code>Virtualbox</code> 中安装 <code>ubuntu server 14.04</code></p><h2 id="增加-kgdb-启动参数"><a href="#增加-kgdb-启动参数" class="headerlink" title="增加 kgdb 启动参数"></a>增加 <code>kgdb</code> 启动参数</h2><p>在 /etc/default/grub 中增加 <code>kgdb</code> 的启动参数</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kgdbwait kgdboc=ttyS0,115200 sysrq_always_enabled</span><br></pre></td></tr></table></figure><h2 id="给宿主机增加串口虚拟文件"><a href="#给宿主机增加串口虚拟文件" class="headerlink" title="给宿主机增加串口虚拟文件"></a>给宿主机增加串口虚拟文件</h2><p>在virtualbox的settings里面选择serial port，勾选enable serial port，之后取消勾选connect to existing pipe/socket。port number、irq、I/O port就使用默认，port mode选择HOST PIPE，下面的目录填上/tmp/serial。</p><h2 id="替换我们的内核镜像"><a href="#替换我们的内核镜像" class="headerlink" title="替换我们的内核镜像"></a>替换我们的内核镜像</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install</span><br></pre></td></tr></table></figure><hr><p>最后一步就是直接重启我们的系统，这个时候你会发现系统停留在启动页面了。</p><h1 id="连接系统进行调试"><a href="#连接系统进行调试" class="headerlink" title="连接系统进行调试"></a>连接系统进行调试</h1><h2 id="attach"><a href="#attach" class="headerlink" title="attach"></a>attach</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">socat -d -d /tmp/serial PTY</span><br></pre></td></tr></table></figure><h2 id="gdb"><a href="#gdb" class="headerlink" title="gdb"></a>gdb</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gdb vmlinux</span><br><span class="line">target remote /dev/pts/1</span><br></pre></td></tr></table></figure><h2 id="回复debug模式"><a href="#回复debug模式" class="headerlink" title="回复debug模式"></a>回复debug模式</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> g &gt; /dev/sysrq-trigger</span><br></pre></td></tr></table></figure><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul><li><a href="https://blog.0x972.info/?d=2014/11/27/18/45/48-linux-kernel-system-debugging-part-1-system-setup" rel="external nofollow noopener noreferrer" target="_blank">Linux Kernel System Debugging, part 1: System Setup</a></li><li><a href="http://nickdesaulniers.github.io/blog/2018/10/24/booting-a-custom-linux-kernel-in-qemu-and-debugging-it-with-gdb/" rel="external nofollow noopener noreferrer" target="_blank">Booting a Custom Linux Kernel in QEMU and Debugging It With GDB</a></li><li><a href="https://blog.csdn.net/gouxf_0219/article/details/82018970" rel="external nofollow noopener noreferrer" target="_blank">gcc: error: elf_x86_64: No such file or directory</a></li><li><a href="https://www.kernel.org/doc/html/v4.14/dev-tools/kgdb.html" rel="external nofollow noopener noreferrer" target="_blank">kgdb</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>本文以读者的 Linux 4.19 为构建目标</p><h1 id="构建Linux内核"><a href="#构建Linux内核" class="headerlink" title="构建Linux内核"></a>构建Linux内核</h1><h2 id="安装-GCC"><a href="#安装-GCC" class="headerlink" title="安装 GCC"></a>安装 GCC</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install gcc</span><br></pre></td></tr></table></figure><h2 id="构建配置"><a href="#构建配置" class="headerlink" title="构建配置"></a>构建配置</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">make menuconfig</span><br><span class="line"><span class="comment"># 选择 kernel hacking —&gt; [*] compile the kernel with debug info 让其携带调试信息</span></span><br><span class="line">make defconfig 生成配置文件</span><br><span class="line">make 编译kernel</span><br></pre></td></tr></table></figure><h1 id="准备运行环境"><a href="#准备运行环境" class="headerlink" title="准备运行环境"></a>准备运行环境</h1><p>因为我们只有一个 <code>Kerenl</code>，我们还需要可以运行的 <code>rootfs</code> 等，最简单的方式是基于已经成熟的 Linux 发行版进行替换内核的方式进行运行。</p><h2 id="准备-Ubuntu-镜像"><a href="#准备-Ubuntu-镜像" class="headerlink" title="准备 Ubuntu 镜像"></a>准备 Ubuntu 镜像</h2><p>在 <code>Virtualbox</code> 中安装 <code>ubuntu server 14.04</code></p><h2 id="增加-kgdb-启动参数"><a href="#增加-kgdb-启动参数" class="headerlink" title="增加 kgdb 启动参数"></a>增加 <code>kgdb</code> 启动参数</h2><p>在 /etc/default/grub 中增加 <code>kgdb</code> 的启动参数</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kgdbwait kgdboc=ttyS0,115200 sysrq_always_enabled nokaslr</span><br></pre></td></tr></table></figure><h2 id="给宿主机增加串口虚拟文件"><a href="#给宿主机增加串口虚拟文件" class="headerlink" title="给宿主机增加串口虚拟文件"></a>给宿主机增加串口虚拟文件</h2><p>在virtualbox的settings里面选择serial port，勾选enable serial port，之后取消勾选connect to existing pipe/socket。port number、irq、I/O port就使用默认，port mode选择HOST PIPE，下面的目录填上/tmp/serial。</p><h2 id="替换我们的内核镜像"><a href="#替换我们的内核镜像" class="headerlink" title="替换我们的内核镜像"></a>替换我们的内核镜像</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install</span><br></pre></td></tr></table></figure><hr><p>最后一步就是直接重启我们的系统，这个时候你会发现系统停留在启动页面了。</p><h1 id="连接系统进行调试"><a href="#连接系统进行调试" class="headerlink" title="连接系统进行调试"></a>连接系统进行调试</h1><h2 id="attach"><a href="#attach" class="headerlink" title="attach"></a>attach</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">socat -d -d /tmp/serial PTY</span><br></pre></td></tr></table></figure><h2 id="gdb"><a href="#gdb" class="headerlink" title="gdb"></a>gdb</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gdb vmlinux</span><br><span class="line">target remote /dev/pts/1</span><br></pre></td></tr></table></figure><h2 id="回复debug模式"><a href="#回复debug模式" class="headerlink" title="回复debug模式"></a>回复debug模式</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> g &gt; /dev/sysrq-trigger</span><br></pre></td></tr></table></figure><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul><li><a href="https://blog.0x972.info/?d=2014/11/27/18/45/48-linux-kernel-system-debugging-part-1-system-setup" rel="external nofollow noopener noreferrer" target="_blank">Linux Kernel System Debugging, part 1: System Setup</a></li><li><a href="http://nickdesaulniers.github.io/blog/2018/10/24/booting-a-custom-linux-kernel-in-qemu-and-debugging-it-with-gdb/" rel="external nofollow noopener noreferrer" target="_blank">Booting a Custom Linux Kernel in QEMU and Debugging It With GDB</a></li><li><a href="https://blog.csdn.net/gouxf_0219/article/details/82018970" rel="external nofollow noopener noreferrer" target="_blank">gcc: error: elf_x86_64: No such file or directory</a></li><li><a href="https://www.kernel.org/doc/html/v4.14/dev-tools/kgdb.html" rel="external nofollow noopener noreferrer" target="_blank">kgdb</a></li></ul>]]></content>
     
     <summary type="html">
     

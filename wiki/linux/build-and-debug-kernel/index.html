@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Yanick&#39;s Wiki">
 <meta property="og:description" content="本文以读者的 Linux 4.19 为构建目标 构建Linux内核安装 GCC1sudo apt install gcc  构建配置1234make menuconfig# 选择 kernel hacking —&amp;gt; [*] compile the kernel with debug info 让其携带调试信息make defconfig 生成配置文件make 编译kernel  准备运行环境">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-06-17T07:24:40.967Z">
+<meta property="og:updated_time" content="2020-06-25T13:59:35.970Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="构建与调试 Linux 内核">
 <meta name="twitter:description" content="本文以读者的 Linux 4.19 为构建目标 构建Linux内核安装 GCC1sudo apt install gcc  构建配置1234make menuconfig# 选择 kernel hacking —&amp;gt; [*] compile the kernel with debug info 让其携带调试信息make defconfig 生成配置文件make 编译kernel  准备运行环境">
@@ -82,7 +82,7 @@
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Rechercher">
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -101,10 +101,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Entradas',
+            POSTS: 'Articles',
             PAGES: 'Pages',
-            CATEGORIES: 'Categorias',
-            TAGS: 'Etiquetas',
+            CATEGORIES: 'Catégories',
+            TAGS: 'Tags',
             UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
@@ -137,7 +137,7 @@
                 <td>
                     
     <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Rechercher">
     </div>
 
                 </td>
@@ -154,7 +154,7 @@
         
     <div class="widget-wrap" id="categories">
         <h3 class="widget-title">
-            <span>Categorias</span>
+            <span>Catégories</span>
             &nbsp;
             <a id="allExpand" href="#">
                 <i class="fa fa-angle-double-down fa-2x"></i>
@@ -251,7 +251,7 @@
                         </a>
                          <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/linux/xbindkey/">Xbindkey</a></li>  </ul> 
                     </li> 
-                     <li class="file active"><a href="/wiki/linux/build-and-debug-kernel/">构建与调试 Linux 内核</a></li>  </ul> 
+                     <li class="file active"><a href="/wiki/linux/build-and-debug-kernel/">构建与调试 Linux 内核</a></li>  <li class="file"><a href="/wiki/linux/ldd/">Linux Device Driver 笔记</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -267,9 +267,36 @@
                         <a href="#" data-role="directory">
                             <i class="fa fa-folder"></i>
                             &nbsp;
+                            tips
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/tips/inoreader-can-not-show-pic/">inoreader 无法显示图片</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
                             tools
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/tools/mirrors/">镜像站快速替换</a></li>  <li class="file"><a href="/wiki/tools/net-debug/">容器网络Debug工具箱</a></li>  <li class="file"><a href="/wiki/tools/rustup/">Rustup by USTC</a></li>  </ul> 
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            ide
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            clion
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/tools/ide/work-with-makefile-in-clion/">Clion中管理Makefile项目</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                     <li class="file"><a href="/wiki/tools/mirrors/">镜像站快速替换</a></li>  <li class="file"><a href="/wiki/tools/net-debug/">容器网络Debug工具箱</a></li>  <li class="file"><a href="/wiki/tools/rustup/">Rustup by USTC</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -350,9 +377,47 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title"><span>Recientes</span></h3>
+        <h3 class="widget-title"><span>Récents</span></h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/wiki/tips/inoreader-can-not-show-pic/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/tips/">tips</a></p>
+                            <p class="item-title"><a href="/wiki/tips/inoreader-can-not-show-pic/" class="title">inoreader 无法显示图片</a></p>
+                            <p class="item-date"><time datetime="2020-06-23T16:27:50.000Z" itemprop="datePublished">2020-06-23</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/wiki/linux/ldd/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/linux/">linux</a></p>
+                            <p class="item-title"><a href="/wiki/linux/ldd/" class="title">Linux Device Driver 笔记</a></p>
+                            <p class="item-date"><time datetime="2020-06-20T16:09:25.000Z" itemprop="datePublished">2020-06-20</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -376,6 +441,25 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/wiki/tools/ide/work-with-makefile-in-clion/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/tools/">tools</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/tools/ide/">ide</a></p>
+                            <p class="item-title"><a href="/wiki/tools/ide/work-with-makefile-in-clion/" class="title">Clion中管理Makefile项目</a></p>
+                            <p class="item-date"><time datetime="2020-06-06T16:27:50.000Z" itemprop="datePublished">2020-06-06</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/wiki/linux/build-and-debug-kernel/" class="thumbnail">
     
     
@@ -392,63 +476,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/wiki/linux/xbindkey/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/linux/">linux</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/linux/usage/">usage</a></p>
-                            <p class="item-title"><a href="/wiki/linux/xbindkey/" class="title">Xbindkey</a></p>
-                            <p class="item-date"><time datetime="2020-05-04T16:27:50.000Z" itemprop="datePublished">2020-05-04</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/wiki/tools/rustup/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/tools/">tools</a></p>
-                            <p class="item-title"><a href="/wiki/tools/rustup/" class="title">Rustup by USTC</a></p>
-                            <p class="item-date"><time datetime="2019-11-22T15:10:08.000Z" itemprop="datePublished">2019-11-22</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/wiki/tools/net-debug/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/tools/">tools</a></p>
-                            <p class="item-title"><a href="/wiki/tools/net-debug/" class="title">容器网络Debug工具箱</a></p>
-                            <p class="item-date"><time datetime="2019-11-18T15:10:08.000Z" itemprop="datePublished">2019-11-18</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -456,9 +483,9 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title"><span>Archivos</span></h3>
+        <h3 class="widget-title"><span>Archives</span></h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">3</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">3</span></li></ul>
         </div>
     </div>
 
@@ -523,7 +550,7 @@
         
             
                 <div id="toc" class="toc-article">
-                <strong class="toc-title">Catálogo</strong>
+                <strong class="toc-title">Catalogue</strong>
                     <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#构建Linux内核"><span class="toc-number">1.</span> <span class="toc-text">构建Linux内核</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装-GCC"><span class="toc-number">1.1.</span> <span class="toc-text">安装 GCC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#构建配置"><span class="toc-number">1.2.</span> <span class="toc-text">构建配置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#准备运行环境"><span class="toc-number">2.</span> <span class="toc-text">准备运行环境</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#准备-Ubuntu-镜像"><span class="toc-number">2.1.</span> <span class="toc-text">准备 Ubuntu 镜像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#增加-kgdb-启动参数"><span class="toc-number">2.2.</span> <span class="toc-text">增加 kgdb 启动参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#给宿主机增加串口虚拟文件"><span class="toc-number">2.3.</span> <span class="toc-text">给宿主机增加串口虚拟文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#替换我们的内核镜像"><span class="toc-number">2.4.</span> <span class="toc-text">替换我们的内核镜像</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#连接系统进行调试"><span class="toc-number">3.</span> <span class="toc-text">连接系统进行调试</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#attach"><span class="toc-number">3.1.</span> <span class="toc-text">attach</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gdb"><span class="toc-number">3.2.</span> <span class="toc-text">gdb</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#回复debug模式"><span class="toc-number">3.3.</span> <span class="toc-text">回复debug模式</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考"><span class="toc-number">4.</span> <span class="toc-text">参考</span></a></li></ol>
                 </div>
             
@@ -537,7 +564,7 @@
 <h1 id="准备运行环境"><a href="#准备运行环境" class="headerlink" title="准备运行环境"></a>准备运行环境</h1><p>因为我们只有一个 <code>Kerenl</code>，我们还需要可以运行的 <code>rootfs</code> 等，最简单的方式是基于已经成熟的 Linux 发行版进行替换内核的方式进行运行。</p>
 <h2 id="准备-Ubuntu-镜像"><a href="#准备-Ubuntu-镜像" class="headerlink" title="准备 Ubuntu 镜像"></a>准备 Ubuntu 镜像</h2><p>在 <code>Virtualbox</code> 中安装 <code>ubuntu server 14.04</code></p>
 <h2 id="增加-kgdb-启动参数"><a href="#增加-kgdb-启动参数" class="headerlink" title="增加 kgdb 启动参数"></a>增加 <code>kgdb</code> 启动参数</h2><p>在 /etc/default/grub 中增加 <code>kgdb</code> 的启动参数</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kgdbwait kgdboc=ttyS0,115200 sysrq_always_enabled</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kgdbwait kgdboc=ttyS0,115200 sysrq_always_enabled nokaslr</span><br></pre></td></tr></table></figure>
 
 <h2 id="给宿主机增加串口虚拟文件"><a href="#给宿主机增加串口虚拟文件" class="headerlink" title="给宿主机增加串口虚拟文件"></a>给宿主机增加串口虚拟文件</h2><p>在virtualbox的settings里面选择serial port，勾选enable serial port，之后取消勾选connect to existing pipe/socket。port number、irq、I/O port就使用默认，port mode选择HOST PIPE，下面的目录填上/tmp/serial。</p>
 <h2 id="替换我们的内核镜像"><a href="#替换我们的内核镜像" class="headerlink" title="替换我们的内核镜像"></a>替换我们的内核镜像</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install</span><br></pre></td></tr></table></figure>
@@ -568,18 +595,18 @@
     
 <nav id="article-nav">
     
-        <a href="/wiki/virtualmachine/mount-file/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Más nuevo</strong>
+        <a href="/wiki/tools/ide/work-with-makefile-in-clion/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Plus récent</strong>
             <div class="article-nav-title">
                 
-                    常见虚拟机挂载共享目录问题
+                    Clion中管理Makefile项目
                 
             </div>
         </a>
     
     
         <a href="/wiki/linux/xbindkey/" id="article-nav-older" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Más viejo</strong>
+            <strong class="article-nav-caption">Plus ancien</strong>
             <div class="article-nav-title">Xbindkey</div>
         </a>
     

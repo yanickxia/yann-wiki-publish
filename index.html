@@ -175,7 +175,7 @@
                         </a>
                          <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/microservice/service_discovery/">服务发现</a></li>  </ul> 
                     </li> 
-                     </ul> 
+                     <li class="file"><a href="/wiki/arch/bottleneck/">常见中间件性能瓶颈</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -380,6 +380,25 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/wiki/arch/bottleneck/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/architecture/">architecture</a></p>
+                            <p class="item-title"><a href="/wiki/arch/bottleneck/" class="title">常见中间件性能瓶颈</a></p>
+                            <p class="item-date"><time datetime="2020-06-27T09:32:50.000Z" itemprop="datePublished">2020-06-27</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/wiki/tips/inoreader-can-not-show-pic/" class="thumbnail">
     
     
@@ -453,25 +472,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/wiki/linux/build-and-debug-kernel/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/linux/">linux</a></p>
-                            <p class="item-title"><a href="/wiki/linux/build-and-debug-kernel/" class="title">构建与调试 Linux 内核</a></p>
-                            <p class="item-date"><time datetime="2020-05-15T16:09:25.000Z" itemprop="datePublished">2020-05-15</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -481,7 +481,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title"><span>Archivos</span></h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">3</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">3</span></li></ul>
         </div>
     </div>
 
@@ -492,6 +492,82 @@
 </aside>
             
             <section id="main">
+        <article id="post-arch/bottleneck" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/architecture/">architecture</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/arch/bottleneck/">
+            <time datetime="2020-06-27T09:32:50.000Z" itemprop="datePublished">2020-06-27</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a href="https://github.com/yanickxia/yann-wiki/raw/master/source/_posts/arch/bottleneck.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/yanickxia/yann-wiki/edit/master/source/_posts/arch/bottleneck.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/yanickxia/yann-wiki/commits/master/source/_posts/arch/bottleneck.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/wiki/arch/bottleneck/">常见中间件性能瓶颈</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+            
+        
+        
+            
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
         <article id="post-tips/inoreader-can-not-show-pic" class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
@@ -1326,105 +1402,6 @@
 <h1 id="Debian"><a href="#Debian" class="headerlink" title="Debian"></a>Debian</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo sed -i <span class="string">'s/deb.debian.org/mirrors.ustc.edu.cn/g'</span> /etc/apt/sources.list</span><br><span class="line">sudo sed -i <span class="string">'s|security.debian.org/debian-security|mirrors.ustc.edu.cn/debian-security|g'</span> /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
 
 <h1 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sed -i <span class="string">'s/archive.ubuntu.com/mirrors.ustc.edu.cn/g'</span> /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
-            </div>
-        
-        <footer class="article-footer">
-        </footer>
-    </div>
-</article>
-
-
-
-
-
-
-    
-        <article id="post-k8s/quick-start" class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-                    <div class="article-meta">
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/cncf/">cncf</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/cncf/kubernetes/">kubernetes</a>
-    </div>
-
-                        
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/wiki/k8s/quick-start/">
-            <time datetime="2019-10-28T16:27:50.000Z" itemprop="datePublished">2019-10-28</time>
-        </a>
-    </div>
-
-
-                        
-                            <i class="fa fa-bar-chart"></i>
-                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
-                        
-                        
-                            <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/raw/master/source/_posts/k8s/quick-start.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/edit/master/source/_posts/k8s/quick-start.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/commits/master/source/_posts/k8s/quick-start.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
-                            </div>
-                        
-                    </div>
-                
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/wiki/k8s/quick-start/">kube 快速安装</a>
-        </h1>
-    
-
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-        
-            
-                
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                
-                    
-                    <p></p><h1 id="宿主机设置"><a href="#宿主机设置" class="headerlink" title="宿主机设置"></a>宿主机设置</h1><h2 id="关闭-交换分区"><a href="#关闭-交换分区" class="headerlink" title="关闭 交换分区"></a>关闭 交换分区</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">swapoff -a</span><br></pre></td></tr></table></figure>
-
-<h2 id="设置Hostname和host"><a href="#设置Hostname和host" class="headerlink" title="设置Hostname和host"></a>设置Hostname和host</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hostnamectl <span class="built_in">set</span>-hostname &lt;your-name&gt;</span><br><span class="line">vim /etc/hosts</span><br></pre></td></tr></table></figure>
-
-<h2 id="本机搞个VPN-amp-设置好代理"><a href="#本机搞个VPN-amp-设置好代理" class="headerlink" title="本机搞个VPN &amp; 设置好代理"></a>本机搞个VPN &amp; 设置好代理</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> http_proxy=http://naso.yannxia.top:8123</span><br><span class="line"><span class="built_in">export</span> https_proxy=http://naso.yannxia.top:8123</span><br><span class="line"><span class="built_in">export</span> ftp_proxy=http://naso.yannxia.top:8123</span><br><span class="line"><span class="built_in">export</span> no_proxy=localhost,127.0.0.0,127.0.1.1,127.0.1.1,10.0.0.0/8,172.16.0.0/16,192.168.0.0/16,mirrors.aliyun.com</span><br></pre></td></tr></table></figure>
-<p>
-                
-            
-        
-        
-            </p></div>   
-            <div class="article-more-link">
-                <a href="/wiki/k8s/quick-start/#more">Read More</a>
             </div>
         
         <footer class="article-footer">

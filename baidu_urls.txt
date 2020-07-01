@@ -1,5 +1,5 @@
+http://wiki.yanick.site/wiki/arch/bottleneck/
 http://wiki.yanick.site/wiki/tips/inoreader-can-not-show-pic/
 http://wiki.yanick.site/wiki/linux/ldd/
 http://wiki.yanick.site/wiki/virtualmachine/mount-file/
 http://wiki.yanick.site/wiki/tools/ide/work-with-makefile-in-clion/
-http://wiki.yanick.site/wiki/linux/build-and-debug-kernel/

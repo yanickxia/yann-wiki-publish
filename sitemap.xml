@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wiki.yanick.site/wiki/arch/bottleneck/</loc>
+    
+    <lastmod>2020-07-01T03:27:33.201Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wiki.yanick.site/wiki/tools/net-debug/</loc>
     
     <lastmod>2020-06-29T15:08:14.498Z</lastmod>
@@ -9,14 +16,14 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/linux/ldd/</loc>
+    <loc>http://wiki.yanick.site/wiki/linux/build-and-debug-kernel/</loc>
     
     <lastmod>2020-06-25T13:59:35.970Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/linux/build-and-debug-kernel/</loc>
+    <loc>http://wiki.yanick.site/wiki/linux/ldd/</loc>
     
     <lastmod>2020-06-25T13:59:35.970Z</lastmod>
     
@@ -51,7 +58,21 @@
   </url>
   
   <url>
+    <loc>http://wiki.yanick.site/wiki/java/future/</loc>
+    
+    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wiki.yanick.site/wiki/java/cyclic-barrier/</loc>
+    
+    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/k8s/quick-start/</loc>
     
     <lastmod>2020-06-17T07:24:40.967Z</lastmod>
     
@@ -65,14 +86,7 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/java/future/</loc>
-    
-    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/k8s/quick-start/</loc>
+    <loc>http://wiki.yanick.site/wiki/learn/how-to-learn/</loc>
     
     <lastmod>2020-06-17T07:24:40.967Z</lastmod>
     
@@ -93,13 +107,6 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/learn/how-to-learn/</loc>
-    
-    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://wiki.yanick.site/wiki/linux/xbindkey/</loc>
     
     <lastmod>2020-06-17T07:24:40.967Z</lastmod>
@@ -114,6 +121,13 @@
   </url>
   
   <url>
+    <loc>http://wiki.yanick.site/wiki/tools/mirrors/</loc>
+    
+    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wiki.yanick.site/wiki/tools/rustup/</loc>
     
     <lastmod>2020-06-17T07:24:40.967Z</lastmod>
@@ -121,7 +135,7 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/tools/mirrors/</loc>
+    <loc>http://wiki.yanick.site/categories/index.html</loc>
     
     <lastmod>2020-06-17T07:24:40.967Z</lastmod>
     
@@ -136,13 +150,6 @@
   
   <url>
     <loc>http://wiki.yanick.site/books/index.html</loc>
-    
-    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/categories/index.html</loc>
     
     <lastmod>2020-06-17T07:24:40.967Z</lastmod>
     

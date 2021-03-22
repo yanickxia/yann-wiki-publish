@@ -2,177 +2,275 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/arch/bottleneck/</loc>
+    <loc>http://wiki.yanick.site/map/embed_page/index.html</loc>
     
-    <lastmod>2020-07-01T03:27:33.201Z</lastmod>
+    <lastmod>2021-03-22T04:00:31.850Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://wiki.yanick.site/wiki/tools/net-debug/</loc>
     
-    <lastmod>2020-06-29T15:08:14.498Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/linux/build-and-debug-kernel/</loc>
-    
-    <lastmod>2020-06-25T13:59:35.970Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/linux/ldd/</loc>
-    
-    <lastmod>2020-06-25T13:59:35.970Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/tips/inoreader-can-not-show-pic/</loc>
-    
-    <lastmod>2020-06-25T13:59:35.970Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/virtualmachine/mount-file/</loc>
-    
-    <lastmod>2020-06-25T13:59:35.970Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/tools/ide/work-with-makefile-in-clion/</loc>
-    
-    <lastmod>2020-06-25T13:59:35.970Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/java/classloader/</loc>
-    
-    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/java/future/</loc>
-    
-    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/java/cyclic-barrier/</loc>
-    
-    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/k8s/quick-start/</loc>
-    
-    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/learn/book-review/</loc>
-    
-    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/learn/how-to-learn/</loc>
-    
-    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/learn/how-to-work/</loc>
-    
-    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/links/kotlin/</loc>
-    
-    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/linux/xbindkey/</loc>
-    
-    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/microservice/service_discovery/</loc>
-    
-    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/tools/mirrors/</loc>
-    
-    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
+    <lastmod>2021-03-22T04:00:31.850Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://wiki.yanick.site/wiki/tools/rustup/</loc>
     
-    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
+    <lastmod>2021-03-22T04:00:31.850Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/categories/index.html</loc>
+    <loc>http://wiki.yanick.site/wiki/tools/os/</loc>
     
-    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
+    <lastmod>2021-03-22T04:00:31.850Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/virtualmachine/mount-file/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.850Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://wiki.yanick.site/about/index.html</loc>
     
-    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
+    <lastmod>2021-03-22T04:00:31.850Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/categories/index.html</loc>
+    
+    <lastmod>2021-03-22T04:00:31.850Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://wiki.yanick.site/books/index.html</loc>
     
-    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
+    <lastmod>2021-03-22T04:00:31.850Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://wiki.yanick.site/map/index.html</loc>
     
-    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
+    <lastmod>2021-03-22T04:00:31.850Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://wiki.yanick.site/tags/index.html</loc>
     
-    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
+    <lastmod>2021-03-22T04:00:31.850Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/map/embed_page/index.html</loc>
+    <loc>http://wiki.yanick.site/wiki/k8s/kubectl-in-remote/</loc>
     
-    <lastmod>2020-06-17T07:24:40.967Z</lastmod>
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/learn/book-review/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/learn/how-to-learn/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/linux/build-and-debug-kernel-simple/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/learn/how-to-work/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/links/kotlin/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/linux/ldd/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/linux/rsa/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/linux/build-and-debug-kernel/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/envoy/build-debug-envoy/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/linux/xbindkey/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/os/debug-linux/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/microservice/service_discovery/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/proxy/proxy/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/os/qemu/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/rust/rust/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/tips/inoreader-can-not-show-pic/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/tools/mirrors/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/arch/bottleneck/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/istio/isito-dev-env/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/gist/gist/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/istio/isito-debug/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/tools/ide/work-with-makefile-in-clion/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/istio/isito-tips/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/java/classloader/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/java/cyclic-barrier/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/k8s/quick-start/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/java/future/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/linux/tcpdump/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
     
   </url>
   

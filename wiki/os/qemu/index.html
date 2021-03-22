@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    
+    <title>为 QEMU 配置网桥上网 | Yanick&#39;s Wiki</title>
+    
+    
+        <meta name="keywords" content="为 QEMU 配置网桥上网">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="工具安装12apt-get install bridge-utils        # 虚拟网桥工具apt-get install uml-utilities       # UML（User-mode linux）工具  配置网桥1234567891011ifconfig &amp;lt;你的网卡名称(能上网的那张)&amp;gt; down    # 首先关闭宿主机网卡接口brctl addbr br0">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为 QEMU 配置网桥上网">
+<meta property="og:url" content="http://wiki.yanick.site/wiki/os/qemu/index.html">
+<meta property="og:site_name" content="Yanick&#39;s Wiki">
+<meta property="og:description" content="工具安装12apt-get install bridge-utils        # 虚拟网桥工具apt-get install uml-utilities       # UML（User-mode linux）工具  配置网桥1234567891011ifconfig &amp;lt;你的网卡名称(能上网的那张)&amp;gt; down    # 首先关闭宿主机网卡接口brctl addbr br0">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2021-03-22T04:00:31.846Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="为 QEMU 配置网桥上网">
+<meta name="twitter:description" content="工具安装12apt-get install bridge-utils        # 虚拟网桥工具apt-get install uml-utilities       # UML（User-mode linux）工具  配置网桥1234567891011ifconfig &amp;lt;你的网卡名称(能上网的那张)&amp;gt; down    # 首先关闭宿主机网卡接口brctl addbr br0">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Yanick&#39;s Wiki" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                
+                <span class="site-title">Yanick&#39;s Wiki</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/map">知识地图</a>
+                
+                    <a class="main-nav-link" href="/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+                    <a class="main-nav-link" href="/about">关于</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Entradas',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categorias',
+            TAGS: 'Etiquetas',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/map">知识地图</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>Categorias</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            architecture
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            microservices
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/microservice/service_discovery/">服务发现</a></li>  </ul> 
+                    </li> 
+                     <li class="file"><a href="/wiki/arch/bottleneck/">常见中间件性能瓶颈</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            cncf
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            kubernetes
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/k8s/quick-start/">kube 快速安装</a></li>  <li class="file"><a href="/wiki/k8s/kubectl-in-remote/">kubectl 远程访问内网中的 kubernetes 集群</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            envoy
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/envoy/build-debug-envoy/">Build & Debug Envoy</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            gist
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/gist/gist/">Gist</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            isito
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/istio/isito-debug/">Isito の Debug</a></li>  <li class="file"><a href="/wiki/istio/isito-dev-env/">搭建 Istio 开发测试环境</a></li>  <li class="file"><a href="/wiki/istio/isito-tips/">Tips</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            java
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            foundation
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/java/classloader/">ClassLoader</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            kotlin
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/links/kotlin/">写给 Java 开发者的 Kotlin 教程</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            异步与并发编程
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/java/future/">Future 详解</a></li>  <li class="file"><a href="/wiki/java/cyclic-barrier/">CyclicBarrier 详解</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            linux
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            ssl
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/linux/rsa/">SSL 证书查看</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            usage
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/linux/xbindkey/">Xbindkey</a></li>  </ul> 
+                    </li> 
+                     <li class="file"><a href="/wiki/linux/build-and-debug-kernel/">构建与调试 Linux 内核</a></li>  <li class="file"><a href="/wiki/linux/ldd/">Linux Device Driver 笔记</a></li>  <li class="file"><a href="/wiki/linux/tcpdump/">TCPDUMP</a></li>  <li class="file"><a href="/wiki/linux/build-and-debug-kernel-simple/">构建与调试 Linux 内核</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            os
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            qemu
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file active"><a href="/wiki/os/qemu/">为 QEMU 配置网桥上网</a></li>  </ul> 
+                    </li> 
+                     <li class="file"><a href="/wiki/tools/os/">OS 初始化工具安装</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            proxy
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/proxy/proxy/">Proxy</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            rust
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/rust/rust/">Rust常见问题</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            technique
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/learn/how-to-learn/">如何学习</a></li>  <li class="file"><a href="/wiki/learn/how-to-work/">如何工作</a></li>  <li class="file"><a href="/wiki/learn/book-review/">阅读回顾模板</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            tips
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/tips/inoreader-can-not-show-pic/">inoreader 无法显示图片</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            tools
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            ide
+                        </a>
+                         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            clion
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/tools/ide/work-with-makefile-in-clion/">Clion中管理Makefile项目</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+                    </li> 
+                     <li class="file"><a href="/wiki/tools/mirrors/">镜像站快速替换</a></li>  <li class="file"><a href="/wiki/tools/net-debug/">容器网络Debug工具箱</a></li>  <li class="file"><a href="/wiki/tools/rustup/">Rustup by USTC</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            virtual machine
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/virtualmachine/mount-file/">常见虚拟机挂载共享目录问题</a></li>  <li class="file"><a href="/wiki/os/debug-linux/">Debug Linux</a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title"><span>Recientes</span></h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/wiki/rust/rust/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/rust/">rust</a></p>
+                            <p class="item-title"><a href="/wiki/rust/rust/" class="title">Rust常见问题</a></p>
+                            <p class="item-date"><time datetime="2021-03-22T16:09:25.000Z" itemprop="datePublished">2021-03-22</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/wiki/linux/build-and-debug-kernel-simple/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/linux/">linux</a></p>
+                            <p class="item-title"><a href="/wiki/linux/build-and-debug-kernel-simple/" class="title">构建与调试 Linux 内核</a></p>
+                            <p class="item-date"><time datetime="2021-03-19T16:09:25.000Z" itemprop="datePublished">2021-03-19</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/wiki/linux/rsa/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/linux/">linux</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/linux/ssl/">ssl</a></p>
+                            <p class="item-title"><a href="/wiki/linux/rsa/" class="title">SSL 证书查看</a></p>
+                            <p class="item-date"><time datetime="2021-03-12T16:09:25.000Z" itemprop="datePublished">2021-03-12</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/wiki/envoy/build-debug-envoy/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/envoy/">envoy</a></p>
+                            <p class="item-title"><a href="/wiki/envoy/build-debug-envoy/" class="title">Build &amp; Debug Envoy</a></p>
+                            <p class="item-date"><time datetime="2021-03-09T16:09:25.000Z" itemprop="datePublished">2021-03-09</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/wiki/proxy/proxy/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/proxy/">proxy</a></p>
+                            <p class="item-title"><a href="/wiki/proxy/proxy/" class="title">Proxy</a></p>
+                            <p class="item-date"><time datetime="2021-03-04T16:09:25.000Z" itemprop="datePublished">2021-03-04</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title"><span>Archivos</span></h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title"><span>Etiquetas</span></h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/gist/">gist</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/isito/">isito</a><span class="tag-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-os/qemu" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/os/">os</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/os/qemu/">qemu</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/os/qemu/">
+            <time datetime="2020-09-24T11:49:34.000Z" itemprop="datePublished">2020-09-24</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a href="https://github.com/yanickxia/yann-wiki/raw/master/source/_posts/os/qemu.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/yanickxia/yann-wiki/edit/master/source/_posts/os/qemu.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/yanickxia/yann-wiki/commits/master/source/_posts/os/qemu.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            为 QEMU 配置网桥上网
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                <div id="toc" class="toc-article">
+                <strong class="toc-title">Catálogo</strong>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#工具安装"><span class="toc-number">1.</span> <span class="toc-text">工具安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置网桥"><span class="toc-number">2.</span> <span class="toc-text">配置网桥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建-TAP"><span class="toc-number">3.</span> <span class="toc-text">创建 TAP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#启动参数"><span class="toc-number">4.</span> <span class="toc-text">启动参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Host-转发设置"><span class="toc-number">5.</span> <span class="toc-text">Host 转发设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VM-内设置"><span class="toc-number">6.</span> <span class="toc-text">VM 内设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">7.</span> <span class="toc-text">参考</span></a></li></ol>
+                </div>
+            
+        
+        
+            <h2 id="工具安装"><a href="#工具安装" class="headerlink" title="工具安装"></a>工具安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get install bridge-utils        <span class="comment"># 虚拟网桥工具</span></span><br><span class="line">apt-get install uml-utilities       <span class="comment"># UML（User-mode linux）工具</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="配置网桥"><a href="#配置网桥" class="headerlink" title="配置网桥"></a>配置网桥</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ifconfig &lt;你的网卡名称(能上网的那张)&gt; down    <span class="comment"># 首先关闭宿主机网卡接口</span></span><br><span class="line">brctl addbr br0                     <span class="comment"># 添加一座名为 br0 的网桥</span></span><br><span class="line">brctl addif br0 &lt;你的网卡名称&gt;        <span class="comment"># 在 br0 中添加一个接口</span></span><br><span class="line">brctl stp br0 off                   <span class="comment"># 如果只有一个网桥，则关闭生成树协议</span></span><br><span class="line">brctl setfd br0 1                   <span class="comment"># 设置 br0 的转发延迟</span></span><br><span class="line">brctl sethello br0 1                <span class="comment"># 设置 br0 的 hello 时间</span></span><br><span class="line">ifconfig br0 0.0.0.0 promisc up     <span class="comment"># 启用 br0 接口</span></span><br><span class="line">ifconfig &lt;你的网卡名称&gt; 0.0.0.0 promisc up    <span class="comment"># 启用网卡接口</span></span><br><span class="line">dhclient br0                        <span class="comment"># 从 dhcp 服务器获得 br0 的 IP 地址</span></span><br><span class="line">brctl show br0                      <span class="comment"># 查看虚拟网桥列表</span></span><br><span class="line">brctl showstp br0                   <span class="comment"># 查看 br0 的各接口信息</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="创建-TAP"><a href="#创建-TAP" class="headerlink" title="创建 TAP"></a>创建 TAP</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tunctl -t tap0 -u &lt;YOUR_ACCOUNT&gt;              <span class="comment"># 创建一个 tap0 接口，只允许 XXX 用户访问</span></span><br><span class="line">brctl addif br0 tap0                <span class="comment"># 在虚拟网桥中增加一个 tap0 接口</span></span><br><span class="line">ifconfig tap0 0.0.0.0 promisc up    <span class="comment"># 启用 tap0 接口</span></span><br><span class="line">brctl showstp br0                   <span class="comment"># 显示 br0 的各个接口</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="启动参数"><a href="#启动参数" class="headerlink" title="启动参数"></a>启动参数</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo qemu-system-mipsel -M malta -kernel vmlinux-3.2.0-4-4kc-malta -hda debian_squeeze_mipsel_standard.qcow2 -append <span class="string">"root=/dev/sda1 console=tty0"</span> -nographic </span><br><span class="line"></span><br><span class="line">-net nic -net tap,ifname=tap0,script=no,downscript=no</span><br></pre></td></tr></table></figure>
+
+<p>-net nic 表示希望 QEMU 在虚拟机中创建一张虚拟网卡，-net tap 表示连接类型为 TAP，并且指定了网卡接口名称(就是刚才创建的 tap0，相当于把虚拟机接入网桥)。</p>
+<p>script 和 downscript 两个选项的作用是告诉 QEMU 在启动系统的时候是否调用脚本自动配置网络环境，如果这两个选项为空，那么 QEMU 启动和退出时会自动选择第一个不存在的 tap 接口(通常是 tap0)为参数，调用脚本 /etc/qemu-ifup 和 /etc/qemu-ifdown。由于我们已经配置完毕，所以这两个参数设置为 no 即可。</p>
+<h2 id="Host-转发设置"><a href="#Host-转发设置" class="headerlink" title="Host 转发设置"></a>Host 转发设置</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> 1 &gt; /proc/sys/net/ipv4/ip_forward</span><br></pre></td></tr></table></figure>
+
+<h2 id="VM-内设置"><a href="#VM-内设置" class="headerlink" title="VM 内设置"></a>VM 内设置</h2><p>假设本机IP为 192.168.142.186，br0 的IP为  172.16.66.128</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ifconfig eth0 up</span><br><span class="line">ifconfig eth0 192.168.142.187 netmask 255.255.240.0 <span class="comment"># 为网卡设置IP</span></span><br><span class="line">route add default gw 192.168.142.186 <span class="comment"># 增加路由表</span></span><br></pre></td></tr></table></figure>
+
+<p>测试一下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">/ <span class="comment"># ping -c 4 114.114.114.114</span></span><br><span class="line">PING 114.114.114.114 (114.114.114.114): 56 data bytes</span><br><span class="line">64 bytes from 114.114.114.114: seq=0 ttl=128 time=31.034 ms</span><br><span class="line">64 bytes from 114.114.114.114: seq=1 ttl=128 time=24.453 ms</span><br><span class="line">64 bytes from 114.114.114.114: seq=2 ttl=128 time=20.257 ms</span><br><span class="line">64 bytes from 114.114.114.114: seq=3 ttl=128 time=24.996 ms</span><br><span class="line"></span><br><span class="line">--- 114.114.114.114 ping statistics ---</span><br><span class="line">4 packets transmitted, 4 packets received, 0% packet loss</span><br><span class="line">round-trip min/avg/max = 20.257/25.185/31.034 ms</span><br></pre></td></tr></table></figure>
+
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://wzt.ac.cn/2019/09/10/QEMU-networking/" rel="external nofollow noopener noreferrer" target="_blank">QEMU 网络配置一把梭</a></li>
+<li><a href="https://blog.csdn.net/leafrenchleaf/article/details/84807316" rel="external nofollow noopener noreferrer" target="_blank">tap的方式使用qemu建立虚拟机桥接网络</a></li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/os/debug-linux/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más nuevo</strong>
+            <div class="article-nav-title">
+                
+                    Debug Linux
+                
+            </div>
+        </a>
+    
+    
+        <a href="/wiki/arch/bottleneck/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más viejo</strong>
+            <div class="article-nav-title">常见中间件性能瓶颈</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+        <section id="comments"> 
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+ </section>
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            yanick &copy; 2021 
+            <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten" rel="external nofollow noopener noreferrer" target="_blank">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_config = function () {
+        
+            this.page.url = 'http://wiki.yanick.site/wiki/os/qemu/';
+        
+        this.page.identifier = 'os/qemu';
+    };
+    (function() { 
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'yann-wiki' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>

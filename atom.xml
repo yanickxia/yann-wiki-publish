@@ -414,6 +414,30 @@
   </entry>
   
   <entry>
+    <title>常见虚拟机挂载共享目录问题</title>
+    <link href="http://wiki.yanick.site/wiki/virtualmachine/mount-file/"/>
+    <id>http://wiki.yanick.site/wiki/virtualmachine/mount-file/</id>
+    <published>2020-06-06T16:27:50.000Z</published>
+    <updated>2021-03-22T04:00:31.850Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="VMware-Functions"><a href="#VMware-Functions" class="headerlink" title="VMware Functions"></a>VMware Functions</h1><p>试试这个</p><p><img src="https://s1.ax1x.com/2020/06/15/NPe0PS.png" alt="NPe0PS.png"></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /usr/bin/vmhgfs-fuse .host:/ /mnt/hgfs -o subtype=vmhgfs-fuse,allow_other</span><br></pre></td></tr></table></figure><h1 id="Virtualbox"><a href="#Virtualbox" class="headerlink" title="Virtualbox"></a>Virtualbox</h1><h2 id="装载-Additions"><a href="#装载-Additions" class="headerlink" title="装载 Additions"></a>装载 Additions</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo mount /dev/cdrom /media/ -o loop</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /media</span><br><span class="line"></span><br><span class="line">sudo ./VBoxLinuxAdditions.run</span><br><span class="line"></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure><h2 id="载入"><a href="#载入" class="headerlink" title="载入"></a>载入</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo modprobe -a vboxguest vboxsf vboxvideo</span><br><span class="line">sudo mount -t vboxsf &lt;NAME&gt; /mnt/shared/</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;VMware-Functions&quot;&gt;&lt;a href=&quot;#VMware-Functions&quot; class=&quot;headerlink&quot; title=&quot;VMware Functions&quot;&gt;&lt;/a&gt;VMware Functions&lt;/h1&gt;&lt;p&gt;试试这个&lt;/p&gt;
+&lt;p&gt;&lt;i
+      
+    
+    </summary>
+    
+      <category term="virtual machine" scheme="http://wiki.yanick.site/categories/virtual-machine/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Clion中管理Makefile项目</title>
     <link href="http://wiki.yanick.site/wiki/tools/ide/work-with-makefile-in-clion/"/>
     <id>http://wiki.yanick.site/wiki/tools/ide/work-with-makefile-in-clion/</id>
@@ -436,30 +460,6 @@
       <category term="ide" scheme="http://wiki.yanick.site/categories/tools/ide/"/>
     
       <category term="clion" scheme="http://wiki.yanick.site/categories/tools/ide/clion/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>常见虚拟机挂载共享目录问题</title>
-    <link href="http://wiki.yanick.site/wiki/virtualmachine/mount-file/"/>
-    <id>http://wiki.yanick.site/wiki/virtualmachine/mount-file/</id>
-    <published>2020-06-06T16:27:50.000Z</published>
-    <updated>2021-03-22T04:00:31.850Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="VMware-Functions"><a href="#VMware-Functions" class="headerlink" title="VMware Functions"></a>VMware Functions</h1><p>试试这个</p><p><img src="https://s1.ax1x.com/2020/06/15/NPe0PS.png" alt="NPe0PS.png"></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /usr/bin/vmhgfs-fuse .host:/ /mnt/hgfs -o subtype=vmhgfs-fuse,allow_other</span><br></pre></td></tr></table></figure><h1 id="Virtualbox"><a href="#Virtualbox" class="headerlink" title="Virtualbox"></a>Virtualbox</h1><h2 id="装载-Additions"><a href="#装载-Additions" class="headerlink" title="装载 Additions"></a>装载 Additions</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo mount /dev/cdrom /media/ -o loop</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /media</span><br><span class="line"></span><br><span class="line">sudo ./VBoxLinuxAdditions.run</span><br><span class="line"></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure><h2 id="载入"><a href="#载入" class="headerlink" title="载入"></a>载入</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo modprobe -a vboxguest vboxsf vboxvideo</span><br><span class="line">sudo mount -t vboxsf &lt;NAME&gt; /mnt/shared/</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;VMware-Functions&quot;&gt;&lt;a href=&quot;#VMware-Functions&quot; class=&quot;headerlink&quot; title=&quot;VMware Functions&quot;&gt;&lt;/a&gt;VMware Functions&lt;/h1&gt;&lt;p&gt;试试这个&lt;/p&gt;
-&lt;p&gt;&lt;i
-      
-    
-    </summary>
-    
-      <category term="virtual machine" scheme="http://wiki.yanick.site/categories/virtual-machine/"/>
     
     
   </entry>

@@ -16,14 +16,14 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/tools/os/</loc>
+    <loc>http://wiki.yanick.site/wiki/tools/rustup/</loc>
     
     <lastmod>2021-03-22T04:00:31.850Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/tools/rustup/</loc>
+    <loc>http://wiki.yanick.site/wiki/tools/os/</loc>
     
     <lastmod>2021-03-22T04:00:31.850Z</lastmod>
     
@@ -44,21 +44,14 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/books/index.html</loc>
-    
-    <lastmod>2021-03-22T04:00:31.850Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/map/index.html</loc>
-    
-    <lastmod>2021-03-22T04:00:31.850Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://wiki.yanick.site/categories/index.html</loc>
+    
+    <lastmod>2021-03-22T04:00:31.850Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/books/index.html</loc>
     
     <lastmod>2021-03-22T04:00:31.850Z</lastmod>
     
@@ -72,7 +65,14 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/k8s/kubectl-in-remote/</loc>
+    <loc>http://wiki.yanick.site/map/index.html</loc>
+    
+    <lastmod>2021-03-22T04:00:31.850Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/k8s/quick-start/</loc>
     
     <lastmod>2021-03-22T04:00:31.846Z</lastmod>
     
@@ -80,20 +80,6 @@
   
   <url>
     <loc>http://wiki.yanick.site/wiki/learn/book-review/</loc>
-    
-    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/learn/how-to-learn/</loc>
-    
-    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/learn/how-to-work/</loc>
     
     <lastmod>2021-03-22T04:00:31.846Z</lastmod>
     
@@ -114,13 +100,6 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/linux/build-and-debug-kernel-simple/</loc>
-    
-    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://wiki.yanick.site/wiki/linux/ldd/</loc>
     
     <lastmod>2021-03-22T04:00:31.846Z</lastmod>
@@ -128,7 +107,28 @@
   </url>
   
   <url>
+    <loc>http://wiki.yanick.site/wiki/linux/build-and-debug-kernel-simple/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/learn/how-to-learn/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wiki.yanick.site/wiki/linux/rsa/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/learn/how-to-work/</loc>
     
     <lastmod>2021-03-22T04:00:31.846Z</lastmod>
     
@@ -149,21 +149,7 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/os/debug-linux/</loc>
-    
-    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://wiki.yanick.site/wiki/microservice/service_discovery/</loc>
-    
-    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/os/qemu/</loc>
     
     <lastmod>2021-03-22T04:00:31.846Z</lastmod>
     
@@ -177,7 +163,7 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/rust/rust/</loc>
+    <loc>http://wiki.yanick.site/wiki/os/debug-linux/</loc>
     
     <lastmod>2021-03-22T04:00:31.846Z</lastmod>
     
@@ -185,6 +171,20 @@
   
   <url>
     <loc>http://wiki.yanick.site/wiki/tips/inoreader-can-not-show-pic/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/os/qemu/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/rust/rust/</loc>
     
     <lastmod>2021-03-22T04:00:31.846Z</lastmod>
     
@@ -233,7 +233,7 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/istio/isito-debug/</loc>
+    <loc>http://wiki.yanick.site/wiki/java/cyclic-barrier/</loc>
     
     <lastmod>2021-03-22T04:00:31.846Z</lastmod>
     
@@ -247,13 +247,6 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/java/cyclic-barrier/</loc>
-    
-    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://wiki.yanick.site/wiki/java/future/</loc>
     
     <lastmod>2021-03-22T04:00:31.846Z</lastmod>
@@ -261,7 +254,14 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/k8s/quick-start/</loc>
+    <loc>http://wiki.yanick.site/wiki/k8s/kubectl-in-remote/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/istio/isito-debug/</loc>
     
     <lastmod>2021-03-22T04:00:31.846Z</lastmod>
     

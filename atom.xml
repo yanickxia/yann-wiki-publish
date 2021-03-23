@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wiki.yanick.site/"/>
-  <updated>2021-03-22T04:00:31.846Z</updated>
+  <updated>2021-03-23T10:45:17.616Z</updated>
   <id>http://wiki.yanick.site/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>计算机缩写之 Call/CC</title>
+    <link href="http://wiki.yanick.site/wiki/cs/call/cc/"/>
+    <id>http://wiki.yanick.site/wiki/cs/call/cc/</id>
+    <published>2021-03-23T17:28:41.000Z</published>
+    <updated>2021-03-23T10:45:17.616Z</updated>
+    
+    <content type="html"><![CDATA[<p><code>call/cc</code> 即 <code>call with current continuation</code>，完整的定义是 </p><blockquote><p>captures the current continuation, and applies its argument to this continuation </p></blockquote><p><code>continuation</code> 就是程序剩下的部分，举个例子，对于表达式 <code>(+ 4 (+ 1 2))</code> 来说，(+ 1 2) 这个的剩下来就是如下</p><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">lambda</span> (<span class="name">v</span>) (<span class="name">+</span> <span class="number">4</span> v))</span><br></pre></td></tr></table></figure><p>对于 4 来说，剩下来就是 </p><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">lambda</span> (<span class="name">v</span>) (<span class="name">+</span> v (<span class="name">+</span> <span class="number">1</span> <span class="number">2</span>)))</span><br></pre></td></tr></table></figure><p>那这个 <code>call/cc</code> 的定义是</p><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(... (<span class="name">call/cc</span> (<span class="name">lambda</span> (<span class="name">cc</span>) </span><br><span class="line">                      (<span class="name">&lt;body&gt;</span>))) ...)</span><br></pre></td></tr></table></figure><p><code>body</code> 是指当前 <code>continuation</code>， <code>cc</code> 就是某个函数。</p><hr><p>回到抽象定义来 <code>(call/cc f)</code> ，接受一个 <code>f</code> 而这个 <code>f</code> 的实参是 <code>continuation</code><br>比如说 <code>((call/cc f) e2)</code> 对于 <code>f</code> 接受是 <code>continuation</code>，假设当前的 <code>continuation</code> 是一个 <code>c</code><br>那么<code>current continuation</code> 为 <code>(lambda (c) (c e2))</code> 这个对于 <code>e2</code> 来说的，加上 f 就会变成 <code>(f (lambda (c) (c e2)))</code></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;code&gt;call/cc&lt;/code&gt; 即 &lt;code&gt;call with current continuation&lt;/code&gt;，完整的定义是 &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;captures the current continuation, and app
+      
+    
+    </summary>
+    
+      <category term="cs" scheme="http://wiki.yanick.site/categories/cs/"/>
+    
+      <category term="call/cc" scheme="http://wiki.yanick.site/categories/cs/call-cc/"/>
+    
+    
+      <category term="cs" scheme="http://wiki.yanick.site/tags/cs/"/>
+    
+      <category term="call/cc" scheme="http://wiki.yanick.site/tags/call-cc/"/>
+    
+  </entry>
   
   <entry>
     <title>Rust常见问题</title>
@@ -364,30 +395,6 @@
   </entry>
   
   <entry>
-    <title>Linux Device Driver 笔记</title>
-    <link href="http://wiki.yanick.site/wiki/linux/ldd/"/>
-    <id>http://wiki.yanick.site/wiki/linux/ldd/</id>
-    <published>2020-06-20T16:09:25.000Z</published>
-    <updated>2021-03-22T04:00:31.846Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Prepare"><a href="#Prepare" class="headerlink" title="Prepare"></a>Prepare</h1><p>先下载 Linux 源码，然后准备到开发驱动的必须前置工作</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">make oldconfig</span><br><span class="line">make prepare</span><br><span class="line">make modules_prepare</span><br></pre></td></tr></table></figure><h1 id="编译-Helloworld"><a href="#编译-Helloworld" class="headerlink" title="编译 Helloworld"></a>编译 Helloworld</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/vigith/Linux-Device-Drivers.git</span><br><span class="line"></span><br><span class="line">make -C /root/linux-2.6.32.4/ M=`<span class="built_in">pwd</span>` modules</span><br></pre></td></tr></table></figure><p>-C: 指定 Linux 源码位置</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Prepare&quot;&gt;&lt;a href=&quot;#Prepare&quot; class=&quot;headerlink&quot; title=&quot;Prepare&quot;&gt;&lt;/a&gt;Prepare&lt;/h1&gt;&lt;p&gt;先下载 Linux 源码，然后准备到开发驱动的必须前置工作&lt;/p&gt;
-&lt;figure class=&quot;h
-      
-    
-    </summary>
-    
-      <category term="linux" scheme="http://wiki.yanick.site/categories/linux/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>TCPDUMP</title>
     <link href="http://wiki.yanick.site/wiki/linux/tcpdump/"/>
     <id>http://wiki.yanick.site/wiki/linux/tcpdump/</id>
@@ -414,25 +421,25 @@
   </entry>
   
   <entry>
-    <title>常见虚拟机挂载共享目录问题</title>
-    <link href="http://wiki.yanick.site/wiki/virtualmachine/mount-file/"/>
-    <id>http://wiki.yanick.site/wiki/virtualmachine/mount-file/</id>
-    <published>2020-06-06T16:27:50.000Z</published>
-    <updated>2021-03-22T04:00:31.850Z</updated>
+    <title>Linux Device Driver 笔记</title>
+    <link href="http://wiki.yanick.site/wiki/linux/ldd/"/>
+    <id>http://wiki.yanick.site/wiki/linux/ldd/</id>
+    <published>2020-06-20T16:09:25.000Z</published>
+    <updated>2021-03-22T04:00:31.846Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="VMware-Functions"><a href="#VMware-Functions" class="headerlink" title="VMware Functions"></a>VMware Functions</h1><p>试试这个</p><p><img src="https://s1.ax1x.com/2020/06/15/NPe0PS.png" alt="NPe0PS.png"></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /usr/bin/vmhgfs-fuse .host:/ /mnt/hgfs -o subtype=vmhgfs-fuse,allow_other</span><br></pre></td></tr></table></figure><h1 id="Virtualbox"><a href="#Virtualbox" class="headerlink" title="Virtualbox"></a>Virtualbox</h1><h2 id="装载-Additions"><a href="#装载-Additions" class="headerlink" title="装载 Additions"></a>装载 Additions</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo mount /dev/cdrom /media/ -o loop</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /media</span><br><span class="line"></span><br><span class="line">sudo ./VBoxLinuxAdditions.run</span><br><span class="line"></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure><h2 id="载入"><a href="#载入" class="headerlink" title="载入"></a>载入</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo modprobe -a vboxguest vboxsf vboxvideo</span><br><span class="line">sudo mount -t vboxsf &lt;NAME&gt; /mnt/shared/</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h1 id="Prepare"><a href="#Prepare" class="headerlink" title="Prepare"></a>Prepare</h1><p>先下载 Linux 源码，然后准备到开发驱动的必须前置工作</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">make oldconfig</span><br><span class="line">make prepare</span><br><span class="line">make modules_prepare</span><br></pre></td></tr></table></figure><h1 id="编译-Helloworld"><a href="#编译-Helloworld" class="headerlink" title="编译 Helloworld"></a>编译 Helloworld</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/vigith/Linux-Device-Drivers.git</span><br><span class="line"></span><br><span class="line">make -C /root/linux-2.6.32.4/ M=`<span class="built_in">pwd</span>` modules</span><br></pre></td></tr></table></figure><p>-C: 指定 Linux 源码位置</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;VMware-Functions&quot;&gt;&lt;a href=&quot;#VMware-Functions&quot; class=&quot;headerlink&quot; title=&quot;VMware Functions&quot;&gt;&lt;/a&gt;VMware Functions&lt;/h1&gt;&lt;p&gt;试试这个&lt;/p&gt;
-&lt;p&gt;&lt;i
+        &lt;h1 id=&quot;Prepare&quot;&gt;&lt;a href=&quot;#Prepare&quot; class=&quot;headerlink&quot; title=&quot;Prepare&quot;&gt;&lt;/a&gt;Prepare&lt;/h1&gt;&lt;p&gt;先下载 Linux 源码，然后准备到开发驱动的必须前置工作&lt;/p&gt;
+&lt;figure class=&quot;h
       
     
     </summary>
     
-      <category term="virtual machine" scheme="http://wiki.yanick.site/categories/virtual-machine/"/>
+      <category term="linux" scheme="http://wiki.yanick.site/categories/linux/"/>
     
     
   </entry>
@@ -465,25 +472,25 @@
   </entry>
   
   <entry>
-    <title>构建与调试 Linux 内核</title>
-    <link href="http://wiki.yanick.site/wiki/linux/build-and-debug-kernel/"/>
-    <id>http://wiki.yanick.site/wiki/linux/build-and-debug-kernel/</id>
-    <published>2020-05-15T16:09:25.000Z</published>
-    <updated>2021-03-22T04:00:31.846Z</updated>
+    <title>常见虚拟机挂载共享目录问题</title>
+    <link href="http://wiki.yanick.site/wiki/virtualmachine/mount-file/"/>
+    <id>http://wiki.yanick.site/wiki/virtualmachine/mount-file/</id>
+    <published>2020-06-06T16:27:50.000Z</published>
+    <updated>2021-03-22T04:00:31.850Z</updated>
     
-    <content type="html"><![CDATA[<p>本文以读者的 Linux 4.19 为构建目标</p><h2 id="构建Linux内核"><a href="#构建Linux内核" class="headerlink" title="构建Linux内核"></a>构建Linux内核</h2><h3 id="安装-GCC"><a href="#安装-GCC" class="headerlink" title="安装 GCC"></a>安装 GCC</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install gcc</span><br></pre></td></tr></table></figure><h3 id="构建配置"><a href="#构建配置" class="headerlink" title="构建配置"></a>构建配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">make menuconfig</span><br><span class="line"><span class="comment"># 选择 kernel hacking —&gt; [*] compile the kernel with debug info 让其携带调试信息</span></span><br><span class="line">make defconfig 生成配置文件</span><br><span class="line">make 编译kernel</span><br></pre></td></tr></table></figure><h2 id="准备运行环境"><a href="#准备运行环境" class="headerlink" title="准备运行环境"></a>准备运行环境</h2><p>因为我们只有一个 <code>Kerenl</code>，我们还需要可以运行的 <code>rootfs</code> 等，最简单的方式是基于已经成熟的 Linux 发行版进行替换内核的方式进行运行。</p><h3 id="准备-Ubuntu-镜像"><a href="#准备-Ubuntu-镜像" class="headerlink" title="准备 Ubuntu 镜像"></a>准备 Ubuntu 镜像</h3><p>在 <code>Virtualbox</code> 中安装 <code>ubuntu server 14.04</code></p><h3 id="增加-kgdb-启动参数"><a href="#增加-kgdb-启动参数" class="headerlink" title="增加 kgdb 启动参数"></a>增加 <code>kgdb</code> 启动参数</h3><p>在 /etc/default/grub 中增加 <code>kgdb</code> 的启动参数</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kgdbwait kgdboc=ttyS0,115200 sysrq_always_enabled nokaslr</span><br></pre></td></tr></table></figure><h3 id="给宿主机增加串口虚拟文件"><a href="#给宿主机增加串口虚拟文件" class="headerlink" title="给宿主机增加串口虚拟文件"></a>给宿主机增加串口虚拟文件</h3><p>在virtualbox的settings里面选择serial port，勾选enable serial port，之后取消勾选connect to existing pipe/socket。port number、irq、I/O port就使用默认，port mode选择HOST PIPE，下面的目录填上/tmp/serial。</p><h3 id="替换我们的内核镜像"><a href="#替换我们的内核镜像" class="headerlink" title="替换我们的内核镜像"></a>替换我们的内核镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install</span><br></pre></td></tr></table></figure><hr><p>最后一步就是直接重启我们的系统，这个时候你会发现系统停留在启动页面了。</p><h2 id="连接系统进行调试"><a href="#连接系统进行调试" class="headerlink" title="连接系统进行调试"></a>连接系统进行调试</h2><h3 id="attach"><a href="#attach" class="headerlink" title="attach"></a>attach</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">socat -d -d /tmp/serial PTY</span><br></pre></td></tr></table></figure><h3 id="gdb"><a href="#gdb" class="headerlink" title="gdb"></a>gdb</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gdb vmlinux</span><br><span class="line">target remote /dev/pts/1</span><br></pre></td></tr></table></figure><h3 id="回复debug模式"><a href="#回复debug模式" class="headerlink" title="回复debug模式"></a>回复debug模式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> g &gt; /dev/sysrq-trigger</span><br></pre></td></tr></table></figure><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="https://blog.0x972.info/?d=2014/11/27/18/45/48-linux-kernel-system-debugging-part-1-system-setup" rel="external nofollow noopener noreferrer" target="_blank">Linux Kernel System Debugging, part 1: System Setup</a></li><li><a href="http://nickdesaulniers.github.io/blog/2018/10/24/booting-a-custom-linux-kernel-in-qemu-and-debugging-it-with-gdb/" rel="external nofollow noopener noreferrer" target="_blank">Booting a Custom Linux Kernel in QEMU and Debugging It With GDB</a></li><li><a href="https://blog.csdn.net/gouxf_0219/article/details/82018970" rel="external nofollow noopener noreferrer" target="_blank">gcc: error: elf_x86_64: No such file or directory</a></li><li><a href="https://www.kernel.org/doc/html/v4.14/dev-tools/kgdb.html" rel="external nofollow noopener noreferrer" target="_blank">kgdb</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="VMware-Functions"><a href="#VMware-Functions" class="headerlink" title="VMware Functions"></a>VMware Functions</h1><p>试试这个</p><p><img src="https://s1.ax1x.com/2020/06/15/NPe0PS.png" alt="NPe0PS.png"></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /usr/bin/vmhgfs-fuse .host:/ /mnt/hgfs -o subtype=vmhgfs-fuse,allow_other</span><br></pre></td></tr></table></figure><h1 id="Virtualbox"><a href="#Virtualbox" class="headerlink" title="Virtualbox"></a>Virtualbox</h1><h2 id="装载-Additions"><a href="#装载-Additions" class="headerlink" title="装载 Additions"></a>装载 Additions</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo mount /dev/cdrom /media/ -o loop</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /media</span><br><span class="line"></span><br><span class="line">sudo ./VBoxLinuxAdditions.run</span><br><span class="line"></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure><h2 id="载入"><a href="#载入" class="headerlink" title="载入"></a>载入</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo modprobe -a vboxguest vboxsf vboxvideo</span><br><span class="line">sudo mount -t vboxsf &lt;NAME&gt; /mnt/shared/</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;本文以读者的 Linux 4.19 为构建目标&lt;/p&gt;
-&lt;h2 id=&quot;构建Linux内核&quot;&gt;&lt;a href=&quot;#构建Linux内核&quot; class=&quot;headerlink&quot; title=&quot;构建Linux内核&quot;&gt;&lt;/a&gt;构建Linux内核&lt;/h2&gt;&lt;h3 id=&quot;安装-GCC
+        &lt;h1 id=&quot;VMware-Functions&quot;&gt;&lt;a href=&quot;#VMware-Functions&quot; class=&quot;headerlink&quot; title=&quot;VMware Functions&quot;&gt;&lt;/a&gt;VMware Functions&lt;/h1&gt;&lt;p&gt;试试这个&lt;/p&gt;
+&lt;p&gt;&lt;i
       
     
     </summary>
     
-      <category term="linux" scheme="http://wiki.yanick.site/categories/linux/"/>
+      <category term="virtual machine" scheme="http://wiki.yanick.site/categories/virtual-machine/"/>
     
     
   </entry>

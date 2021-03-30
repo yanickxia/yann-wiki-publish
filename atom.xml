@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wiki.yanick.site/"/>
-  <updated>2021-03-23T10:45:17.616Z</updated>
+  <updated>2021-03-30T03:20:15.223Z</updated>
   <id>http://wiki.yanick.site/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Seal VPN Not Working in ubuntu 18+</title>
+    <link href="http://wiki.yanick.site/wiki/tips/dns/"/>
+    <id>http://wiki.yanick.site/wiki/tips/dns/</id>
+    <published>2021-03-24T16:24:41.000Z</published>
+    <updated>2021-03-30T03:20:15.223Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Ubuntu18以上无法访问网络的解决办法</span><br><span class="line">Ubuntu 18.04 以后，系统预设安装 systemd-resolved，劫持了 /etc/resolve.conf</span><br><span class="line">用 symbolic link 指向 /run/systemd/resolve/stub-resolv.conf</span><br><span class="line">NetworkManager 发现 /etc/resolv.conf 为 symbolic-link, 会忽略我们使用 dnsmasq 的要求。</span><br><span class="line">解法:</span><br><span class="line">sudo systemctl <span class="built_in">disable</span> systemd-resolved</span><br><span class="line">sudo rm -f /etc/resolv.conf <span class="comment"># manually delete the /etc/resolv.conf</span></span><br><span class="line">sudo systemctl reload NetworkManager <span class="comment"># NM will regenerate /etc/resolv.conf</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=
+      
+    
+    </summary>
+    
+      <category term="tips" scheme="http://wiki.yanick.site/categories/tips/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>计算机缩写之 Call/CC</title>
@@ -147,9 +170,9 @@
     <link href="http://wiki.yanick.site/wiki/proxy/proxy/"/>
     <id>http://wiki.yanick.site/wiki/proxy/proxy/</id>
     <published>2021-03-04T16:09:25.000Z</published>
-    <updated>2021-03-22T04:00:31.846Z</updated>
+    <updated>2021-03-30T03:20:15.223Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="shadowsocks-代理"><a href="#shadowsocks-代理" class="headerlink" title="shadowsocks 代理"></a>shadowsocks 代理</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -dt --name ssserver -p 6443:6443 -p 6500:6500/udp mritd/shadowsocks -m <span class="string">"ss-server"</span> -s <span class="string">"-s 0.0.0.0 -p 6443 -m chacha20-ietf-poly1305 -k Dangerous@123"</span> -x -e <span class="string">"kcpserver"</span> -k <span class="string">"-t 127.0.0.1:6443 -l :6500 -mode fast2"</span></span><br></pre></td></tr></table></figure><h2 id="Socket-5-代理"><a href="#Socket-5-代理" class="headerlink" title="Socket 5 代理"></a>Socket 5 代理</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name socket5-proxy -p 80:1080 -e PROXY_USER=root  -e PROXY_PASSWORD=Dangerous@123 serjs/go-socks5-proxy</span><br></pre></td></tr></table></figure><p>更多参考 <a href="https://hub.docker.com/r/mritd/shadowsocks" rel="external nofollow noopener noreferrer" target="_blank">https://hub.docker.com/r/mritd/shadowsocks</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="shadowsocks-代理"><a href="#shadowsocks-代理" class="headerlink" title="shadowsocks 代理"></a>shadowsocks 代理</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -dt --name ssserver -p 6443:6443 -p 6500:6500/udp mritd/shadowsocks -m <span class="string">"ss-server"</span> -s <span class="string">"-s 0.0.0.0 -p 6443 -m chacha20-ietf-poly1305 -k Dangerous@123"</span> -x -e <span class="string">"kcpserver"</span> -k <span class="string">"-t 127.0.0.1:6443 -l :6500 -mode fast2"</span></span><br></pre></td></tr></table></figure><h2 id="Socket-5-代理"><a href="#Socket-5-代理" class="headerlink" title="Socket 5 代理"></a>Socket 5 代理</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name socket5-proxy -p 80:1080 -e PROXY_USER=root  -e PROXY_PASSWORD=Dangerous@123 serjs/go-socks5-proxy</span><br></pre></td></tr></table></figure><h3 id="No-docker"><a href="#No-docker" class="headerlink" title="No docker"></a>No docker</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get install dante-server</span><br><span class="line"> vim /etc/danted.conf</span><br></pre></td></tr></table></figure><p>更多参考 <a href="https://hub.docker.com/r/mritd/shadowsocks" rel="external nofollow noopener noreferrer" target="_blank">https://hub.docker.com/r/mritd/shadowsocks</a></p>]]></content>
     
     <summary type="html">
     
@@ -312,15 +335,15 @@
     <link href="http://wiki.yanick.site/wiki/os/debug-linux/"/>
     <id>http://wiki.yanick.site/wiki/os/debug-linux/</id>
     <published>2020-09-24T16:24:41.000Z</published>
-    <updated>2021-03-22T04:00:31.846Z</updated>
+    <updated>2021-03-30T03:20:15.223Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Virtualbox"><a href="#Virtualbox" class="headerlink" title="Virtualbox"></a>Virtualbox</h1><h2 id="装载-Additions"><a href="#装载-Additions" class="headerlink" title="装载 Additions"></a>装载 Additions</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo mount /dev/cdrom /media/ -o loop</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /media</span><br><span class="line"></span><br><span class="line">sudo ./VBoxLinuxAdditions.run</span><br><span class="line"></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure><h2 id="载入"><a href="#载入" class="headerlink" title="载入"></a>载入</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo modprobe -a vboxguest vboxsf vboxvideo</span><br><span class="line">sudo mount -t vboxsf &lt;NAME&gt; /mnt/shared/</span><br></pre></td></tr></table></figure><h1 id="Build-debug-kenrel"><a href="#Build-debug-kenrel" class="headerlink" title="Build debug kenrel"></a>Build debug kenrel</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cp /boot/</span><br><span class="line">make oldconfig</span><br></pre></td></tr></table></figure><h1 id="build"><a href="#build" class="headerlink" title="build"></a>build</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h2 id="Virtualbox"><a href="#Virtualbox" class="headerlink" title="Virtualbox"></a>Virtualbox</h2><h3 id="装载-Additions"><a href="#装载-Additions" class="headerlink" title="装载 Additions"></a>装载 Additions</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo mount /dev/cdrom /media/ -o loop</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /media</span><br><span class="line"></span><br><span class="line">sudo ./VBoxLinuxAdditions.run</span><br><span class="line"></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure><h3 id="载入"><a href="#载入" class="headerlink" title="载入"></a>载入</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo modprobe -a vboxguest vboxsf vboxvideo</span><br><span class="line">sudo mount -t vboxsf &lt;NAME&gt; /mnt/shared/</span><br></pre></td></tr></table></figure><h1 id="Build-debug-kenrel"><a href="#Build-debug-kenrel" class="headerlink" title="#Build debug kenrel"></a>#Build debug kenrel</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cp /boot/</span><br><span class="line">make oldconfig</span><br></pre></td></tr></table></figure><h2 id="build"><a href="#build" class="headerlink" title="build"></a>build</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure><h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><h3 id="Debian"><a href="#Debian" class="headerlink" title="Debian"></a>Debian</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker run -it ubuntu:18.04 bash</span><br><span class="line">sed -i &apos;s/archive.ubuntu.com/mirrors.ustc.edu.cn/g&apos; /etc/apt/sources.list</span><br></pre></td></tr></table></figure><h3 id="intall"><a href="#intall" class="headerlink" title="intall"></a>intall</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install gcc</span><br></pre></td></tr></table></figure><h3 id="ARM"><a href="#ARM" class="headerlink" title="ARM"></a>ARM</h3><p>buildboot 默认没有 DHCP 记得安装这个才能使用</p><p>参考 <a href="https://gist.github.com/extremecoders-re/e8fd8a67a515fee0c873dcafc81d811c" rel="external nofollow noopener noreferrer" target="_blank">Setting up Qemu with a tap interface</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;Virtualbox&quot;&gt;&lt;a href=&quot;#Virtualbox&quot; class=&quot;headerlink&quot; title=&quot;Virtualbox&quot;&gt;&lt;/a&gt;Virtualbox&lt;/h1&gt;&lt;h2 id=&quot;装载-Additions&quot;&gt;&lt;a href=&quot;#装载-Additi
+        &lt;h2 id=&quot;Virtualbox&quot;&gt;&lt;a href=&quot;#Virtualbox&quot; class=&quot;headerlink&quot; title=&quot;Virtualbox&quot;&gt;&lt;/a&gt;Virtualbox&lt;/h2&gt;&lt;h3 id=&quot;装载-Additions&quot;&gt;&lt;a href=&quot;#装载-Additi
       
     
     </summary>
@@ -395,6 +418,30 @@
   </entry>
   
   <entry>
+    <title>Linux Device Driver 笔记</title>
+    <link href="http://wiki.yanick.site/wiki/linux/ldd/"/>
+    <id>http://wiki.yanick.site/wiki/linux/ldd/</id>
+    <published>2020-06-20T16:09:25.000Z</published>
+    <updated>2021-03-22T04:00:31.846Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Prepare"><a href="#Prepare" class="headerlink" title="Prepare"></a>Prepare</h1><p>先下载 Linux 源码，然后准备到开发驱动的必须前置工作</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">make oldconfig</span><br><span class="line">make prepare</span><br><span class="line">make modules_prepare</span><br></pre></td></tr></table></figure><h1 id="编译-Helloworld"><a href="#编译-Helloworld" class="headerlink" title="编译 Helloworld"></a>编译 Helloworld</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/vigith/Linux-Device-Drivers.git</span><br><span class="line"></span><br><span class="line">make -C /root/linux-2.6.32.4/ M=`<span class="built_in">pwd</span>` modules</span><br></pre></td></tr></table></figure><p>-C: 指定 Linux 源码位置</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Prepare&quot;&gt;&lt;a href=&quot;#Prepare&quot; class=&quot;headerlink&quot; title=&quot;Prepare&quot;&gt;&lt;/a&gt;Prepare&lt;/h1&gt;&lt;p&gt;先下载 Linux 源码，然后准备到开发驱动的必须前置工作&lt;/p&gt;
+&lt;figure class=&quot;h
+      
+    
+    </summary>
+    
+      <category term="linux" scheme="http://wiki.yanick.site/categories/linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>TCPDUMP</title>
     <link href="http://wiki.yanick.site/wiki/linux/tcpdump/"/>
     <id>http://wiki.yanick.site/wiki/linux/tcpdump/</id>
@@ -411,30 +458,6 @@
 &lt;li&gt;抓取 HTTP 协议内容&lt;/li&gt;
 &lt;/ol&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td
-      
-    
-    </summary>
-    
-      <category term="linux" scheme="http://wiki.yanick.site/categories/linux/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Linux Device Driver 笔记</title>
-    <link href="http://wiki.yanick.site/wiki/linux/ldd/"/>
-    <id>http://wiki.yanick.site/wiki/linux/ldd/</id>
-    <published>2020-06-20T16:09:25.000Z</published>
-    <updated>2021-03-22T04:00:31.846Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Prepare"><a href="#Prepare" class="headerlink" title="Prepare"></a>Prepare</h1><p>先下载 Linux 源码，然后准备到开发驱动的必须前置工作</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">make oldconfig</span><br><span class="line">make prepare</span><br><span class="line">make modules_prepare</span><br></pre></td></tr></table></figure><h1 id="编译-Helloworld"><a href="#编译-Helloworld" class="headerlink" title="编译 Helloworld"></a>编译 Helloworld</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/vigith/Linux-Device-Drivers.git</span><br><span class="line"></span><br><span class="line">make -C /root/linux-2.6.32.4/ M=`<span class="built_in">pwd</span>` modules</span><br></pre></td></tr></table></figure><p>-C: 指定 Linux 源码位置</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Prepare&quot;&gt;&lt;a href=&quot;#Prepare&quot; class=&quot;headerlink&quot; title=&quot;Prepare&quot;&gt;&lt;/a&gt;Prepare&lt;/h1&gt;&lt;p&gt;先下载 Linux 源码，然后准备到开发驱动的必须前置工作&lt;/p&gt;
-&lt;figure class=&quot;h
       
     
     </summary>
@@ -467,30 +490,6 @@
       <category term="ide" scheme="http://wiki.yanick.site/categories/tools/ide/"/>
     
       <category term="clion" scheme="http://wiki.yanick.site/categories/tools/ide/clion/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>常见虚拟机挂载共享目录问题</title>
-    <link href="http://wiki.yanick.site/wiki/virtualmachine/mount-file/"/>
-    <id>http://wiki.yanick.site/wiki/virtualmachine/mount-file/</id>
-    <published>2020-06-06T16:27:50.000Z</published>
-    <updated>2021-03-22T04:00:31.850Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="VMware-Functions"><a href="#VMware-Functions" class="headerlink" title="VMware Functions"></a>VMware Functions</h1><p>试试这个</p><p><img src="https://s1.ax1x.com/2020/06/15/NPe0PS.png" alt="NPe0PS.png"></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /usr/bin/vmhgfs-fuse .host:/ /mnt/hgfs -o subtype=vmhgfs-fuse,allow_other</span><br></pre></td></tr></table></figure><h1 id="Virtualbox"><a href="#Virtualbox" class="headerlink" title="Virtualbox"></a>Virtualbox</h1><h2 id="装载-Additions"><a href="#装载-Additions" class="headerlink" title="装载 Additions"></a>装载 Additions</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo mount /dev/cdrom /media/ -o loop</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> /media</span><br><span class="line"></span><br><span class="line">sudo ./VBoxLinuxAdditions.run</span><br><span class="line"></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure><h2 id="载入"><a href="#载入" class="headerlink" title="载入"></a>载入</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo modprobe -a vboxguest vboxsf vboxvideo</span><br><span class="line">sudo mount -t vboxsf &lt;NAME&gt; /mnt/shared/</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;VMware-Functions&quot;&gt;&lt;a href=&quot;#VMware-Functions&quot; class=&quot;headerlink&quot; title=&quot;VMware Functions&quot;&gt;&lt;/a&gt;VMware Functions&lt;/h1&gt;&lt;p&gt;试试这个&lt;/p&gt;
-&lt;p&gt;&lt;i
-      
-    
-    </summary>
-    
-      <category term="virtual machine" scheme="http://wiki.yanick.site/categories/virtual-machine/"/>
     
     
   </entry>

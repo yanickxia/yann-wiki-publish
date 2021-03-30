@@ -1,5 +1,5 @@
+http://wiki.yanick.site/wiki/tips/dns/
 http://wiki.yanick.site/wiki/cs/call/cc/
 http://wiki.yanick.site/wiki/rust/rust/
 http://wiki.yanick.site/wiki/linux/build-and-debug-kernel-simple/
 http://wiki.yanick.site/wiki/linux/rsa/
-http://wiki.yanick.site/wiki/envoy/build-debug-envoy/

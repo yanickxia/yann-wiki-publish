@@ -1195,105 +1195,6 @@
 
 
     
-        <article id="post-linux/ldd" class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-                    <div class="article-meta">
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/linux/">linux</a>
-    </div>
-
-                        
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/wiki/linux/ldd/">
-            <time datetime="2020-06-20T16:09:25.000Z" itemprop="datePublished">2020-06-20</time>
-        </a>
-    </div>
-
-
-                        
-                            <i class="fa fa-bar-chart"></i>
-                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
-                        
-                        
-                            <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/raw/master/source/_posts/linux/ldd.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/edit/master/source/_posts/linux/ldd.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/commits/master/source/_posts/linux/ldd.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
-                            </div>
-                        
-                    </div>
-                
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/wiki/linux/ldd/">Linux Device Driver 笔记</a>
-        </h1>
-    
-
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-        
-            
-                
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                
-                    
-                    <p></p><h1 id="Prepare"><a href="#Prepare" class="headerlink" title="Prepare"></a>Prepare</h1><p>先下载 Linux 源码，然后准备到开发驱动的必须前置工作</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">make oldconfig</span><br><span class="line">make prepare</span><br><span class="line">make modules_prepare</span><br></pre></td></tr></table></figure>
-
-<h1 id="编译-Helloworld"><a href="#编译-Helloworld" class="headerlink" title="编译 Helloworld"></a>编译 Helloworld</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/vigith/Linux-Device-Drivers.git</span><br><span class="line"></span><br><span class="line">make -C /root/linux-2.6.32.4/ M=`<span class="built_in">pwd</span>` modules</span><br></pre></td></tr></table></figure>
-
-<p>
-                
-            
-        
-        
-            </p></div>   
-            <div class="article-more-link">
-                <a href="/wiki/linux/ldd/#more">Read More</a>
-            </div>
-        
-        <footer class="article-footer">
-        </footer>
-    </div>
-</article>
-
-
-
-
-
-
-    
         <article id="post-linux/tcpdump" class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
@@ -1380,6 +1281,105 @@
             </p></div>   
             <div class="article-more-link">
                 <a href="/wiki/linux/tcpdump/#more">Read More</a>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-linux/ldd" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/linux/">linux</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/linux/ldd/">
+            <time datetime="2020-06-20T16:09:25.000Z" itemprop="datePublished">2020-06-20</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a href="https://github.com/yanickxia/yann-wiki/raw/master/source/_posts/linux/ldd.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/yanickxia/yann-wiki/edit/master/source/_posts/linux/ldd.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/yanickxia/yann-wiki/commits/master/source/_posts/linux/ldd.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/wiki/linux/ldd/">Linux Device Driver 笔记</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p></p><h1 id="Prepare"><a href="#Prepare" class="headerlink" title="Prepare"></a>Prepare</h1><p>先下载 Linux 源码，然后准备到开发驱动的必须前置工作</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">make oldconfig</span><br><span class="line">make prepare</span><br><span class="line">make modules_prepare</span><br></pre></td></tr></table></figure>
+
+<h1 id="编译-Helloworld"><a href="#编译-Helloworld" class="headerlink" title="编译 Helloworld"></a>编译 Helloworld</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/vigith/Linux-Device-Drivers.git</span><br><span class="line"></span><br><span class="line">make -C /root/linux-2.6.32.4/ M=`<span class="built_in">pwd</span>` modules</span><br></pre></td></tr></table></figure>
+
+<p>
+                
+            
+        
+        
+            </p></div>   
+            <div class="article-more-link">
+                <a href="/wiki/linux/ldd/#more">Read More</a>
             </div>
         
         <footer class="article-footer">

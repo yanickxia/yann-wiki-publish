@@ -418,6 +418,30 @@
   </entry>
   
   <entry>
+    <title>Linux Device Driver 笔记</title>
+    <link href="http://wiki.yanick.site/wiki/linux/ldd/"/>
+    <id>http://wiki.yanick.site/wiki/linux/ldd/</id>
+    <published>2020-06-20T16:09:25.000Z</published>
+    <updated>2021-03-22T04:00:31.846Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Prepare"><a href="#Prepare" class="headerlink" title="Prepare"></a>Prepare</h1><p>先下载 Linux 源码，然后准备到开发驱动的必须前置工作</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">make oldconfig</span><br><span class="line">make prepare</span><br><span class="line">make modules_prepare</span><br></pre></td></tr></table></figure><h1 id="编译-Helloworld"><a href="#编译-Helloworld" class="headerlink" title="编译 Helloworld"></a>编译 Helloworld</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/vigith/Linux-Device-Drivers.git</span><br><span class="line"></span><br><span class="line">make -C /root/linux-2.6.32.4/ M=`<span class="built_in">pwd</span>` modules</span><br></pre></td></tr></table></figure><p>-C: 指定 Linux 源码位置</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Prepare&quot;&gt;&lt;a href=&quot;#Prepare&quot; class=&quot;headerlink&quot; title=&quot;Prepare&quot;&gt;&lt;/a&gt;Prepare&lt;/h1&gt;&lt;p&gt;先下载 Linux 源码，然后准备到开发驱动的必须前置工作&lt;/p&gt;
+&lt;figure class=&quot;h
+      
+    
+    </summary>
+    
+      <category term="linux" scheme="http://wiki.yanick.site/categories/linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>TCPDUMP</title>
     <link href="http://wiki.yanick.site/wiki/linux/tcpdump/"/>
     <id>http://wiki.yanick.site/wiki/linux/tcpdump/</id>
@@ -434,30 +458,6 @@
 &lt;li&gt;抓取 HTTP 协议内容&lt;/li&gt;
 &lt;/ol&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td
-      
-    
-    </summary>
-    
-      <category term="linux" scheme="http://wiki.yanick.site/categories/linux/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Linux Device Driver 笔记</title>
-    <link href="http://wiki.yanick.site/wiki/linux/ldd/"/>
-    <id>http://wiki.yanick.site/wiki/linux/ldd/</id>
-    <published>2020-06-20T16:09:25.000Z</published>
-    <updated>2021-03-22T04:00:31.846Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Prepare"><a href="#Prepare" class="headerlink" title="Prepare"></a>Prepare</h1><p>先下载 Linux 源码，然后准备到开发驱动的必须前置工作</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">make oldconfig</span><br><span class="line">make prepare</span><br><span class="line">make modules_prepare</span><br></pre></td></tr></table></figure><h1 id="编译-Helloworld"><a href="#编译-Helloworld" class="headerlink" title="编译 Helloworld"></a>编译 Helloworld</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/vigith/Linux-Device-Drivers.git</span><br><span class="line"></span><br><span class="line">make -C /root/linux-2.6.32.4/ M=`<span class="built_in">pwd</span>` modules</span><br></pre></td></tr></table></figure><p>-C: 指定 Linux 源码位置</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Prepare&quot;&gt;&lt;a href=&quot;#Prepare&quot; class=&quot;headerlink&quot; title=&quot;Prepare&quot;&gt;&lt;/a&gt;Prepare&lt;/h1&gt;&lt;p&gt;先下载 Linux 源码，然后准备到开发驱动的必须前置工作&lt;/p&gt;
-&lt;figure class=&quot;h
       
     
     </summary>

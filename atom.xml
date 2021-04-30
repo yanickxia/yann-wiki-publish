@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wiki.yanick.site/"/>
-  <updated>2021-03-30T03:20:15.223Z</updated>
+  <updated>2021-04-30T06:15:18.715Z</updated>
   <id>http://wiki.yanick.site/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>kubernetes network troubleshooting</title>
+    <link href="http://wiki.yanick.site/wiki/k8s/network-troubleshooting/"/>
+    <id>http://wiki.yanick.site/wiki/k8s/network-troubleshooting/</id>
+    <published>2021-04-16T16:27:50.000Z</published>
+    <updated>2021-04-30T06:15:18.715Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="API-无法访问其他服务"><a href="#API-无法访问其他服务" class="headerlink" title="API 无法访问其他服务"></a>API 无法访问其他服务</h2><p>最近安装了一个 <code>kube</code> 但是 <code>api server</code>，但是无法访问 <code>mertics server</code> 等组件，经排查</p><ul><li><p><code>api server</code> 运行在 <code>master</code> 节点上</p></li><li><p><code>其他</code> 组件运行在 <code>worker</code> 节点上<br>核心原因是因为 <code>flannel</code> 打开了 <code>DirectRouting</code> 选项，导致了将宿主机网卡作为 <code>host-gw</code> 直接将 二层 数据包转发出去，并没有进行封装，在云上的网络（火山引擎）禁止此转发行为，表现为</p></li><li><p><code>api server</code> 访问其他服务都是 <code>timeout</code></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;API-无法访问其他服务&quot;&gt;&lt;a href=&quot;#API-无法访问其他服务&quot; class=&quot;headerlink&quot; title=&quot;API 无法访问其他服务&quot;&gt;&lt;/a&gt;API 无法访问其他服务&lt;/h2&gt;&lt;p&gt;最近安装了一个 &lt;code&gt;kube&lt;/code&gt; 但是 &lt;
+      
+    
+    </summary>
+    
+      <category term="network" scheme="http://wiki.yanick.site/categories/network/"/>
+    
+      <category term="kubernetes" scheme="http://wiki.yanick.site/categories/network/kubernetes/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Seal VPN Not Working in ubuntu 18+</title>
@@ -170,9 +195,9 @@
     <link href="http://wiki.yanick.site/wiki/proxy/proxy/"/>
     <id>http://wiki.yanick.site/wiki/proxy/proxy/</id>
     <published>2021-03-04T16:09:25.000Z</published>
-    <updated>2021-03-30T03:20:15.223Z</updated>
+    <updated>2021-04-30T06:15:18.715Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="shadowsocks-代理"><a href="#shadowsocks-代理" class="headerlink" title="shadowsocks 代理"></a>shadowsocks 代理</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -dt --name ssserver -p 6443:6443 -p 6500:6500/udp mritd/shadowsocks -m <span class="string">"ss-server"</span> -s <span class="string">"-s 0.0.0.0 -p 6443 -m chacha20-ietf-poly1305 -k Dangerous@123"</span> -x -e <span class="string">"kcpserver"</span> -k <span class="string">"-t 127.0.0.1:6443 -l :6500 -mode fast2"</span></span><br></pre></td></tr></table></figure><h2 id="Socket-5-代理"><a href="#Socket-5-代理" class="headerlink" title="Socket 5 代理"></a>Socket 5 代理</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name socket5-proxy -p 80:1080 -e PROXY_USER=root  -e PROXY_PASSWORD=Dangerous@123 serjs/go-socks5-proxy</span><br></pre></td></tr></table></figure><h3 id="No-docker"><a href="#No-docker" class="headerlink" title="No docker"></a>No docker</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get install dante-server</span><br><span class="line"> vim /etc/danted.conf</span><br></pre></td></tr></table></figure><p>更多参考 <a href="https://hub.docker.com/r/mritd/shadowsocks" rel="external nofollow noopener noreferrer" target="_blank">https://hub.docker.com/r/mritd/shadowsocks</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="shadowsocks-代理"><a href="#shadowsocks-代理" class="headerlink" title="shadowsocks 代理"></a>shadowsocks 代理</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -dt --name ss -p 6443:6443 mritd/shadowsocks -s <span class="string">"-s 0.0.0.0 -p 6443 -m aes-256-cfb -k Dangerous@123"</span></span><br></pre></td></tr></table></figure><p>参考 <a href="https://github.com/mritd/dockerfile/blob/master/shadowsocks/README.md" rel="external nofollow noopener noreferrer" target="_blank">README</a></p><h2 id="Socket-5-代理"><a href="#Socket-5-代理" class="headerlink" title="Socket 5 代理"></a>Socket 5 代理</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name socket5-proxy -p 80:1080 -e PROXY_USER=root  -e PROXY_PASSWORD=Dangerous@123 serjs/go-socks5-proxy</span><br></pre></td></tr></table></figure><h3 id="No-docker"><a href="#No-docker" class="headerlink" title="No docker"></a>No docker</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get install dante-server</span><br><span class="line"> vim /etc/danted.conf</span><br></pre></td></tr></table></figure><p>更多参考 <a href="https://hub.docker.com/r/mritd/shadowsocks" rel="external nofollow noopener noreferrer" target="_blank">https://hub.docker.com/r/mritd/shadowsocks</a></p><h2 id="FRP-隧道"><a href="#FRP-隧道" class="headerlink" title="FRP 隧道"></a>FRP 隧道</h2><p>Server</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --restart=always --network host -d -v /etc/frp/frps.ini:/etc/frp/frps.ini --name frps snowdreamtech/frps</span><br></pre></td></tr></table></figure><p>Client</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --restart=always --network host -d -v /etc/frp/frpc.ini:/etc/frp/frpc.ini --name frpc snowdreamtech/frpc</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -463,33 +488,6 @@
     </summary>
     
       <category term="linux" scheme="http://wiki.yanick.site/categories/linux/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Clion中管理Makefile项目</title>
-    <link href="http://wiki.yanick.site/wiki/tools/ide/work-with-makefile-in-clion/"/>
-    <id>http://wiki.yanick.site/wiki/tools/ide/work-with-makefile-in-clion/</id>
-    <published>2020-06-06T16:27:50.000Z</published>
-    <updated>2021-03-22T04:00:31.846Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Tut"><a href="#Tut" class="headerlink" title="Tut"></a>Tut</h1><h2 id="安装-PIP"><a href="#安装-PIP" class="headerlink" title="安装 PIP"></a>安装 PIP</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install python-pip</span><br></pre></td></tr></table></figure><h2 id="install-compiledb"><a href="#install-compiledb" class="headerlink" title="install compiledb"></a>install compiledb</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install compiledb</span><br></pre></td></tr></table></figure><h2 id="compile-db"><a href="#compile-db" class="headerlink" title="compile db"></a>compile db</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">compiledb -n make</span><br></pre></td></tr></table></figure><h2 id="install-plugin-for-clion"><a href="#install-plugin-for-clion" class="headerlink" title="install plugin for clion"></a>install plugin for clion</h2><p>skip</p><h2 id="open-project"><a href="#open-project" class="headerlink" title="open project"></a>open project</h2><p>CLion will detect the compile_commands.json file and look in there for its project information. You may see it think about it for a few seconds, then show the “Compiler Info” tab on the Build tool window, telling you that everything finished ok (there were any errors or warnings you’ll see them in the “Sync” tab).</p><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul><li><a href="https://blog.jetbrains.com/clion/2018/08/working-with-makefiles-in-clion-using-compilation-db/" rel="external nofollow noopener noreferrer" target="_blank">Working with Makefiles in CLion using Compilation DB</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Tut&quot;&gt;&lt;a href=&quot;#Tut&quot; class=&quot;headerlink&quot; title=&quot;Tut&quot;&gt;&lt;/a&gt;Tut&lt;/h1&gt;&lt;h2 id=&quot;安装-PIP&quot;&gt;&lt;a href=&quot;#安装-PIP&quot; class=&quot;headerlink&quot; title=&quot;安装 PIP&quot;&gt;&lt;
-      
-    
-    </summary>
-    
-      <category term="tools" scheme="http://wiki.yanick.site/categories/tools/"/>
-    
-      <category term="ide" scheme="http://wiki.yanick.site/categories/tools/ide/"/>
-    
-      <category term="clion" scheme="http://wiki.yanick.site/categories/tools/ide/clion/"/>
     
     
   </entry>

@@ -766,12 +766,27 @@
                     
                     
                 
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p></p><h2 id="Pilot-Discovery"><a href="#Pilot-Discovery" class="headerlink" title="Pilot Discovery"></a>Pilot Discovery</h2><h3 id="构建"><a href="#构建" class="headerlink" title="构建"></a>构建</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 下载，检出版本</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/istio/istio.git &amp;&amp; <span class="built_in">cd</span> istio  &amp;&amp; git checkout &lt;YOUR_WANT_ISTIO&gt; </span><br><span class="line"></span><br><span class="line"><span class="comment">#  构建</span></span><br><span class="line">go build pilot/cmd/pilot-discovery</span><br></pre></td></tr></table></figure>
+
+<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>为了让我们在本地开发测试 <code>Pilot</code>，首先准备好 <code>kube-config</code></p>
+<p>启动 <code>poilot</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pilot-discovery discovery --kubeconfig ~/.kube/config &lt;默认配置&gt;</span><br></pre></td></tr></table></figure>
+<p>
+                
             
         
         
-            <h2 id="Poilot"><a href="#Poilot" class="headerlink" title="Poilot"></a>Poilot</h2><p>为了让我们在本地开发测试 <code>Poilot</code>，首先准备好 <code>kube-config</code></p>
-<p>启动 <code>poilot</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pilot-discovery discovery --kubeconfig ~/.kube/config</span><br></pre></td></tr></table></figure>
+            </p></div>   
+            <div class="article-more-link">
+                <a href="/wiki/istio/isito-dev-env/#more">Read More</a>
             </div>
         
         <footer class="article-footer">

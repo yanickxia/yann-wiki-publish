@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wiki.yanick.site/wiki/linux/nc/</loc>
+    
+    <lastmod>2021-06-09T05:35:17.599Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wiki.yanick.site/wiki/istio/isito-dev-env/</loc>
     
-    <lastmod>2021-05-23T07:25:17.740Z</lastmod>
+    <lastmod>2021-06-09T05:35:17.599Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/linux/network/listen-and-print/</loc>
+    
+    <lastmod>2021-06-09T05:35:17.599Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/k8s/quick-start/</loc>
+    
+    <lastmod>2021-04-30T06:15:18.715Z</lastmod>
     
   </url>
   
@@ -23,21 +44,14 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/k8s/quick-start/</loc>
-    
-    <lastmod>2021-04-30T06:15:18.715Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/tips/dns/</loc>
+    <loc>http://wiki.yanick.site/wiki/os/debug-linux/</loc>
     
     <lastmod>2021-03-30T03:20:15.223Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/os/debug-linux/</loc>
+    <loc>http://wiki.yanick.site/wiki/tips/dns/</loc>
     
     <lastmod>2021-03-30T03:20:15.223Z</lastmod>
     
@@ -51,7 +65,28 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/tags/index.html</loc>
+    <loc>http://wiki.yanick.site/wiki/tools/rustup/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.850Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/tools/os/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.850Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/virtualmachine/mount-file/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.850Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/tools/net-debug/</loc>
     
     <lastmod>2021-03-22T04:00:31.850Z</lastmod>
     
@@ -72,35 +107,7 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/map/index.html</loc>
-    
-    <lastmod>2021-03-22T04:00:31.850Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/virtualmachine/mount-file/</loc>
-    
-    <lastmod>2021-03-22T04:00:31.850Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/tools/rustup/</loc>
-    
-    <lastmod>2021-03-22T04:00:31.850Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/tools/os/</loc>
-    
-    <lastmod>2021-03-22T04:00:31.850Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/tools/net-debug/</loc>
+    <loc>http://wiki.yanick.site/books/index.html</loc>
     
     <lastmod>2021-03-22T04:00:31.850Z</lastmod>
     
@@ -114,28 +121,21 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/books/index.html</loc>
+    <loc>http://wiki.yanick.site/map/index.html</loc>
     
     <lastmod>2021-03-22T04:00:31.850Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/tools/mirrors/</loc>
+    <loc>http://wiki.yanick.site/tags/index.html</loc>
     
-    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    <lastmod>2021-03-22T04:00:31.850Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://wiki.yanick.site/wiki/linux/ldd/</loc>
-    
-    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/linux/build-and-debug-kernel/</loc>
     
     <lastmod>2021-03-22T04:00:31.846Z</lastmod>
     
@@ -149,7 +149,14 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/envoy/build-debug-envoy/</loc>
+    <loc>http://wiki.yanick.site/wiki/linux/rsa/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/istio/isito-debug/</loc>
     
     <lastmod>2021-03-22T04:00:31.846Z</lastmod>
     
@@ -170,14 +177,7 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/os/qemu/</loc>
-    
-    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/learn/how-to-work/</loc>
+    <loc>http://wiki.yanick.site/wiki/istio/isito-tips/</loc>
     
     <lastmod>2021-03-22T04:00:31.846Z</lastmod>
     
@@ -191,7 +191,14 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/linux/build-and-debug-kernel-simple/</loc>
+    <loc>http://wiki.yanick.site/wiki/java/classloader/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/java/cyclic-barrier/</loc>
     
     <lastmod>2021-03-22T04:00:31.846Z</lastmod>
     
@@ -205,21 +212,7 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/linux/rsa/</loc>
-    
-    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/links/kotlin/</loc>
-    
-    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/learn/how-to-learn/</loc>
+    <loc>http://wiki.yanick.site/wiki/tools/mirrors/</loc>
     
     <lastmod>2021-03-22T04:00:31.846Z</lastmod>
     
@@ -240,14 +233,7 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/java/cyclic-barrier/</loc>
-    
-    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/tools/ide/work-with-makefile-in-clion/</loc>
+    <loc>http://wiki.yanick.site/wiki/arch/bottleneck/</loc>
     
     <lastmod>2021-03-22T04:00:31.846Z</lastmod>
     
@@ -261,35 +247,63 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/java/classloader/</loc>
-    
-    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/istio/isito-tips/</loc>
-    
-    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/istio/isito-debug/</loc>
-    
-    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/arch/bottleneck/</loc>
-    
-    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://wiki.yanick.site/wiki/gist/gist/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/learn/how-to-learn/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/tools/ide/work-with-makefile-in-clion/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/learn/how-to-work/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/links/kotlin/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/envoy/build-debug-envoy/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/linux/build-and-debug-kernel-simple/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/linux/build-and-debug-kernel/</loc>
+    
+    <lastmod>2021-03-22T04:00:31.846Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/os/qemu/</loc>
     
     <lastmod>2021-03-22T04:00:31.846Z</lastmod>
     

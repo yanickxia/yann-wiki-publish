@@ -1,5 +1,5 @@
+http://wiki.yanick.site/wiki/linux/nc/
+http://wiki.yanick.site/wiki/linux/network/listen-and-print/
 http://wiki.yanick.site/wiki/k8s/network-troubleshooting/
 http://wiki.yanick.site/wiki/tips/dns/
 http://wiki.yanick.site/wiki/cs/call/cc/
-http://wiki.yanick.site/wiki/rust/rust/
-http://wiki.yanick.site/wiki/linux/build-and-debug-kernel-simple/

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wiki.yanick.site/"/>
-  <updated>2021-04-30T06:15:18.715Z</updated>
+  <updated>2021-06-09T05:35:17.599Z</updated>
   <id>http://wiki.yanick.site/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>NC 使用指南</title>
+    <link href="http://wiki.yanick.site/wiki/linux/nc/"/>
+    <id>http://wiki.yanick.site/wiki/linux/nc/</id>
+    <published>2021-06-09T13:09:25.000Z</published>
+    <updated>2021-06-09T05:35:17.599Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="传输文件"><a href="#传输文件" class="headerlink" title="传输文件"></a>传输文件</h2><p>目标服务器</p><p>nc -q0 -lp <port> | tar xvf -</port></p><p>文件所在服务器</p><p>tar cvf - dir | nc -q0 <ip> <port></port></ip></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;传输文件&quot;&gt;&lt;a href=&quot;#传输文件&quot; class=&quot;headerlink&quot; title=&quot;传输文件&quot;&gt;&lt;/a&gt;传输文件&lt;/h2&gt;&lt;p&gt;目标服务器&lt;/p&gt;
+&lt;p&gt;nc -q0 -lp &lt;port&gt; | tar xvf -&lt;/port&gt;&lt;/p&gt;
+&lt;p&gt;文件所在服
+      
+    
+    </summary>
+    
+      <category term="linux" scheme="http://wiki.yanick.site/categories/linux/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>监听并打印接收到的数据</title>
+    <link href="http://wiki.yanick.site/wiki/linux/network/listen-and-print/"/>
+    <id>http://wiki.yanick.site/wiki/linux/network/listen-and-print/</id>
+    <published>2021-05-28T10:30:25.000Z</published>
+    <updated>2021-06-09T05:35:17.599Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Socat-推荐"><a href="#Socat-推荐" class="headerlink" title="Socat [推荐]"></a>Socat [推荐]</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">socat -x - TCP-LISTEN:12345,fork,reuseaddr</span><br></pre></td></tr></table></figure><p>-x: 打印 HEX </p><h2 id="Ncat"><a href="#Ncat" class="headerlink" title="Ncat"></a>Ncat</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ncat -lk -C --hex-dump ssh-hex.log 12345</span><br></pre></td></tr></table></figure><p>-C: Hex Dump</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Socat-推荐&quot;&gt;&lt;a href=&quot;#Socat-推荐&quot; class=&quot;headerlink&quot; title=&quot;Socat [推荐]&quot;&gt;&lt;/a&gt;Socat [推荐]&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+      
+    
+    </summary>
+    
+      <category term="linux" scheme="http://wiki.yanick.site/categories/linux/"/>
+    
+      <category term="network" scheme="http://wiki.yanick.site/categories/linux/network/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>kubernetes network troubleshooting</title>
@@ -291,9 +341,9 @@
     <link href="http://wiki.yanick.site/wiki/istio/isito-dev-env/"/>
     <id>http://wiki.yanick.site/wiki/istio/isito-dev-env/</id>
     <published>2020-11-03T17:28:41.000Z</published>
-    <updated>2021-05-23T07:25:17.740Z</updated>
+    <updated>2021-06-09T05:35:17.599Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Pilot-Discovery"><a href="#Pilot-Discovery" class="headerlink" title="Pilot Discovery"></a>Pilot Discovery</h2><h3 id="构建"><a href="#构建" class="headerlink" title="构建"></a>构建</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 下载，检出版本</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/istio/istio.git &amp;&amp; <span class="built_in">cd</span> istio  &amp;&amp; git checkout &lt;YOUR_WANT_ISTIO&gt; </span><br><span class="line"></span><br><span class="line"><span class="comment">#  构建</span></span><br><span class="line">go build pilot/cmd/pilot-discovery</span><br></pre></td></tr></table></figure><h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>为了让我们在本地开发测试 <code>Pilot</code>，首先准备好 <code>kube-config</code></p><p>启动 <code>poilot</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pilot-discovery discovery --kubeconfig ~/.kube/config &lt;默认配置&gt;</span><br></pre></td></tr></table></figure><p>Pilot Discovery 运行是非常的简单的，比较复杂的是 Agent。</p><h2 id="Pilot-Agent"><a href="#Pilot-Agent" class="headerlink" title="Pilot Agent"></a>Pilot Agent</h2><h3 id="构建-Proxy"><a href="#构建-Proxy" class="headerlink" title="构建 Proxy"></a>构建 Proxy</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载并检出</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/istio/proxy.git &amp;&amp; <span class="built_in">cd</span> proxy</span><br><span class="line"></span><br><span class="line"><span class="comment"># make build_envoy</span></span><br><span class="line">make build_envoy</span><br></pre></td></tr></table></figure><p>构建 <code>istio proxy</code> 会遇见各种的问题，有问题可以参考这里 <a href="https://gist.github.com/juniorz/0fecd7eafc44ff03013e1f0ab1bc4b6b" rel="external nofollow noopener noreferrer" target="_blank">How to build Istio proxy on OSX (Catalina)</a></p><h3 id="构建-Agent"><a href="#构建-Agent" class="headerlink" title="构建 Agent"></a>构建 Agent</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 构建 agent</span><br><span class="line">go build pilot/cmd/pilot-agent</span><br></pre></td></tr></table></figure><h3 id="运行-1"><a href="#运行-1" class="headerlink" title="运行"></a>运行</h3><p>建议在 istio 目录下运行，这里的  #PWD = istio path</p><ul><li>创建 envoy 启动模板</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p var/lib/istio/envoy/</span><br><span class="line"></span><br><span class="line">cp tools/packaing/common/envoy_bootstrap.json  var/lib/istio/envoy/envoy_bootstrap_tmpl.json</span><br></pre></td></tr></table></figure><ul><li>创建 Mesh 配置， mesh.yaml</li></ul><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">enableTracing:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">ingressService:</span> <span class="string">istio-ingress</span></span><br><span class="line"><span class="attr">defaultConfig:</span></span><br><span class="line"><span class="attr">  connectTimeout:</span> <span class="number">1</span><span class="string">s</span></span><br><span class="line"><span class="attr">  configPath:</span> <span class="string">"/etc/istio/proxy"</span></span><br><span class="line"><span class="attr">  binaryPath:</span> <span class="string">"&lt;YOUR ENVOY BIN&gt;"</span></span><br><span class="line"><span class="attr">  serviceCluster:</span> <span class="string">istio-proxy</span></span><br><span class="line"><span class="attr">  drainDuration:</span> <span class="number">2</span><span class="string">s</span></span><br><span class="line"><span class="attr">  parentShutdownDuration:</span> <span class="number">3</span><span class="string">s</span></span><br><span class="line"><span class="attr">  proxyAdminPort:</span> <span class="number">15000</span></span><br><span class="line"><span class="attr">  statsdUdpAddress:</span> <span class="string">""</span></span><br><span class="line"><span class="attr">  discoveryAddress:</span> <span class="string">istiod-remote.istio-system.svc:15012</span> <span class="string">&lt;建议修改</span> <span class="string">Host</span> <span class="string">将</span> <span class="string">istiod-remote.istio-system.svc</span> <span class="string">映射到</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span><span class="string">&gt;</span></span><br></pre></td></tr></table></figure><ul><li>创建 Kube Token</li></ul><p>//TODO</p><ul><li>运行 istioAgent</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">EXTERNAL_ISTIOD=<span class="literal">true</span>;CA_ROOT_CA=&lt;ROOT-CA证书，从服务器下载下来&gt;;CA_ADDR=istiod-remote.istio-system.svc:15012;JWT_POLICY=first-party-jwt;ISTIO_META_CLUSTER_ID=Kubernetes;ISTIO_META_DNS_CAPTURE=<span class="literal">false</span>;POD_NAME=netshoot-local-test;POD_NAMESPACE=default;SERVICE_ACCOUNT=default</span><br><span class="line"></span><br><span class="line">proxy --meshConfig mesh.yaml</span><br></pre></td></tr></table></figure><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>提了一个 Issue 给社区，看看有没有更好的方式进行运行。</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="Pilot-Discovery"><a href="#Pilot-Discovery" class="headerlink" title="Pilot Discovery"></a>Pilot Discovery</h2><h3 id="构建"><a href="#构建" class="headerlink" title="构建"></a>构建</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 下载，检出版本</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/istio/istio.git &amp;&amp; <span class="built_in">cd</span> istio  &amp;&amp; git checkout &lt;YOUR_WANT_ISTIO&gt; </span><br><span class="line"></span><br><span class="line"><span class="comment">#  构建</span></span><br><span class="line">go build pilot/cmd/pilot-discovery</span><br></pre></td></tr></table></figure><h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>为了让我们在本地开发测试 <code>Pilot</code>，首先准备好 <code>kube-config</code></p><p>启动 <code>poilot</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pilot-discovery discovery --kubeconfig ~/.kube/config &lt;默认配置&gt;</span><br></pre></td></tr></table></figure><p>Pilot Discovery 运行是非常的简单的，比较复杂的是 Agent。</p><h2 id="Pilot-Agent"><a href="#Pilot-Agent" class="headerlink" title="Pilot Agent"></a>Pilot Agent</h2><h3 id="构建-Proxy"><a href="#构建-Proxy" class="headerlink" title="构建 Proxy"></a>构建 Proxy</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载并检出</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/istio/proxy.git &amp;&amp; <span class="built_in">cd</span> proxy</span><br><span class="line"></span><br><span class="line"><span class="comment"># make build_envoy</span></span><br><span class="line">make build_envoy</span><br></pre></td></tr></table></figure><p>构建 <code>istio proxy</code> 会遇见各种的问题，有问题可以参考这里 <a href="https://gist.github.com/juniorz/0fecd7eafc44ff03013e1f0ab1bc4b6b" rel="external nofollow noopener noreferrer" target="_blank">How to build Istio proxy on OSX (Catalina)</a></p><h3 id="构建-Agent"><a href="#构建-Agent" class="headerlink" title="构建 Agent"></a>构建 Agent</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 构建 agent</span><br><span class="line">go build pilot/cmd/pilot-agent</span><br></pre></td></tr></table></figure><h3 id="运行-1"><a href="#运行-1" class="headerlink" title="运行"></a>运行</h3><p>建议在 istio 目录下运行，这里的  #PWD = istio path</p><ul><li>创建 envoy 启动模板</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p var/lib/istio/envoy/</span><br><span class="line"></span><br><span class="line">cp tools/packaing/common/envoy_bootstrap.json  var/lib/istio/envoy/envoy_bootstrap_tmpl.json</span><br></pre></td></tr></table></figure><ul><li>创建 Mesh 配置， mesh.yaml</li></ul><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">enableTracing:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">ingressService:</span> <span class="string">istio-ingress</span></span><br><span class="line"><span class="attr">defaultConfig:</span></span><br><span class="line"><span class="attr">  connectTimeout:</span> <span class="number">1</span><span class="string">s</span></span><br><span class="line"><span class="attr">  configPath:</span> <span class="string">"/etc/istio/proxy"</span></span><br><span class="line"><span class="attr">  binaryPath:</span> <span class="string">"&lt;YOUR ENVOY BIN&gt;"</span></span><br><span class="line"><span class="attr">  serviceCluster:</span> <span class="string">istio-proxy</span></span><br><span class="line"><span class="attr">  drainDuration:</span> <span class="number">2</span><span class="string">s</span></span><br><span class="line"><span class="attr">  parentShutdownDuration:</span> <span class="number">3</span><span class="string">s</span></span><br><span class="line"><span class="attr">  proxyAdminPort:</span> <span class="number">15000</span></span><br><span class="line"><span class="attr">  statsdUdpAddress:</span> <span class="string">""</span></span><br><span class="line"><span class="attr">  discoveryAddress:</span> <span class="string">istiod-remote.istio-system.svc:15012</span> <span class="string">&lt;建议修改</span> <span class="string">Host</span> <span class="string">将</span> <span class="string">istiod-remote.istio-system.svc</span> <span class="string">映射到</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span><span class="string">&gt;</span></span><br></pre></td></tr></table></figure><ul><li>创建 Kube Token</li></ul><p>//TODO</p><ul><li>运行 istioAgent</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">EXTERNAL_ISTIOD=<span class="literal">true</span>;CA_ROOT_CA=&lt;ROOT-CA证书，从服务器下载下来&gt;;CA_ADDR=istiod-remote.istio-system.svc:15012;JWT_POLICY=first-party-jwt;ISTIO_META_CLUSTER_ID=Kubernetes;ISTIO_META_DNS_CAPTURE=<span class="literal">false</span>;POD_NAME=netshoot-local-test;POD_NAMESPACE=default;SERVICE_ACCOUNT=default</span><br><span class="line"></span><br><span class="line">proxy --meshConfig mesh.yaml</span><br></pre></td></tr></table></figure><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="https://github.com/aspenmesh/istio-build-server" rel="external nofollow noopener noreferrer" target="_blank">istio-build-server</a></li></ul><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>提了一个 Issue 给社区，看看有没有更好的方式进行运行。</p>]]></content>
     
     <summary type="html">
     
@@ -438,56 +488,6 @@
     </summary>
     
       <category term="tips" scheme="http://wiki.yanick.site/categories/tips/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Linux Device Driver 笔记</title>
-    <link href="http://wiki.yanick.site/wiki/linux/ldd/"/>
-    <id>http://wiki.yanick.site/wiki/linux/ldd/</id>
-    <published>2020-06-20T16:09:25.000Z</published>
-    <updated>2021-03-22T04:00:31.846Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Prepare"><a href="#Prepare" class="headerlink" title="Prepare"></a>Prepare</h1><p>先下载 Linux 源码，然后准备到开发驱动的必须前置工作</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">make oldconfig</span><br><span class="line">make prepare</span><br><span class="line">make modules_prepare</span><br></pre></td></tr></table></figure><h1 id="编译-Helloworld"><a href="#编译-Helloworld" class="headerlink" title="编译 Helloworld"></a>编译 Helloworld</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/vigith/Linux-Device-Drivers.git</span><br><span class="line"></span><br><span class="line">make -C /root/linux-2.6.32.4/ M=`<span class="built_in">pwd</span>` modules</span><br></pre></td></tr></table></figure><p>-C: 指定 Linux 源码位置</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Prepare&quot;&gt;&lt;a href=&quot;#Prepare&quot; class=&quot;headerlink&quot; title=&quot;Prepare&quot;&gt;&lt;/a&gt;Prepare&lt;/h1&gt;&lt;p&gt;先下载 Linux 源码，然后准备到开发驱动的必须前置工作&lt;/p&gt;
-&lt;figure class=&quot;h
-      
-    
-    </summary>
-    
-      <category term="linux" scheme="http://wiki.yanick.site/categories/linux/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>TCPDUMP</title>
-    <link href="http://wiki.yanick.site/wiki/linux/tcpdump/"/>
-    <id>http://wiki.yanick.site/wiki/linux/tcpdump/</id>
-    <published>2020-06-20T16:09:25.000Z</published>
-    <updated>2021-03-22T04:00:31.846Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li>抓取 HTTP 协议内容</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tcpdump -A -s 0 <span class="string">'tcp port 80 and (((ip[2:2] - ((ip[0]&amp;0xf)&lt;&lt;2)) - ((tcp[12]&amp;0xf0)&gt;&gt;2)) != 0)'</span></span><br></pre></td></tr></table></figure><ol start="2"><li>抓取特定来源的HTTP</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tcpdump -A -s 0 <span class="string">'src example.com and tcp port 80 and (((ip[2:2] - ((ip[0]&amp;0xf)&lt;&lt;2)) - ((tcp[12]&amp;0xf0)&gt;&gt;2)) != 0)'</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ol&gt;
-&lt;li&gt;抓取 HTTP 协议内容&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td
-      
-    
-    </summary>
-    
-      <category term="linux" scheme="http://wiki.yanick.site/categories/linux/"/>
     
     
   </entry>

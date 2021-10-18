@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wiki.yanick.site/"/>
-  <updated>2021-06-09T05:35:17.599Z</updated>
+  <updated>2021-10-17T14:10:17.137Z</updated>
   <id>http://wiki.yanick.site/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux 强制重启</title>
+    <link href="http://wiki.yanick.site/wiki/linux/linux-force-reboot/"/>
+    <id>http://wiki.yanick.site/wiki/linux/linux-force-reboot/</id>
+    <published>2021-10-17T22:09:25.000Z</published>
+    <updated>2021-10-17T14:10:17.137Z</updated>
+    
+    <content type="html"><![CDATA[<p>当系统无法使用 <code>shutdown</code> <code>reboot</code> 无法使用的是清空下，我们需要使用另外一种方式进行重启。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> 1 &gt; /proc/sys/kernel/sysrq  </span><br><span class="line"><span class="built_in">echo</span> b &gt; /proc/sysrq-trigger</span><br></pre></td></tr></table></figure><p>1./proc/sys/kernel/sysrq<br>向 sysrq 文件中写入1是为了开启 SysRq 功能。根据 linux/Documentations/sysrq.txt 中所说：SysRq 代表的是 Magic System Request Key。开启了这个功能以后，只要内核没有挂掉，它就会响应你要求的任何操作。但是这需要内核支持(CONFIG_MAGIC_SYSRQ 选项)。向 /proc/sys/kernel/sysrq 中写入0是关闭 SysRq 功能，写入1是开启，其他选项请参考 sysrq.txt。</p><p>2./proc/sysrq-trigger<br>立即重新启动计算机:<br>echo “b” &gt; /proc/sysrq-trigger</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="https://developer.aliyun.com/article/520273" rel="external nofollow noopener noreferrer" target="_blank">Linux强制重启</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;当系统无法使用 &lt;code&gt;shutdown&lt;/code&gt; &lt;code&gt;reboot&lt;/code&gt; 无法使用的是清空下，我们需要使用另外一种方式进行重启。&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gu
+      
+    
+    </summary>
+    
+      <category term="linux" scheme="http://wiki.yanick.site/categories/linux/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>NC 使用指南</title>
@@ -465,29 +489,6 @@
     </summary>
     
       <category term="architecture" scheme="http://wiki.yanick.site/categories/architecture/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>inoreader 无法显示图片</title>
-    <link href="http://wiki.yanick.site/wiki/tips/inoreader-can-not-show-pic/"/>
-    <id>http://wiki.yanick.site/wiki/tips/inoreader-can-not-show-pic/</id>
-    <published>2020-06-23T16:27:50.000Z</published>
-    <updated>2021-03-22T04:00:31.846Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>安装 <code>referer control</code> 禁止 inoreader 向第三方站点发送 referrer</p><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul><li><a href="https://www.v2ex.com/amp/t/562142" rel="external nofollow noopener noreferrer" target="_blank">inoreader 图片不显示是什么情况</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;解决办法&quot;&gt;&lt;a href=&quot;#解决办法&quot; class=&quot;headerlink&quot; title=&quot;解决办法&quot;&gt;&lt;/a&gt;解决办法&lt;/h1&gt;&lt;p&gt;安装 &lt;code&gt;referer control&lt;/code&gt; 禁止 inoreader 向第三方站点发送 referrer
-      
-    
-    </summary>
-    
-      <category term="tips" scheme="http://wiki.yanick.site/categories/tips/"/>
     
     
   </entry>

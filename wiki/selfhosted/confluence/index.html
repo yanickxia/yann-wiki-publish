@@ -3,23 +3,23 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     
-    <title>Linux 强制重启 | Yanick&#39;s Wiki</title>
+    <title>自建 Confluence Quick Start | Yanick&#39;s Wiki</title>
     
     
-        <meta name="keywords" content="Linux 强制重启">
+        <meta name="keywords" content="自建 Confluence Quick Start">
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="当系统无法使用 shutdown reboot 无法使用的是清空下，我们需要使用另外一种方式进行重启。 12echo 1 &amp;gt; /proc/sys/kernel/sysrq  echo b &amp;gt; /proc/sysrq-trigger  1./proc/sys/kernel/sysrq向 sysrq 文件中写入1是为了开启 SysRq 功能。根据 linux/Documentations/">
+    <meta name="description" content="Docker 化 ConfluenceDockerfile1234FROM atlassian/confluence-server:7.13# 使用 Mysql，PG 默认不需要ADD mysql-connector-java-8.0.19.jar /opt/atlassian/confluence/lib/ ADD atlassian-agent-v1.3.1/atlassian-agent.j">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux 强制重启">
-<meta property="og:url" content="http://wiki.yanick.site/wiki/linux/linux-force-reboot/index.html">
+<meta property="og:title" content="自建 Confluence Quick Start">
+<meta property="og:url" content="http://wiki.yanick.site/wiki/selfhosted/confluence/index.html">
 <meta property="og:site_name" content="Yanick&#39;s Wiki">
-<meta property="og:description" content="当系统无法使用 shutdown reboot 无法使用的是清空下，我们需要使用另外一种方式进行重启。 12echo 1 &amp;gt; /proc/sys/kernel/sysrq  echo b &amp;gt; /proc/sysrq-trigger  1./proc/sys/kernel/sysrq向 sysrq 文件中写入1是为了开启 SysRq 功能。根据 linux/Documentations/">
+<meta property="og:description" content="Docker 化 ConfluenceDockerfile1234FROM atlassian/confluence-server:7.13# 使用 Mysql，PG 默认不需要ADD mysql-connector-java-8.0.19.jar /opt/atlassian/confluence/lib/ ADD atlassian-agent-v1.3.1/atlassian-agent.j">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2021-10-21T06:55:16.548Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux 强制重启">
-<meta name="twitter:description" content="当系统无法使用 shutdown reboot 无法使用的是清空下，我们需要使用另外一种方式进行重启。 12echo 1 &amp;gt; /proc/sys/kernel/sysrq  echo b &amp;gt; /proc/sysrq-trigger  1./proc/sys/kernel/sysrq向 sysrq 文件中写入1是为了开启 SysRq 功能。根据 linux/Documentations/">
+<meta name="twitter:title" content="自建 Confluence Quick Start">
+<meta name="twitter:description" content="Docker 化 ConfluenceDockerfile1234FROM atlassian/confluence-server:7.13# 使用 Mysql，PG 默认不需要ADD mysql-connector-java-8.0.19.jar /opt/atlassian/confluence/lib/ ADD atlassian-agent-v1.3.1/atlassian-agent.j">
     
 
     
@@ -277,9 +277,9 @@
                      </ul> 
                     </li> 
                     
-                    <li class="directory open">
+                    <li class="directory">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder-open"></i>
+                            <i class="fa fa-folder"></i>
                             &nbsp;
                             linux
                         </a>
@@ -310,7 +310,7 @@
                         </a>
                          <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/linux/xbindkey/">Xbindkey</a></li>  </ul> 
                     </li> 
-                     <li class="file"><a href="/wiki/linux/build-and-debug-kernel/">构建与调试 Linux 内核</a></li>  <li class="file"><a href="/wiki/linux/ldd/">Linux Device Driver 笔记</a></li>  <li class="file"><a href="/wiki/linux/tcpdump/">TCPDUMP</a></li>  <li class="file"><a href="/wiki/linux/build-and-debug-kernel-simple/">构建与调试 Linux 内核</a></li>  <li class="file"><a href="/wiki/linux/nc/">NC 使用指南</a></li>  <li class="file active"><a href="/wiki/linux/linux-force-reboot/">Linux 强制重启</a></li>  </ul> 
+                     <li class="file"><a href="/wiki/linux/build-and-debug-kernel/">构建与调试 Linux 内核</a></li>  <li class="file"><a href="/wiki/linux/ldd/">Linux Device Driver 笔记</a></li>  <li class="file"><a href="/wiki/linux/tcpdump/">TCPDUMP</a></li>  <li class="file"><a href="/wiki/linux/build-and-debug-kernel-simple/">构建与调试 Linux 内核</a></li>  <li class="file"><a href="/wiki/linux/nc/">NC 使用指南</a></li>  <li class="file"><a href="/wiki/linux/linux-force-reboot/">Linux 强制重启</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -367,13 +367,13 @@
                          <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/rust/rust/">Rust常见问题</a></li>  </ul> 
                     </li> 
                     
-                    <li class="directory">
+                    <li class="directory open">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder"></i>
+                            <i class="fa fa-folder-open"></i>
                             &nbsp;
                             selfhosted
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/selfhosted/confluence/">自建 Confluence Quick Start</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file active"><a href="/wiki/selfhosted/confluence/">自建 Confluence Quick Start</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -624,7 +624,7 @@
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
             
-            <section id="main"><article id="post-linux/linux-force-reboot" class="article article-type-post" itemscope="" itemprop="blogPost">
+            <section id="main"><article id="post-selfhosted/confluence" class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -634,15 +634,15 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/linux/">linux</a>
+        <a class="article-category-link" href="/categories/selfhosted/">selfhosted</a>
     </div>
 
                         
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/wiki/linux/linux-force-reboot/">
-            <time datetime="2021-10-17T22:09:25.000Z" itemprop="datePublished">2021-10-17</time>
+        <a href="/wiki/selfhosted/confluence/">
+            <time datetime="2021-10-21T14:05:25.000Z" itemprop="datePublished">2021-10-21</time>
         </a>
     </div>
 
@@ -653,13 +653,13 @@
                         
                         
                             <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/raw/master/source/_posts/linux/linux-force-reboot.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
+                                <a href="https://github.com/yanickxia/yann-wiki/raw/master/source/_posts/selfhosted/confluence.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
                             </div>
                             <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/edit/master/source/_posts/linux/linux-force-reboot.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
+                                <a href="https://github.com/yanickxia/yann-wiki/edit/master/source/_posts/selfhosted/confluence.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
                             </div>
                             <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/commits/master/source/_posts/linux/linux-force-reboot.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
+                                <a href="https://github.com/yanickxia/yann-wiki/commits/master/source/_posts/selfhosted/confluence.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
                             </div>
                         
                     </div>
@@ -667,7 +667,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            Linux 强制重启
+            自建 Confluence Quick Start
         </h1>
     
 
@@ -680,19 +680,22 @@
             
                 <div id="toc" class="toc-article">
                 <strong class="toc-title">Catalogue</strong>
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">1.</span> <span class="toc-text">参考</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Docker-化-Confluence"><span class="toc-number">1.</span> <span class="toc-text">Docker 化 Confluence</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Docker-Compose"><span class="toc-number">2.</span> <span class="toc-text">Docker-Compose</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#破解安装Key"><span class="toc-number">3.</span> <span class="toc-text">破解安装Key</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#破解软体"><span class="toc-number">4.</span> <span class="toc-text">破解软体</span></a></li></ol>
                 </div>
             
         
         
-            <p>当系统无法使用 <code>shutdown</code> <code>reboot</code> 无法使用的是清空下，我们需要使用另外一种方式进行重启。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> 1 &gt; /proc/sys/kernel/sysrq  </span><br><span class="line"><span class="built_in">echo</span> b &gt; /proc/sysrq-trigger</span><br></pre></td></tr></table></figure>
+            <h2 id="Docker-化-Confluence"><a href="#Docker-化-Confluence" class="headerlink" title="Docker 化 Confluence"></a>Docker 化 Confluence</h2><figure class="highlight plain"><figcaption><span>Dockerfile</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">FROM atlassian/confluence-server:7.13</span><br><span class="line"># 使用 Mysql，PG 默认不需要</span><br><span class="line">ADD mysql-connector-java-8.0.19.jar /opt/atlassian/confluence/lib/ </span><br><span class="line">ADD atlassian-agent-v1.3.1/atlassian-agent.jar /opt/atlassian/atlassian-agent.jar</span><br></pre></td></tr></table></figure>
 
-<p>1./proc/sys/kernel/sysrq<br>向 sysrq 文件中写入1是为了开启 SysRq 功能。根据 linux/Documentations/sysrq.txt 中所说：SysRq 代表的是 Magic System Request Key。开启了这个功能以后，只要内核没有挂掉，它就会响应你要求的任何操作。但是这需要内核支持(CONFIG_MAGIC_SYSRQ 选项)。向 /proc/sys/kernel/sysrq 中写入0是关闭 SysRq 功能，写入1是开启，其他选项请参考 sysrq.txt。</p>
-<p>2./proc/sysrq-trigger<br>立即重新启动计算机:<br>echo “b” &gt; /proc/sysrq-trigger</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li><a href="https://developer.aliyun.com/article/520273" rel="external nofollow noopener noreferrer" target="_blank">Linux强制重启</a></li>
-</ul>
+<p><code>atlassian-agent</code> <a href="https://gitee.com/pengzhile/atlassian-agent" rel="external nofollow noopener noreferrer" target="_blank">点此获取</a></p>
+<h2 id="Docker-Compose"><a href="#Docker-Compose" class="headerlink" title="Docker-Compose"></a>Docker-Compose</h2><figure class="highlight yaml"><figcaption><span>docker-compose.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">confluence:</span></span><br><span class="line"><span class="attr">    build:</span> <span class="string">.</span></span><br><span class="line"><span class="attr">    container_name:</span> <span class="string">confluence</span></span><br><span class="line"><span class="attr">    depends_on:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">mysql</span></span><br><span class="line"><span class="attr">    environment:</span></span><br><span class="line"><span class="attr">    JAVA_OPTS:</span> <span class="attr">-javaagent:/opt/atlassian/atlassian-agent.jar</span>  <span class="comment"># 挂入破解插件</span></span><br><span class="line"><span class="attr">    JVM_MAXIMUM_MEMORY:</span> <span class="number">4096</span><span class="string">m</span></span><br><span class="line"><span class="attr">    volumes:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">/mnt/confluence/data/:/var/atlassian/application-data/confluence/</span></span><br><span class="line"><span class="attr">    ports:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">"8090:8090"</span></span><br><span class="line"><span class="attr">    logging:</span></span><br><span class="line"><span class="attr">    driver:</span> <span class="string">"json-file"</span></span><br><span class="line"><span class="attr">    options:</span></span><br><span class="line"><span class="attr">        max-size:</span> <span class="number">50</span><span class="string">m</span></span><br><span class="line"><span class="attr">    restart:</span> <span class="string">unless-stopped</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="破解安装Key"><a href="#破解安装Key" class="headerlink" title="破解安装Key"></a>破解安装Key</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a -jar /opt/atlassian/atlassian-agent.jar  -p conf -m &lt;YOUR-MAIL&gt; -o &lt;YOUR-ORG&gt; -d -s &lt;YOUR-SEVICE-KEY&gt;</span><br></pre></td></tr></table></figure>
+
+<p>推荐使用 <code>-d</code> 开启 DataCenter 版本，因为 Server 到 2024 年之后就不能用了。</p>
+<h2 id="破解软体"><a href="#破解软体" class="headerlink" title="破解软体"></a>破解软体</h2><p>和上面差不多，只是把 -p 的参数改一下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar /opt/atlassian/atlassian-agent.jar  -p com.mute.confluence.plugins.xTables -m &lt;YOUR-MAIL&gt; -o &lt;YOUR-ORG&gt; -d -s &lt;YOUR-SEVICE-KEY&gt;</span><br></pre></td></tr></table></figure>
+
 
             </div>
         
@@ -705,19 +708,10 @@
     
 <nav id="article-nav">
     
-        <a href="/wiki/selfhosted/confluence/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Newer</strong>
-            <div class="article-nav-title">
-                
-                    自建 Confluence Quick Start
-                
-            </div>
-        </a>
     
-    
-        <a href="/wiki/linux/nc/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/wiki/linux/linux-force-reboot/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">NC 使用指南</div>
+            <div class="article-nav-title">Linux 强制重启</div>
         </a>
     
 </nav>
@@ -765,9 +759,9 @@
     <script>
     var disqus_config = function () {
         
-            this.page.url = 'http://wiki.yanick.site/wiki/linux/linux-force-reboot/';
+            this.page.url = 'http://wiki.yanick.site/wiki/selfhosted/confluence/';
         
-        this.page.identifier = 'linux/linux-force-reboot';
+        this.page.identifier = 'selfhosted/confluence';
     };
     (function() { 
         var d = document, s = d.createElement('script');  

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wiki.yanick.site/"/>
-  <updated>2021-10-21T06:55:16.548Z</updated>
+  <updated>2021-11-12T10:40:17.083Z</updated>
   <id>http://wiki.yanick.site/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Istio 快速构建</title>
+    <link href="http://wiki.yanick.site/wiki/istio/istio-build/"/>
+    <id>http://wiki.yanick.site/wiki/istio/istio-build/</id>
+    <published>2021-11-08T17:28:41.000Z</published>
+    <updated>2021-11-12T10:40:17.083Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="build-Envoy-By-docker"><a href="#build-Envoy-By-docker" class="headerlink" title="build Envoy By docker"></a>build Envoy By docker</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /root/go/src/istio.io/</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/istio/proxy.git</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> proxy</span><br><span class="line">docker run -it -w /work -v <span class="variable">$PWD</span>:/work gcr.io/istio-testing/build-tools-proxy:master-latest bash</span><br><span class="line">make</span><br></pre></td></tr></table></figure><h2 id="build-release"><a href="#build-release" class="headerlink" title="build release"></a>build release</h2><p>参考 <a href="https://github.com/istio/release-builder/blob/master/release/README.md" rel="external nofollow noopener noreferrer" target="_blank">istio-release-builder</a></p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="https://github.com/istio/istio/issues/28476" rel="external nofollow noopener noreferrer" target="_blank">istio issue</a></li><li><a href="https://github.com/istio/tools" rel="external nofollow noopener noreferrer" target="_blank">istio tools</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;build-Envoy-By-docker&quot;&gt;&lt;a href=&quot;#build-Envoy-By-docker&quot; class=&quot;headerlink&quot; title=&quot;build Envoy By docker&quot;&gt;&lt;/a&gt;build Envoy By docker&lt;/
+      
+    
+    </summary>
+    
+      <category term="isito" scheme="http://wiki.yanick.site/categories/isito/"/>
+    
+    
+      <category term="isito" scheme="http://wiki.yanick.site/tags/isito/"/>
+    
+  </entry>
   
   <entry>
     <title>自建 Confluence Quick Start</title>
@@ -471,31 +496,6 @@
     </summary>
     
       <category term="virtual machine" scheme="http://wiki.yanick.site/categories/virtual-machine/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>为 QEMU 配置网桥上网</title>
-    <link href="http://wiki.yanick.site/wiki/os/qemu/"/>
-    <id>http://wiki.yanick.site/wiki/os/qemu/</id>
-    <published>2020-09-24T11:49:34.000Z</published>
-    <updated>2021-10-21T06:55:16.548Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="工具安装"><a href="#工具安装" class="headerlink" title="工具安装"></a>工具安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get install bridge-utils        <span class="comment"># 虚拟网桥工具</span></span><br><span class="line">apt-get install uml-utilities       <span class="comment"># UML（User-mode linux）工具</span></span><br></pre></td></tr></table></figure><h2 id="配置网桥"><a href="#配置网桥" class="headerlink" title="配置网桥"></a>配置网桥</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ifconfig &lt;你的网卡名称(能上网的那张)&gt; down    <span class="comment"># 首先关闭宿主机网卡接口</span></span><br><span class="line">brctl addbr br0                     <span class="comment"># 添加一座名为 br0 的网桥</span></span><br><span class="line">brctl addif br0 &lt;你的网卡名称&gt;        <span class="comment"># 在 br0 中添加一个接口</span></span><br><span class="line">brctl stp br0 off                   <span class="comment"># 如果只有一个网桥，则关闭生成树协议</span></span><br><span class="line">brctl setfd br0 1                   <span class="comment"># 设置 br0 的转发延迟</span></span><br><span class="line">brctl sethello br0 1                <span class="comment"># 设置 br0 的 hello 时间</span></span><br><span class="line">ifconfig br0 0.0.0.0 promisc up     <span class="comment"># 启用 br0 接口</span></span><br><span class="line">ifconfig &lt;你的网卡名称&gt; 0.0.0.0 promisc up    <span class="comment"># 启用网卡接口</span></span><br><span class="line">dhclient br0                        <span class="comment"># 从 dhcp 服务器获得 br0 的 IP 地址</span></span><br><span class="line">brctl show br0                      <span class="comment"># 查看虚拟网桥列表</span></span><br><span class="line">brctl showstp br0                   <span class="comment"># 查看 br0 的各接口信息</span></span><br></pre></td></tr></table></figure><h2 id="创建-TAP"><a href="#创建-TAP" class="headerlink" title="创建 TAP"></a>创建 TAP</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tunctl -t tap0 -u &lt;YOUR_ACCOUNT&gt;              <span class="comment"># 创建一个 tap0 接口，只允许 XXX 用户访问</span></span><br><span class="line">brctl addif br0 tap0                <span class="comment"># 在虚拟网桥中增加一个 tap0 接口</span></span><br><span class="line">ifconfig tap0 0.0.0.0 promisc up    <span class="comment"># 启用 tap0 接口</span></span><br><span class="line">brctl showstp br0                   <span class="comment"># 显示 br0 的各个接口</span></span><br></pre></td></tr></table></figure><h2 id="启动参数"><a href="#启动参数" class="headerlink" title="启动参数"></a>启动参数</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo qemu-system-mipsel -M malta -kernel vmlinux-3.2.0-4-4kc-malta -hda debian_squeeze_mipsel_standard.qcow2 -append <span class="string">"root=/dev/sda1 console=tty0"</span> -nographic </span><br><span class="line"></span><br><span class="line">-net nic -net tap,ifname=tap0,script=no,downscript=no</span><br></pre></td></tr></table></figure><p>-net nic 表示希望 QEMU 在虚拟机中创建一张虚拟网卡，-net tap 表示连接类型为 TAP，并且指定了网卡接口名称(就是刚才创建的 tap0，相当于把虚拟机接入网桥)。</p><p>script 和 downscript 两个选项的作用是告诉 QEMU 在启动系统的时候是否调用脚本自动配置网络环境，如果这两个选项为空，那么 QEMU 启动和退出时会自动选择第一个不存在的 tap 接口(通常是 tap0)为参数，调用脚本 /etc/qemu-ifup 和 /etc/qemu-ifdown。由于我们已经配置完毕，所以这两个参数设置为 no 即可。</p><h2 id="Host-转发设置"><a href="#Host-转发设置" class="headerlink" title="Host 转发设置"></a>Host 转发设置</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> 1 &gt; /proc/sys/net/ipv4/ip_forward</span><br></pre></td></tr></table></figure><h2 id="VM-内设置"><a href="#VM-内设置" class="headerlink" title="VM 内设置"></a>VM 内设置</h2><p>假设本机IP为 192.168.142.186，br0 的IP为  172.16.66.128</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ifconfig eth0 up</span><br><span class="line">ifconfig eth0 192.168.142.187 netmask 255.255.240.0 <span class="comment"># 为网卡设置IP</span></span><br><span class="line">route add default gw 192.168.142.186 <span class="comment"># 增加路由表</span></span><br></pre></td></tr></table></figure><p>测试一下</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">/ <span class="comment"># ping -c 4 114.114.114.114</span></span><br><span class="line">PING 114.114.114.114 (114.114.114.114): 56 data bytes</span><br><span class="line">64 bytes from 114.114.114.114: seq=0 ttl=128 time=31.034 ms</span><br><span class="line">64 bytes from 114.114.114.114: seq=1 ttl=128 time=24.453 ms</span><br><span class="line">64 bytes from 114.114.114.114: seq=2 ttl=128 time=20.257 ms</span><br><span class="line">64 bytes from 114.114.114.114: seq=3 ttl=128 time=24.996 ms</span><br><span class="line"></span><br><span class="line">--- 114.114.114.114 ping statistics ---</span><br><span class="line">4 packets transmitted, 4 packets received, 0% packet loss</span><br><span class="line">round-trip min/avg/max = 20.257/25.185/31.034 ms</span><br></pre></td></tr></table></figure><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="https://wzt.ac.cn/2019/09/10/QEMU-networking/" rel="external nofollow noopener noreferrer" target="_blank">QEMU 网络配置一把梭</a></li><li><a href="https://blog.csdn.net/leafrenchleaf/article/details/84807316" rel="external nofollow noopener noreferrer" target="_blank">tap的方式使用qemu建立虚拟机桥接网络</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;工具安装&quot;&gt;&lt;a href=&quot;#工具安装&quot; class=&quot;headerlink&quot; title=&quot;工具安装&quot;&gt;&lt;/a&gt;工具安装&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre
-      
-    
-    </summary>
-    
-      <category term="os" scheme="http://wiki.yanick.site/categories/os/"/>
-    
-      <category term="qemu" scheme="http://wiki.yanick.site/categories/os/qemu/"/>
     
     
   </entry>

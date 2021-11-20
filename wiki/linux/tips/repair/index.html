@@ -3,23 +3,23 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     
-    <title>kubernetes network troubleshooting | Yanick&#39;s Wiki</title>
+    <title>修复系统 | Yanick&#39;s Wiki</title>
     
     
-        <meta name="keywords" content="kubernetes network troubleshooting">
+        <meta name="keywords" content="修复系统">
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="API 无法访问其他服务最近安装了一个 kube 但是 api server，但是无法访问 mertics server 等组件，经排查  api server 运行在 master 节点上  其他 组件运行在 worker 节点上核心原因是因为 flannel 打开了 DirectRouting 选项，导致了将宿主机网卡作为 host-gw 直接将 二层 数据包转发出去，并没有进行封装，在云上的">
+    <meta name="description" content="今天遇见2个问题，第一个突然显卡驱动不能安装。 修复 Nv 驱动无法安装的问题1LC_MESSAGES=C dpkg-divert --list &apos;*nvidia-340*&apos; | sed -nre &apos;s/^diversion of (.*) to .*/\1/p&apos; | xargs -rd&apos;\n&apos; -n1 -- sudo dpkg-divert --remove\nsudo apt --fix-br">
 <meta property="og:type" content="article">
-<meta property="og:title" content="kubernetes network troubleshooting">
-<meta property="og:url" content="http://wiki.yanick.site/wiki/k8s/network-troubleshooting/index.html">
+<meta property="og:title" content="修复系统">
+<meta property="og:url" content="http://wiki.yanick.site/wiki/linux/tips/repair/index.html">
 <meta property="og:site_name" content="Yanick&#39;s Wiki">
-<meta property="og:description" content="API 无法访问其他服务最近安装了一个 kube 但是 api server，但是无法访问 mertics server 等组件，经排查  api server 运行在 master 节点上  其他 组件运行在 worker 节点上核心原因是因为 flannel 打开了 DirectRouting 选项，导致了将宿主机网卡作为 host-gw 直接将 二层 数据包转发出去，并没有进行封装，在云上的">
+<meta property="og:description" content="今天遇见2个问题，第一个突然显卡驱动不能安装。 修复 Nv 驱动无法安装的问题1LC_MESSAGES=C dpkg-divert --list &apos;*nvidia-340*&apos; | sed -nre &apos;s/^diversion of (.*) to .*/\1/p&apos; | xargs -rd&apos;\n&apos; -n1 -- sudo dpkg-divert --remove\nsudo apt --fix-br">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2021-10-21T06:55:16.548Z">
+<meta property="og:updated_time" content="2021-11-20T11:29:02.246Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="kubernetes network troubleshooting">
-<meta name="twitter:description" content="API 无法访问其他服务最近安装了一个 kube 但是 api server，但是无法访问 mertics server 等组件，经排查  api server 运行在 master 节点上  其他 组件运行在 worker 节点上核心原因是因为 flannel 打开了 DirectRouting 选项，导致了将宿主机网卡作为 host-gw 直接将 二层 数据包转发出去，并没有进行封装，在云上的">
+<meta name="twitter:title" content="修复系统">
+<meta name="twitter:description" content="今天遇见2个问题，第一个突然显卡驱动不能安装。 修复 Nv 驱动无法安装的问题1LC_MESSAGES=C dpkg-divert --list &apos;*nvidia-340*&apos; | sed -nre &apos;s/^diversion of (.*) to .*/\1/p&apos; | xargs -rd&apos;\n&apos; -n1 -- sudo dpkg-divert --remove\nsudo apt --fix-br">
     
 
     
@@ -277,9 +277,9 @@
                      </ul> 
                     </li> 
                     
-                    <li class="directory">
+                    <li class="directory open">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder"></i>
+                            <i class="fa fa-folder-open"></i>
                             &nbsp;
                             linux
                         </a>
@@ -310,23 +310,23 @@
                         </a>
                          <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/linux/xbindkey/">Xbindkey</a></li>  </ul> 
                     </li> 
-                     <li class="file"><a href="/wiki/linux/build-and-debug-kernel/">构建与调试 Linux 内核</a></li>  <li class="file"><a href="/wiki/linux/ldd/">Linux Device Driver 笔记</a></li>  <li class="file"><a href="/wiki/linux/tcpdump/">TCPDUMP</a></li>  <li class="file"><a href="/wiki/linux/build-and-debug-kernel-simple/">构建与调试 Linux 内核</a></li>  <li class="file"><a href="/wiki/linux/nc/">NC 使用指南</a></li>  <li class="file"><a href="/wiki/linux/linux-force-reboot/">Linux 强制重启</a></li>  <li class="file"><a href="/wiki/linux/tips/repair/">修复系统</a></li>  </ul> 
+                     <li class="file"><a href="/wiki/linux/build-and-debug-kernel/">构建与调试 Linux 内核</a></li>  <li class="file"><a href="/wiki/linux/ldd/">Linux Device Driver 笔记</a></li>  <li class="file"><a href="/wiki/linux/tcpdump/">TCPDUMP</a></li>  <li class="file"><a href="/wiki/linux/build-and-debug-kernel-simple/">构建与调试 Linux 内核</a></li>  <li class="file"><a href="/wiki/linux/nc/">NC 使用指南</a></li>  <li class="file"><a href="/wiki/linux/linux-force-reboot/">Linux 强制重启</a></li>  <li class="file active"><a href="/wiki/linux/tips/repair/">修复系统</a></li>  </ul> 
                     </li> 
                     
-                    <li class="directory open">
+                    <li class="directory">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder-open"></i>
+                            <i class="fa fa-folder"></i>
                             &nbsp;
                             network
                         </a>
                          <ul class="unstyled" id="tree"> 
-                    <li class="directory open">
+                    <li class="directory">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder-open"></i>
+                            <i class="fa fa-folder"></i>
                             &nbsp;
                             kubernetes
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file active"><a href="/wiki/k8s/network-troubleshooting/">kubernetes network troubleshooting</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/k8s/network-troubleshooting/">kubernetes network troubleshooting</a></li>  </ul> 
                     </li> 
                      </ul> 
                     </li> 
@@ -624,7 +624,7 @@
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
             
-            <section id="main"><article id="post-k8s/network-troubleshooting" class="article article-type-post" itemscope="" itemprop="blogPost">
+            <section id="main"><article id="post-linux/tips/repair" class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -634,15 +634,15 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/network/">network</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/network/kubernetes/">kubernetes</a>
+        <a class="article-category-link" href="/categories/linux/">linux</a>
     </div>
 
                         
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/wiki/k8s/network-troubleshooting/">
-            <time datetime="2021-04-16T16:27:50.000Z" itemprop="datePublished">2021-04-16</time>
+        <a href="/wiki/linux/tips/repair/">
+            <time datetime="2021-11-20T16:09:25.000Z" itemprop="datePublished">2021-11-20</time>
         </a>
     </div>
 
@@ -653,13 +653,13 @@
                         
                         
                             <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/raw/master/source/_posts/k8s/network-troubleshooting.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
+                                <a href="https://github.com/yanickxia/yann-wiki/raw/master/source/_posts/linux/tips/repair.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
                             </div>
                             <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/edit/master/source/_posts/k8s/network-troubleshooting.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
+                                <a href="https://github.com/yanickxia/yann-wiki/edit/master/source/_posts/linux/tips/repair.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
                             </div>
                             <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/commits/master/source/_posts/k8s/network-troubleshooting.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
+                                <a href="https://github.com/yanickxia/yann-wiki/commits/master/source/_posts/linux/tips/repair.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
                             </div>
                         
                     </div>
@@ -667,7 +667,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            kubernetes network troubleshooting
+            修复系统
         </h1>
     
 
@@ -680,21 +680,15 @@
             
                 <div id="toc" class="toc-article">
                 <strong class="toc-title">Catalogue</strong>
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#API-无法访问其他服务"><span class="toc-number">1.</span> <span class="toc-text">API 无法访问其他服务</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#修复-Nv-驱动无法安装的问题"><span class="toc-number">1.</span> <span class="toc-text">修复 Nv 驱动无法安装的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修-usr-lib-x86-64-linux-gnu-缺失"><span class="toc-number">2.</span> <span class="toc-text">修 /usr/lib/x86_64-linux-gnu/ 缺失</span></a></li></ol>
                 </div>
             
         
         
-            <h2 id="API-无法访问其他服务"><a href="#API-无法访问其他服务" class="headerlink" title="API 无法访问其他服务"></a>API 无法访问其他服务</h2><p>最近安装了一个 <code>kube</code> 但是 <code>api server</code>，但是无法访问 <code>mertics server</code> 等组件，经排查</p>
-<ul>
-<li><p><code>api server</code> 运行在 <code>master</code> 节点上</p>
-</li>
-<li><p><code>其他</code> 组件运行在 <code>worker</code> 节点上<br>核心原因是因为 <code>flannel</code> 打开了 <code>DirectRouting</code> 选项，导致了将宿主机网卡作为 <code>host-gw</code> 直接将 二层 数据包转发出去，并没有进行封装，在云上的网络（火山引擎）禁止此转发行为，表现为</p>
-</li>
-<li><p><code>api server</code> 访问其他服务都是 <code>timeout</code></p>
-</li>
-</ul>
+            <p>今天遇见2个问题，第一个突然显卡驱动不能安装。</p>
+<h2 id="修复-Nv-驱动无法安装的问题"><a href="#修复-Nv-驱动无法安装的问题" class="headerlink" title="修复 Nv 驱动无法安装的问题"></a>修复 Nv 驱动无法安装的问题</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LC_MESSAGES=C dpkg-divert --list <span class="string">'*nvidia-340*'</span> | sed -nre <span class="string">'s/^diversion of (.*) to .*/\1/p'</span> | xargs -rd<span class="string">'\n'</span> -n1 -- sudo dpkg-divert --remove\nsudo apt --fix-broken install</span><br></pre></td></tr></table></figure>
 
+<h2 id="修-usr-lib-x86-64-linux-gnu-缺失"><a href="#修-usr-lib-x86-64-linux-gnu-缺失" class="headerlink" title="修 /usr/lib/x86_64-linux-gnu/ 缺失"></a>修 /usr/lib/x86_64-linux-gnu/ 缺失</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install --reinstall `dpkg -S /usr/lib/x86_64-linux-gnu/ \\n| sed <span class="string">'s/,/ /g'</span> | head -c-28`</span><br></pre></td></tr></table></figure>
             </div>
         
         <footer class="article-footer">
@@ -706,19 +700,10 @@
     
 <nav id="article-nav">
     
-        <a href="/wiki/linux/network/listen-and-print/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Newer</strong>
-            <div class="article-nav-title">
-                
-                    监听并打印接收到的数据
-                
-            </div>
-        </a>
     
-    
-        <a href="/wiki/tips/dns/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/wiki/istio/istio-build/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">Seal VPN Not Working in ubuntu 18+</div>
+            <div class="article-nav-title">Istio 快速构建</div>
         </a>
     
 </nav>
@@ -766,9 +751,9 @@
     <script>
     var disqus_config = function () {
         
-            this.page.url = 'http://wiki.yanick.site/wiki/k8s/network-troubleshooting/';
+            this.page.url = 'http://wiki.yanick.site/wiki/linux/tips/repair/';
         
-        this.page.identifier = 'k8s/network-troubleshooting';
+        this.page.identifier = 'linux/tips/repair';
     };
     (function() { 
         var d = document, s = d.createElement('script');  

@@ -1,5 +1,5 @@
+http://wiki.yanick.site/wiki/linux/tips/netese-cloud/
 http://wiki.yanick.site/wiki/linux/tips/repair/
 http://wiki.yanick.site/wiki/istio/istio-build/
 http://wiki.yanick.site/wiki/selfhosted/confluence/
 http://wiki.yanick.site/wiki/linux/linux-force-reboot/
-http://wiki.yanick.site/wiki/linux/nc/

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wiki.yanick.site/"/>
-  <updated>2021-11-21T06:20:17.077Z</updated>
+  <updated>2022-01-30T07:55:16.229Z</updated>
   <id>http://wiki.yanick.site/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SRE 工具箱</title>
+    <link href="http://wiki.yanick.site/wiki/tools/sre/"/>
+    <id>http://wiki.yanick.site/wiki/tools/sre/</id>
+    <published>2022-01-30T16:27:50.000Z</published>
+    <updated>2022-01-30T07:55:16.229Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="guacamole"><a href="#guacamole" class="headerlink" title="guacamole"></a>guacamole</h1><blockquote><blockquote><blockquote><p>a client-less remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH over HTML5.</p></blockquote></blockquote></blockquote><p><a href="https://github.com/MaxWaldorf/guacamole" rel="external nofollow noopener noreferrer" target="_blank">github</a> ：临时使用版本，包含了数据，如果使用在 PRD 推荐使用官方的 IMAGE</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker run \</span><br><span class="line">  -p 8080:8080 \</span><br><span class="line">  -v &lt;/path/to/config&gt;:/config \</span><br><span class="line">  maxwaldorf/guacamole</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;guacamole&quot;&gt;&lt;a href=&quot;#guacamole&quot; class=&quot;headerlink&quot; title=&quot;guacamole&quot;&gt;&lt;/a&gt;guacamole&lt;/h1&gt;&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;a c
+      
+    
+    </summary>
+    
+      <category term="tools" scheme="http://wiki.yanick.site/categories/tools/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>使用侧边键控制网易云音乐</title>
@@ -378,32 +404,6 @@
     </summary>
     
       <category term="proxy" scheme="http://wiki.yanick.site/categories/proxy/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>SRE 工具箱</title>
-    <link href="http://wiki.yanick.site/wiki/tools/sre/"/>
-    <id>http://wiki.yanick.site/wiki/tools/sre/</id>
-    <published>2021-01-30T16:27:50.000Z</published>
-    <updated>2022-01-30T05:35:15.872Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="guacamole"><a href="#guacamole" class="headerlink" title="guacamole"></a>guacamole</h1><blockquote><blockquote><blockquote><p>a client-less remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH over HTML5.</p></blockquote></blockquote></blockquote><p><a href="https://github.com/MaxWaldorf/guacamole" rel="external nofollow noopener noreferrer" target="_blank">github</a> ：临时使用版本，包含了数据，如果使用在 PRD 推荐使用官方的 IMAGE</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker run \</span><br><span class="line">  -p 8080:8080 \</span><br><span class="line">  -v &lt;/path/to/config&gt;:/config \</span><br><span class="line">  maxwaldorf/guacamole</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;guacamole&quot;&gt;&lt;a href=&quot;#guacamole&quot; class=&quot;headerlink&quot; title=&quot;guacamole&quot;&gt;&lt;/a&gt;guacamole&lt;/h1&gt;&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;a c
-      
-    
-    </summary>
-    
-      <category term="tools" scheme="http://wiki.yanick.site/categories/tools/"/>
     
     
   </entry>

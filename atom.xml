@@ -383,6 +383,32 @@
   </entry>
   
   <entry>
+    <title>SRE 工具箱</title>
+    <link href="http://wiki.yanick.site/wiki/tools/sre/"/>
+    <id>http://wiki.yanick.site/wiki/tools/sre/</id>
+    <published>2021-01-30T16:27:50.000Z</published>
+    <updated>2022-01-30T05:35:15.872Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="guacamole"><a href="#guacamole" class="headerlink" title="guacamole"></a>guacamole</h1><blockquote><blockquote><blockquote><p>a client-less remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH over HTML5.</p></blockquote></blockquote></blockquote><p><a href="https://github.com/MaxWaldorf/guacamole" rel="external nofollow noopener noreferrer" target="_blank">github</a> ：临时使用版本，包含了数据，如果使用在 PRD 推荐使用官方的 IMAGE</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker run \</span><br><span class="line">  -p 8080:8080 \</span><br><span class="line">  -v &lt;/path/to/config&gt;:/config \</span><br><span class="line">  maxwaldorf/guacamole</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;guacamole&quot;&gt;&lt;a href=&quot;#guacamole&quot; class=&quot;headerlink&quot; title=&quot;guacamole&quot;&gt;&lt;/a&gt;guacamole&lt;/h1&gt;&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;a c
+      
+    
+    </summary>
+    
+      <category term="tools" scheme="http://wiki.yanick.site/categories/tools/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Tips</title>
     <link href="http://wiki.yanick.site/wiki/istio/isito-tips/"/>
     <id>http://wiki.yanick.site/wiki/istio/isito-tips/</id>
@@ -477,28 +503,6 @@
     
     
       <category term="isito" scheme="http://wiki.yanick.site/tags/isito/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>kubectl 远程访问内网中的 kubernetes 集群</title>
-    <link href="http://wiki.yanick.site/wiki/k8s/kubectl-in-remote/"/>
-    <id>http://wiki.yanick.site/wiki/k8s/kubectl-in-remote/</id>
-    <published>2020-11-02T16:27:50.000Z</published>
-    <updated>2021-10-21T06:55:16.544Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="拷贝-config"><a href="#拷贝-config" class="headerlink" title="拷贝 config"></a>拷贝 config</h2><p>将服务器的 /etc/kubernetes/admin.conf 拷贝至本地的 ~/.kube/config</p><a id="more"></a><h2 id="修改服务器地址"><a href="#修改服务器地址" class="headerlink" title="修改服务器地址"></a>修改服务器地址</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">clusters:</span></span><br><span class="line"><span class="attr">- cluster:</span></span><br><span class="line"><span class="attr">    certificate-authority-data:</span> <span class="string">LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN</span></span><br><span class="line"><span class="attr">    server:</span> <span class="attr">https://172.17.43.150:6443</span></span><br><span class="line"><span class="attr">  name:</span> <span class="string">kubernetes</span></span><br></pre></td></tr></table></figure><p>将 <code>server</code> 改成你的远程地址</p><h2 id="重新生成证书"><a href="#重新生成证书" class="headerlink" title="重新生成证书"></a>重新生成证书</h2><h3 id="保存kubeadm-配置"><a href="#保存kubeadm-配置" class="headerlink" title="保存kubeadm 配置"></a>保存kubeadm 配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl -n kube-system get configmap kubeadm-config -o jsonpath=<span class="string">'&#123;.data.ClusterConfiguration&#125;'</span> &gt; kubeadm.yaml</span><br></pre></td></tr></table></figure><h3 id="增加可信地址"><a href="#增加可信地址" class="headerlink" title="增加可信地址"></a>增加可信地址</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiServer:</span></span><br><span class="line"><span class="attr">  extraArgs:</span></span><br><span class="line"><span class="attr">    authorization-mode:</span> <span class="string">Node,RBAC</span></span><br><span class="line"><span class="attr">  timeoutForControlPlane:</span> <span class="number">4</span><span class="string">m0s</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">kubeadm.k8s.io/v1beta2</span></span><br><span class="line"><span class="attr">certificatesDir:</span> <span class="string">/etc/kubernetes/pki</span></span><br><span class="line"><span class="attr">clusterName:</span> <span class="string">kubernetes</span></span><br><span class="line"><span class="attr">controllerManager:</span> <span class="string">&#123;&#125;</span></span><br></pre></td></tr></table></figure><p>修改为</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiServer:</span></span><br><span class="line"><span class="attr">  certSANs:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">"&lt;YOUR_IP&gt;"</span></span><br><span class="line"><span class="attr">  extraArgs:</span></span><br><span class="line"><span class="attr">    authorization-mode:</span> <span class="string">Node,RBAC</span></span><br><span class="line"><span class="attr">  timeoutForControlPlane:</span> <span class="number">4</span><span class="string">m0s</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">kubeadm.k8s.io/v1beta2</span></span><br><span class="line"><span class="attr">certificatesDir:</span> <span class="string">/etc/kubernetes/pki</span></span><br><span class="line"><span class="attr">clusterName:</span> <span class="string">kubernetes</span></span><br><span class="line"><span class="attr">controllerManager:</span> <span class="string">&#123;&#125;</span></span><br></pre></td></tr></table></figure><h3 id="生成新的证书"><a href="#生成新的证书" class="headerlink" title="生成新的证书"></a>生成新的证书</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 删除 crt</span></span><br><span class="line">mv /etc/kubernetes/pki/apiserver.&#123;crt,key&#125; ~</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成证书</span></span><br><span class="line">kubeadm init phase certs apiserver --config kubeadm.yaml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启 api server</span></span><br><span class="line">docker <span class="built_in">kill</span> $(docker ps | grep kube-apiserver | grep -v pause | awk <span class="string">'&#123;print $1&#125;'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 更新配置</span></span><br><span class="line">kubeadm config migrate --old-config kubeadm.yaml</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;拷贝-config&quot;&gt;&lt;a href=&quot;#拷贝-config&quot; class=&quot;headerlink&quot; title=&quot;拷贝 config&quot;&gt;&lt;/a&gt;拷贝 config&lt;/h2&gt;&lt;p&gt;将服务器的 /etc/kubernetes/admin.conf 拷贝至本地的 ~/.kube/config&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="cncf" scheme="http://wiki.yanick.site/categories/cncf/"/>
-    
-      <category term="kubernetes" scheme="http://wiki.yanick.site/categories/cncf/kubernetes/"/>
-    
     
   </entry>
   

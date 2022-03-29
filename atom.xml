@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wiki.yanick.site/"/>
-  <updated>2022-03-25T05:20:18.214Z</updated>
+  <updated>2022-03-29T08:40:16.574Z</updated>
   <id>http://wiki.yanick.site/</id>
   
   <author>
@@ -17,13 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Ubuntu 必装软件</title>
+    <link href="http://wiki.yanick.site/wiki/tools/linux/ubuntu/"/>
+    <id>http://wiki.yanick.site/wiki/tools/linux/ubuntu/</id>
+    <published>2022-03-29T15:10:08.000Z</published>
+    <updated>2022-03-29T08:40:16.574Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="AppImageLauncher"><a href="#AppImageLauncher" class="headerlink" title="AppImageLauncher"></a>AppImageLauncher</h2><p>是否厌恶死了， appimage 程序没有启动 icon 了，试试 <a href="https://github.com/TheAssassin/AppImageLauncher" rel="external nofollow noopener noreferrer" target="_blank">AppImageLauncher</a> 真香。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;AppImageLauncher&quot;&gt;&lt;a href=&quot;#AppImageLauncher&quot; class=&quot;headerlink&quot; title=&quot;AppImageLauncher&quot;&gt;&lt;/a&gt;AppImageLauncher&lt;/h2&gt;&lt;p&gt;是否厌恶死了， appima
+      
+    
+    </summary>
+    
+      <category term="ubuntu" scheme="http://wiki.yanick.site/categories/ubuntu/"/>
+    
+      <category term="tools" scheme="http://wiki.yanick.site/categories/ubuntu/tools/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>ZSH 自用安装手册</title>
     <link href="http://wiki.yanick.site/wiki/tools/zsh/zsh/"/>
     <id>http://wiki.yanick.site/wiki/tools/zsh/zsh/</id>
     <published>2022-03-25T13:00:50.000Z</published>
-    <updated>2022-03-25T05:20:18.214Z</updated>
+    <updated>2022-03-29T08:40:16.574Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="ZSH-安装"><a href="#ZSH-安装" class="headerlink" title="ZSH 安装"></a>ZSH 安装</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt install -y git zsh</span><br><span class="line">sh -c <span class="string">"<span class="variable">$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>"</span></span><br></pre></td></tr></table></figure><h1 id="ZSH-插件"><a href="#ZSH-插件" class="headerlink" title="ZSH 插件"></a>ZSH 插件</h1><h2 id="zsh-autosuggestions"><a href="#zsh-autosuggestions" class="headerlink" title="zsh-autosuggestions"></a>zsh-autosuggestions</h2><p><a href="https://github.com/zsh-users/zsh-autosuggestions" rel="external nofollow noopener noreferrer" target="_blank">github link</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-autosuggestions <span class="variable">$&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;</span>/plugins/zsh-autosuggestions</span><br></pre></td></tr></table></figure><figure class="highlight bash"><figcaption><span>~/.zshrc</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">plugins=( </span><br><span class="line">    <span class="comment"># other plugins...</span></span><br><span class="line">    zsh-autosuggestions</span><br><span class="line">)</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h1 id="ZSH-安装"><a href="#ZSH-安装" class="headerlink" title="ZSH 安装"></a>ZSH 安装</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt install -y git zsh</span><br><span class="line">sh -c <span class="string">"<span class="variable">$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>"</span></span><br></pre></td></tr></table></figure><h1 id="ZSH-插件"><a href="#ZSH-插件" class="headerlink" title="ZSH 插件"></a>ZSH 插件</h1><h2 id="zsh-autosuggestions"><a href="#zsh-autosuggestions" class="headerlink" title="zsh-autosuggestions"></a>zsh-autosuggestions</h2><p><a href="https://github.com/zsh-users/zsh-autosuggestions" rel="external nofollow noopener noreferrer" target="_blank">github link</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-autosuggestions <span class="variable">$&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;</span>/plugins/zsh-autosuggestions</span><br></pre></td></tr></table></figure><figure class="highlight bash"><figcaption><span>~/.zshrc</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">plugins=( </span><br><span class="line">    <span class="comment"># other plugins...</span></span><br><span class="line">    zsh-autosuggestions</span><br><span class="line">)</span><br></pre></td></tr></table></figure><p>推荐配置</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=&quot;fg=#3f3f3f,bg=#8c8c8c,bold&quot;</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -474,31 +499,6 @@
     
       <category term="os" scheme="http://wiki.yanick.site/categories/os/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Gist</title>
-    <link href="http://wiki.yanick.site/wiki/gist/gist/"/>
-    <id>http://wiki.yanick.site/wiki/gist/gist/</id>
-    <published>2020-11-22T17:28:41.000Z</published>
-    <updated>2021-10-21T06:55:16.544Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="为Kube-Object增加Type信息"><a href="#为Kube-Object增加Type信息" class="headerlink" title="为Kube Object增加Type信息"></a>为Kube Object增加Type信息</h2><p>因为 <code>Client-GO</code> 返回的 <code>TypeMeta</code> 永远为 <code>Null</code>，因此需要自己添加</p><figure class="highlight go"><figcaption><span>addTypeInformationToObject</span><a href="https://gist.github.com/yanickxia/8a5306ab555034cb862eda5e0f12399a" rel="external nofollow noopener noreferrer" target="_blank">source_code</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">addTypeInformationToObject</span><span class="params">(obj runtime.Object)</span> <span class="title">error</span></span> &#123;</span><br><span class="line">    gvks, _, err := scheme.Scheme.ObjectKinds(obj)</span><br><span class="line">    <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> fmt.Errorf(<span class="string">"missing apiVersion or kind and cannot assign it; %w"</span>, err)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> _, gvk := <span class="keyword">range</span> gvks &#123;</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(gvk.Kind) == <span class="number">0</span> &#123;</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(gvk.Version) == <span class="number">0</span> || gvk.Version == runtime.APIVersionInternal &#123;</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        &#125;</span><br><span class="line">        obj.GetObjectKind().SetGroupVersionKind(gvk)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;为Kube-Object增加Type信息&quot;&gt;&lt;a href=&quot;#为Kube-Object增加Type信息&quot; class=&quot;headerlink&quot; title=&quot;为Kube Object增加Type信息&quot;&gt;&lt;/a&gt;为Kube Object增加Type信息&lt;/h2&gt;&lt;
-      
-    
-    </summary>
-    
-      <category term="gist" scheme="http://wiki.yanick.site/categories/gist/"/>
-    
-    
-      <category term="gist" scheme="http://wiki.yanick.site/tags/gist/"/>
     
   </entry>
   

@@ -1,5 +1,5 @@
+http://wiki.yanick.site/wiki/java/mirros/maven/
 http://wiki.yanick.site/wiki/tools/linux/ubuntu/
 http://wiki.yanick.site/wiki/tools/zsh/zsh/
 http://wiki.yanick.site/wiki/tools/sre/
 http://wiki.yanick.site/wiki/linux/tips/netese-cloud/
-http://wiki.yanick.site/wiki/linux/tips/repair/

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wiki.yanick.site/"/>
-  <updated>2022-03-29T08:40:16.574Z</updated>
+  <updated>2022-04-11T06:15:17.105Z</updated>
   <id>http://wiki.yanick.site/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Maven Mirrors</title>
+    <link href="http://wiki.yanick.site/wiki/java/mirros/maven/"/>
+    <id>http://wiki.yanick.site/wiki/java/mirros/maven/</id>
+    <published>2022-04-11T14:32:50.000Z</published>
+    <updated>2022-04-11T06:15:17.105Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Huawei"><a href="#Huawei" class="headerlink" title="Huawei"></a>Huawei</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">repositories</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">repository</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span>&gt;</span>hw<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>hw<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">url</span>&gt;</span>https://mirrors.huaweicloud.com/repository/maven/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">repository</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">repositories</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">pluginRepositories</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pluginRepository</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span>&gt;</span>hw<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>hw<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">url</span>&gt;</span>https://mirrors.huaweicloud.com/repository/maven/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">pluginRepository</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">pluginRepositories</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Huawei&quot;&gt;&lt;a href=&quot;#Huawei&quot; class=&quot;headerlink&quot; title=&quot;Huawei&quot;&gt;&lt;/a&gt;Huawei&lt;/h2&gt;&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutte
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://wiki.yanick.site/categories/java/"/>
+    
+      <category term="mirros" scheme="http://wiki.yanick.site/categories/java/mirros/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Ubuntu 必装软件</title>
@@ -476,29 +501,6 @@
     
     
       <category term="isito" scheme="http://wiki.yanick.site/tags/isito/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>OS 初始化工具安装</title>
-    <link href="http://wiki.yanick.site/wiki/tools/os/"/>
-    <id>http://wiki.yanick.site/wiki/tools/os/</id>
-    <published>2021-01-08T15:10:08.000Z</published>
-    <updated>2022-02-07T07:15:18.434Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="PRE"><a href="#PRE" class="headerlink" title="PRE"></a>PRE</h2><h3 id="镜像源更换"><a href="#镜像源更换" class="headerlink" title="镜像源更换"></a>镜像源更换</h3><p><a href="https://mirrors.ustc.edu.cn/repogen/" rel="external nofollow noopener noreferrer" target="_blank">USTC MIRROR 生成</a></p><hr><h2 id="ZSH"><a href="#ZSH" class="headerlink" title="ZSH"></a>ZSH</h2><h3 id="国内"><a href="#国内" class="headerlink" title="国内"></a>国内</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt install -y git zsh autojump</span><br><span class="line">sh -c <span class="string">"<span class="variable">$(curl -fsSL https://gitee.com/pocmon/ohmyzsh/raw/master/tools/install.sh)</span>"</span></span><br></pre></td></tr></table></figure><h3 id="全球"><a href="#全球" class="headerlink" title="全球"></a>全球</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt install -y git zsh</span><br><span class="line">sh -c <span class="string">"<span class="variable">$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>"</span></span><br></pre></td></tr></table></figure><h3 id="ZSH-Theme-P10K"><a href="#ZSH-Theme-P10K" class="headerlink" title="ZSH Theme P10K"></a>ZSH Theme P10K</h3><h4 id="国内-1"><a href="#国内-1" class="headerlink" title="国内"></a>国内</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git $&#123;ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom&#125;/themes/powerlevel10k</span><br></pre></td></tr></table></figure><h4 id="全球-1"><a href="#全球-1" class="headerlink" title="全球"></a>全球</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --depth=1 https://github.com/romkatv/powerlevel10k.git <span class="variable">$&#123;ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom&#125;</span>/themes/powerlevel10k</span><br></pre></td></tr></table></figure><hr><p>Set ZSH_THEME=”powerlevel10k/powerlevel10k” in ~/.zshrc.</p><h5 id="Update"><a href="#Update" class="headerlink" title="Update"></a>Update</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git -C <span class="variable">$&#123;ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom&#125;</span>/themes/powerlevel10k pull</span><br></pre></td></tr></table></figure><h3 id="ZSH-lazyload"><a href="#ZSH-lazyload" class="headerlink" title="ZSH lazyload"></a>ZSH lazyload</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/qoomon/zsh-lazyload <span class="variable">$ZSH_CUSTOM</span>/plugins/zsh-lazyload</span><br><span class="line">plugins+=(zsh-lazyload)</span><br></pre></td></tr></table></figure><h3 id="Iterm2-Badges"><a href="#Iterm2-Badges" class="headerlink" title="Iterm2 Badges"></a>Iterm2 Badges</h3><p><a href="https://lihsmi.ch/iterm/2020/02/07/iterm-badges.html" rel="external nofollow noopener noreferrer" target="_blank">Link</a></p><h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><h3 id="国内-2"><a href="#国内-2" class="headerlink" title="国内"></a>国内</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun</span><br></pre></td></tr></table></figure><h3 id="全球-2"><a href="#全球-2" class="headerlink" title="全球"></a>全球</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://get.docker.com</span><br></pre></td></tr></table></figure><h3 id="Docker-Compose"><a href="#Docker-Compose" class="headerlink" title="Docker Compose"></a>Docker Compose</h3><h4 id="国内-3"><a href="#国内-3" class="headerlink" title="国内"></a>国内</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -L https://get.daocloud.io/docker/compose/releases/download/1.27.4/docker-compose-`uname -s`-`uname -m` &gt; /usr/<span class="built_in">local</span>/bin/docker-compose &amp;&amp; chmod +x /usr/<span class="built_in">local</span>/bin/docker-compose</span><br></pre></td></tr></table></figure><h4 id="全球-3"><a href="#全球-3" class="headerlink" title="全球"></a>全球</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -L <span class="string">"https://github.com/docker/compose/releases/download/1.27.4/docker-compose-<span class="variable">$(uname -s)</span>-<span class="variable">$(uname -m)</span>"</span> -o /usr/<span class="built_in">local</span>/bin/docker-compose  &amp;&amp; chmod +x /usr/<span class="built_in">local</span>/bin/docker-compose</span><br></pre></td></tr></table></figure><h2 id="Kube"><a href="#Kube" class="headerlink" title="Kube"></a>Kube</h2><h3 id="国内-4"><a href="#国内-4" class="headerlink" title="国内"></a>国内</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">apt-get install -y apt-transport-https</span><br><span class="line">curl https://mirrors.aliyun.com/kubernetes/apt/doc/apt-key.gpg | apt-key add - </span><br><span class="line">cat &lt;&lt;EOF &gt;/etc/apt/sources.list.d/kubernetes.list</span><br><span class="line">deb https://mirrors.aliyun.com/kubernetes/apt/ kubernetes-stretch main</span><br><span class="line">EOF</span><br><span class="line">apt-get update</span><br><span class="line">apt-get install -y kubectl</span><br></pre></td></tr></table></figure><h2 id="Jenkins"><a href="#Jenkins" class="headerlink" title="Jenkins"></a>Jenkins</h2><p>启动 <code>jenkins</code> 之后，访问 <code>${JENKINS}/pluginManager/advanced</code></p><p>替换 <code>update-center.json</code> 为</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://mirrors.tuna.tsinghua.edu.cn/jenkins/updates/update-center.json</span><br></pre></td></tr></table></figure><p>进入系统的 update 目录更新</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i <span class="string">'s/https:\/\/updates.jenkins.io\/download/https:\/\/mirrors.tuna.tsinghua.edu.cn\/jenkins/g'</span> default.json &amp;&amp; sed -i <span class="string">'s/http:\/\/www.google.com/https:\/\/www.baidu.com/g'</span> default.json</span><br></pre></td></tr></table></figure><p>重启系统<br><code>${JENKINS}/restart</code></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;PRE&quot;&gt;&lt;a href=&quot;#PRE&quot; class=&quot;headerlink&quot; title=&quot;PRE&quot;&gt;&lt;/a&gt;PRE&lt;/h2&gt;&lt;h3 id=&quot;镜像源更换&quot;&gt;&lt;a href=&quot;#镜像源更换&quot; class=&quot;headerlink&quot; title=&quot;镜像源更换&quot;&gt;&lt;/a&gt;
-      
-    
-    </summary>
-    
-      <category term="os" scheme="http://wiki.yanick.site/categories/os/"/>
-    
     
   </entry>
   

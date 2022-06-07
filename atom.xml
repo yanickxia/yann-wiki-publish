@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wiki.yanick.site/"/>
-  <updated>2022-04-11T06:15:17.105Z</updated>
+  <updated>2022-06-07T02:45:16.027Z</updated>
   <id>http://wiki.yanick.site/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Istio Common</title>
+    <link href="http://wiki.yanick.site/wiki/istio/istio-common/"/>
+    <id>http://wiki.yanick.site/wiki/istio/istio-common/</id>
+    <published>2022-05-25T11:28:41.000Z</published>
+    <updated>2022-06-07T02:45:16.027Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="启用-Sidecar"><a href="#启用-Sidecar" class="headerlink" title="启用 Sidecar"></a>启用 Sidecar</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kubectl label namespace default istio-injection=enabled --overwrite</span><br><span class="line">kubectl get namespace -L istio-injection</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;启用-Sidecar&quot;&gt;&lt;a href=&quot;#启用-Sidecar&quot; class=&quot;headerlink&quot; title=&quot;启用 Sidecar&quot;&gt;&lt;/a&gt;启用 Sidecar&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr
+      
+    
+    </summary>
+    
+      <category term="isito" scheme="http://wiki.yanick.site/categories/isito/"/>
+    
+    
+      <category term="isito" scheme="http://wiki.yanick.site/tags/isito/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git</title>
+    <link href="http://wiki.yanick.site/wiki/git/git/"/>
+    <id>http://wiki.yanick.site/wiki/git/git/</id>
+    <published>2022-04-27T14:32:50.000Z</published>
+    <updated>2022-06-07T02:45:16.027Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Git-无法拉去-Go-私有仓库"><a href="#Git-无法拉去-Go-私有仓库" class="headerlink" title="Git 无法拉去 Go 私有仓库"></a>Git 无法拉去 Go 私有仓库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --add url.<span class="string">"git@xxxxx.org:"</span>.insteadOf <span class="string">"https://xxxxx.org/"</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Git-无法拉去-Go-私有仓库&quot;&gt;&lt;a href=&quot;#Git-无法拉去-Go-私有仓库&quot; class=&quot;headerlink&quot; title=&quot;Git 无法拉去 Go 私有仓库&quot;&gt;&lt;/a&gt;Git 无法拉去 Go 私有仓库&lt;/h2&gt;&lt;figure class=&quot;hi
+      
+    
+    </summary>
+    
+      <category term="java" scheme="http://wiki.yanick.site/categories/java/"/>
+    
+      <category term="mirros" scheme="http://wiki.yanick.site/categories/java/mirros/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Maven Mirrors</title>
@@ -46,9 +96,9 @@
     <link href="http://wiki.yanick.site/wiki/tools/linux/ubuntu/"/>
     <id>http://wiki.yanick.site/wiki/tools/linux/ubuntu/</id>
     <published>2022-03-29T15:10:08.000Z</published>
-    <updated>2022-03-29T08:40:16.574Z</updated>
+    <updated>2022-06-07T02:45:16.027Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="AppImageLauncher"><a href="#AppImageLauncher" class="headerlink" title="AppImageLauncher"></a>AppImageLauncher</h2><p>是否厌恶死了， appimage 程序没有启动 icon 了，试试 <a href="https://github.com/TheAssassin/AppImageLauncher" rel="external nofollow noopener noreferrer" target="_blank">AppImageLauncher</a> 真香。</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="AppImageLauncher"><a href="#AppImageLauncher" class="headerlink" title="AppImageLauncher"></a>AppImageLauncher</h2><p>是否厌恶死了， appimage 程序没有启动 icon 了，试试 <a href="https://github.com/TheAssassin/AppImageLauncher" rel="external nofollow noopener noreferrer" target="_blank">AppImageLauncher</a> 真香。</p><h2 id="indicator-声音切换器"><a href="#indicator-声音切换器" class="headerlink" title="indicator 声音切换器"></a>indicator 声音切换器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo snap install indicator-sound-switcher</span><br></pre></td></tr></table></figure><h2 id="开箱即用的VIM"><a href="#开箱即用的VIM" class="headerlink" title="开箱即用的VIM"></a>开箱即用的VIM</h2><p><a href="https://spacevim.org/quick-start-guide/" rel="external nofollow noopener noreferrer" target="_blank">spacevim</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sLf https://spacevim.org/install.sh | bash</span><br></pre></td></tr></table></figure><h2 id="Terminal-增强版"><a href="#Terminal-增强版" class="headerlink" title="Terminal 增强版"></a>Terminal 增强版</h2><p><a href="https://gnunn1.github.io/tilix-web/" rel="external nofollow noopener noreferrer" target="_blank">tilix</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install tilix</span><br></pre></td></tr></table></figure><p><a href="https://github.com/gnome-terminator/terminator" rel="external nofollow noopener noreferrer" target="_blank">terminator</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install terminator</span><br></pre></td></tr></table></figure><p><a href="https://hyper.is/" rel="external nofollow noopener noreferrer" target="_blank">hyper</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://hyper.is/</span><br></pre></td></tr></table></figure><p>跨平台是优点，但是吃 GPU，毕竟是 electron 家族的玩意</p><p><a href="https://tabby.sh/" rel="external nofollow noopener noreferrer" target="_blank">tabby</a><br>云同步是真的不错，不过也是 electron 家族</p>]]></content>
     
     <summary type="html">
     
@@ -453,54 +503,6 @@
     
       <category term="envoy" scheme="http://wiki.yanick.site/categories/envoy/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Proxy</title>
-    <link href="http://wiki.yanick.site/wiki/proxy/proxy/"/>
-    <id>http://wiki.yanick.site/wiki/proxy/proxy/</id>
-    <published>2021-03-04T16:09:25.000Z</published>
-    <updated>2021-10-21T06:55:16.548Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="shadowsocks-代理"><a href="#shadowsocks-代理" class="headerlink" title="shadowsocks 代理"></a>shadowsocks 代理</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -dt --name ss -p 6443:6443 mritd/shadowsocks -s <span class="string">"-s 0.0.0.0 -p 6443 -m aes-256-cfb -k Dangerous@123"</span></span><br></pre></td></tr></table></figure><p>参考 <a href="https://github.com/mritd/dockerfile/blob/master/shadowsocks/README.md" rel="external nofollow noopener noreferrer" target="_blank">README</a></p><h2 id="Socket-5-代理"><a href="#Socket-5-代理" class="headerlink" title="Socket 5 代理"></a>Socket 5 代理</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name socket5-proxy -p 80:1080 -e PROXY_USER=root  -e PROXY_PASSWORD=Dangerous@123 serjs/go-socks5-proxy</span><br></pre></td></tr></table></figure><h3 id="No-docker"><a href="#No-docker" class="headerlink" title="No docker"></a>No docker</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get install dante-server</span><br><span class="line"> vim /etc/danted.conf</span><br></pre></td></tr></table></figure><p>更多参考 <a href="https://hub.docker.com/r/mritd/shadowsocks" rel="external nofollow noopener noreferrer" target="_blank">https://hub.docker.com/r/mritd/shadowsocks</a></p><h2 id="FRP-隧道"><a href="#FRP-隧道" class="headerlink" title="FRP 隧道"></a>FRP 隧道</h2><p>Server</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --restart=always --network host -d -v /etc/frp/frps.ini:/etc/frp/frps.ini --name frps snowdreamtech/frps</span><br></pre></td></tr></table></figure><p>Client</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --restart=always --network host -d -v /etc/frp/frpc.ini:/etc/frp/frpc.ini --name frpc snowdreamtech/frpc</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;shadowsocks-代理&quot;&gt;&lt;a href=&quot;#shadowsocks-代理&quot; class=&quot;headerlink&quot; title=&quot;shadowsocks 代理&quot;&gt;&lt;/a&gt;shadowsocks 代理&lt;/h2&gt;&lt;figure class=&quot;highlight 
-      
-    
-    </summary>
-    
-      <category term="proxy" scheme="http://wiki.yanick.site/categories/proxy/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Tips</title>
-    <link href="http://wiki.yanick.site/wiki/istio/isito-tips/"/>
-    <id>http://wiki.yanick.site/wiki/istio/isito-tips/</id>
-    <published>2021-01-24T11:28:41.000Z</published>
-    <updated>2021-10-21T06:55:16.544Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="自定义指标前缀"><a href="#自定义指标前缀" class="headerlink" title="自定义指标前缀"></a>自定义指标前缀</h2><p>istio 没有将所有的配置项都释放出来，因此我们可以通过 <code>EnvoyFilter</code> 这个 <code>CRD</code> 进行操作</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">kind:</span> <span class="string">EnvoyFilter</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">networking.istio.io/v1alpha3</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line"><span class="attr">  annotations:</span></span><br><span class="line"><span class="attr">  name:</span> <span class="string">mysql-stats-settings</span></span><br><span class="line"><span class="attr">  namespace:</span> <span class="string">wordpress</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line"><span class="attr">  configPatches:</span></span><br><span class="line"><span class="attr">  - applyTo:</span> <span class="string">NETWORK_FILTER</span></span><br><span class="line"><span class="attr">    match:</span></span><br><span class="line"><span class="attr">      context:</span> <span class="string">ANY</span></span><br><span class="line"><span class="attr">      listener:</span></span><br><span class="line"><span class="attr">        filterChain:</span></span><br><span class="line"><span class="attr">          filter:</span></span><br><span class="line"><span class="attr">            name:</span> <span class="string">envoy.filters.network.mysql_proxy</span></span><br><span class="line"><span class="attr">    patch:</span></span><br><span class="line"><span class="attr">      operation:</span> <span class="string">MERGE</span></span><br><span class="line"><span class="attr">      value:</span></span><br><span class="line"><span class="attr">        typed_config:</span></span><br><span class="line">          <span class="string">"@type"</span><span class="string">:</span> <span class="string">"type.googleapis.com/envoy.extensions.filters.network.mysql_proxy.v3.MySQLProxy"</span></span><br><span class="line"><span class="attr">          stat_prefix:</span> <span class="string">egress_mysql</span></span><br></pre></td></tr></table></figure><h2 id="Envoy-指标对外暴露"><a href="#Envoy-指标对外暴露" class="headerlink" title="Envoy 指标对外暴露"></a>Envoy 指标对外暴露</h2><p>istio 没有将所有的指标对外暴露，因此需要额外配置： <a href="https://istio.io/latest/docs/ops/configuration/telemetry/envoy-stats/" rel="external nofollow noopener noreferrer" target="_blank">envoy-stats</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ kubectl edit configmaps -n istio-system istio</span><br></pre></td></tr></table></figure><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"defaultConfig"</span>: &#123;</span><br><span class="line">        <span class="attr">"discoveryAddress"</span>: <span class="string">"istiod.istio-system.svc:15012"</span>,</span><br><span class="line">        <span class="attr">"rootNamespace"</span>: <span class="string">"istio-system"</span>,</span><br><span class="line">        <span class="attr">"trustDomain"</span>: <span class="string">"cluster.local"</span>,</span><br><span class="line">        <span class="attr">"proxyStatsMatcher"</span>: &#123;</span><br><span class="line">            <span class="attr">"inclusionRegexps"</span>: [</span><br><span class="line">                <span class="string">".*mysql.*"</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">"inclusionPrefixes"</span>: [</span><br><span class="line">                <span class="string">"egress_mysql"</span></span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">"meshId"</span>: <span class="string">"mesh1"</span>,</span><br><span class="line">        <span class="attr">"enablePrometheusMerge"</span>: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;自定义指标前缀&quot;&gt;&lt;a href=&quot;#自定义指标前缀&quot; class=&quot;headerlink&quot; title=&quot;自定义指标前缀&quot;&gt;&lt;/a&gt;自定义指标前缀&lt;/h2&gt;&lt;p&gt;istio 没有将所有的配置项都释放出来，因此我们可以通过 &lt;code&gt;EnvoyFilter&lt;/c
-      
-    
-    </summary>
-    
-      <category term="isito" scheme="http://wiki.yanick.site/categories/isito/"/>
-    
-    
-      <category term="isito" scheme="http://wiki.yanick.site/tags/isito/"/>
     
   </entry>
   

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wiki.yanick.site/"/>
-  <updated>2022-06-07T02:45:16.027Z</updated>
+  <updated>2022-06-21T12:15:16.775Z</updated>
   <id>http://wiki.yanick.site/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>有趣的工具</title>
+    <link href="http://wiki.yanick.site/wiki/tools/tools/"/>
+    <id>http://wiki.yanick.site/wiki/tools/tools/</id>
+    <published>2022-06-07T15:10:08.000Z</published>
+    <updated>2022-06-21T12:15:16.775Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="terminalizer"><a href="#terminalizer" class="headerlink" title="terminalizer"></a><a href="https://github.com/faressoft/terminalizer#installation" rel="external nofollow noopener noreferrer" target="_blank">terminalizer</a></h2><p>录制你的 Shell Input </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;terminalizer&quot;&gt;&lt;a href=&quot;#terminalizer&quot; class=&quot;headerlink&quot; title=&quot;terminalizer&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://github.com/faressoft/terminalizer
+      
+    
+    </summary>
+    
+      <category term="os" scheme="http://wiki.yanick.site/categories/os/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Istio Common</title>
@@ -121,9 +144,9 @@
     <link href="http://wiki.yanick.site/wiki/tools/zsh/zsh/"/>
     <id>http://wiki.yanick.site/wiki/tools/zsh/zsh/</id>
     <published>2022-03-25T13:00:50.000Z</published>
-    <updated>2022-03-29T08:40:16.574Z</updated>
+    <updated>2022-06-21T12:15:16.779Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="ZSH-安装"><a href="#ZSH-安装" class="headerlink" title="ZSH 安装"></a>ZSH 安装</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt install -y git zsh</span><br><span class="line">sh -c <span class="string">"<span class="variable">$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>"</span></span><br></pre></td></tr></table></figure><h1 id="ZSH-插件"><a href="#ZSH-插件" class="headerlink" title="ZSH 插件"></a>ZSH 插件</h1><h2 id="zsh-autosuggestions"><a href="#zsh-autosuggestions" class="headerlink" title="zsh-autosuggestions"></a>zsh-autosuggestions</h2><p><a href="https://github.com/zsh-users/zsh-autosuggestions" rel="external nofollow noopener noreferrer" target="_blank">github link</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-autosuggestions <span class="variable">$&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;</span>/plugins/zsh-autosuggestions</span><br></pre></td></tr></table></figure><figure class="highlight bash"><figcaption><span>~/.zshrc</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">plugins=( </span><br><span class="line">    <span class="comment"># other plugins...</span></span><br><span class="line">    zsh-autosuggestions</span><br><span class="line">)</span><br></pre></td></tr></table></figure><p>推荐配置</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=&quot;fg=#3f3f3f,bg=#8c8c8c,bold&quot;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h1 id="ZSH-安装"><a href="#ZSH-安装" class="headerlink" title="ZSH 安装"></a>ZSH 安装</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt install -y git zsh</span><br><span class="line">sh -c <span class="string">"<span class="variable">$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>"</span></span><br></pre></td></tr></table></figure><h1 id="ZSH-配置"><a href="#ZSH-配置" class="headerlink" title="ZSH 配置"></a>ZSH 配置</h1><p><a href="https://koenwoortman.com/zsh-split-zshrc-into-multiple-files/" rel="external nofollow noopener noreferrer" target="_blank">Split the zshrc file into multiple files</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ~/.zshrc</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Load seperated config files</span></span><br><span class="line"><span class="keyword">for</span> conf <span class="keyword">in</span> <span class="string">"<span class="variable">$HOME</span>/.config/zsh/config.d/"</span>*.zsh; <span class="keyword">do</span></span><br><span class="line">  <span class="built_in">source</span> <span class="string">"<span class="variable">$&#123;conf&#125;</span>"</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"><span class="built_in">unset</span> conf</span><br></pre></td></tr></table></figure><h1 id="ZSH-插件"><a href="#ZSH-插件" class="headerlink" title="ZSH 插件"></a>ZSH 插件</h1><h2 id="zsh-autosuggestions"><a href="#zsh-autosuggestions" class="headerlink" title="zsh-autosuggestions"></a>zsh-autosuggestions</h2><p><a href="https://github.com/zsh-users/zsh-autosuggestions" rel="external nofollow noopener noreferrer" target="_blank">github link</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/zsh-users/zsh-autosuggestions <span class="variable">$&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;</span>/plugins/zsh-autosuggestions</span><br></pre></td></tr></table></figure><figure class="highlight bash"><figcaption><span>~/.zshrc</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">plugins=( </span><br><span class="line">    <span class="comment"># other plugins...</span></span><br><span class="line">    zsh-autosuggestions</span><br><span class="line">)</span><br></pre></td></tr></table></figure><p>推荐配置</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=&quot;fg=#3f3f3f,bg=#8c8c8c,bold&quot;</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -478,30 +501,6 @@
       <category term="linux" scheme="http://wiki.yanick.site/categories/linux/"/>
     
       <category term="ssl" scheme="http://wiki.yanick.site/categories/linux/ssl/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Build &amp; Debug Envoy</title>
-    <link href="http://wiki.yanick.site/wiki/envoy/build-debug-envoy/"/>
-    <id>http://wiki.yanick.site/wiki/envoy/build-debug-envoy/</id>
-    <published>2021-03-09T16:09:25.000Z</published>
-    <updated>2021-10-21T06:55:16.544Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Debug-Compiler"><a href="#Debug-Compiler" class="headerlink" title="Debug Compiler"></a>Debug Compiler</h2><p>首先构建一个可debug的版本</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bazel build -c dbg --spawn_strategy=standalone //<span class="built_in">source</span>/exe:envoy-static</span><br></pre></td></tr></table></figure><h2 id="生成-dSYM"><a href="#生成-dSYM" class="headerlink" title="生成 dSYM"></a>生成 dSYM</h2><p>进入到 envoy-static 同级目录，执行：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dsymutil envoy-static -o envoy-static.dSYM</span><br></pre></td></tr></table></figure><h2 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h2><h3 id="Debug-By-LLDB"><a href="#Debug-By-LLDB" class="headerlink" title="Debug By LLDB"></a>Debug By LLDB</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ lldb envoy-static</span><br><span class="line">(lldb) process launch --stop-at-entry -- -c <span class="variable">$PATH_TO_CONFIG</span></span><br><span class="line">(lldb) add-dsym envoy-static.dSYM</span><br><span class="line">(lldb) breakpoint <span class="built_in">set</span> --file server.cc --line 147</span><br><span class="line">(lldb) <span class="built_in">continue</span></span><br></pre></td></tr></table></figure><h3 id="Debug-By-Vscode"><a href="#Debug-By-Vscode" class="headerlink" title="Debug By Vscode"></a>Debug By Vscode</h3><p>open launch.json file and change program to “${workspaceFolder}/bazel-bin/envoy” (lauch.json will open when to start debugging)</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    // Use IntelliSense to learn about possible attributes.</span><br><span class="line">    // Hover to view descriptions of existing attributes.</span><br><span class="line">    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387</span><br><span class="line">    "version": "0.2.0",</span><br><span class="line">    "configurations": [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"name"</span>: <span class="string">"(lldb) Launch"</span>,</span><br><span class="line">            <span class="attr">"type"</span>: <span class="string">"cppdbg"</span>,</span><br><span class="line">            <span class="attr">"request"</span>: <span class="string">"launch"</span>,</span><br><span class="line">            <span class="attr">"program"</span>: <span class="string">"$&#123;workspaceFolder&#125;/bazel-bin/source/exe/envoy-static"</span>,</span><br><span class="line">            <span class="attr">"args"</span>: [<span class="string">"-c"</span>, <span class="string">"envoy.yaml"</span>],</span><br><span class="line">            <span class="attr">"stopAtEntry"</span>: <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">"cwd"</span>: <span class="string">"$&#123;workspaceFolder&#125;"</span>,</span><br><span class="line">            <span class="attr">"environment"</span>: [],</span><br><span class="line">            <span class="attr">"externalConsole"</span>: <span class="literal">true</span>,</span><br><span class="line">            <span class="attr">"MIMode"</span>: <span class="string">"lldb"</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="Debug-in-Clion"><a href="#Debug-in-Clion" class="headerlink" title="Debug in Clion"></a>Debug in Clion</h3><h4 id="Gen-CMakeList"><a href="#Gen-CMakeList" class="headerlink" title="Gen CMakeList"></a>Gen CMakeList</h4><p>下载 <a href="https://github.com/lizan/bazel-cmakelists" rel="external nofollow noopener noreferrer" target="_blank">bazel-cmakelists</a>，在envoy目录下运行，生成 <code>CMakeLists.txt</code>。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bazel-cmakelists --targets //<span class="built_in">source</span>/exe:envoy-static --skip_build</span><br></pre></td></tr></table></figure><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="https://zhuanlan.zhihu.com/p/258777260" rel="external nofollow noopener noreferrer" target="_blank">Envoy调试指南</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Debug-Compiler&quot;&gt;&lt;a href=&quot;#Debug-Compiler&quot; class=&quot;headerlink&quot; title=&quot;Debug Compiler&quot;&gt;&lt;/a&gt;Debug Compiler&lt;/h2&gt;&lt;p&gt;首先构建一个可debug的版本&lt;/p&gt;
-&lt;f
-      
-    
-    </summary>
-    
-      <category term="envoy" scheme="http://wiki.yanick.site/categories/envoy/"/>
     
     
   </entry>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wiki.yanick.site/"/>
-  <updated>2022-06-21T12:15:16.775Z</updated>
+  <updated>2022-06-29T08:20:19.253Z</updated>
   <id>http://wiki.yanick.site/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SSH Tips</title>
+    <link href="http://wiki.yanick.site/wiki/tools/ssh/ssh/"/>
+    <id>http://wiki.yanick.site/wiki/tools/ssh/ssh/</id>
+    <published>2022-06-29T16:27:50.000Z</published>
+    <updated>2022-06-29T08:20:19.253Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="SSH-Keep-Alive"><a href="#SSH-Keep-Alive" class="headerlink" title="SSH Keep Alive"></a>SSH Keep Alive</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ~/.ssh/config</span></span><br><span class="line">Host *</span><br><span class="line">    ServerAliveInterval 30</span><br><span class="line">    ServerAliveCountMax 2</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;SSH-Keep-Alive&quot;&gt;&lt;a href=&quot;#SSH-Keep-Alive&quot; class=&quot;headerlink&quot; title=&quot;SSH Keep Alive&quot;&gt;&lt;/a&gt;SSH Keep Alive&lt;/h2&gt;&lt;figure class=&quot;highlight 
+      
+    
+    </summary>
+    
+      <category term="tools" scheme="http://wiki.yanick.site/categories/tools/"/>
+    
+      <category term="ssh" scheme="http://wiki.yanick.site/categories/tools/ssh/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>有趣的工具</title>
@@ -153,6 +178,29 @@
       
       
         &lt;h1 id=&quot;ZSH-安装&quot;&gt;&lt;a href=&quot;#ZSH-安装&quot; class=&quot;headerlink&quot; title=&quot;ZSH 安装&quot;&gt;&lt;/a&gt;ZSH 安装&lt;/h1&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutt
+      
+    
+    </summary>
+    
+      <category term="tools" scheme="http://wiki.yanick.site/categories/tools/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Free Site Resource</title>
+    <link href="http://wiki.yanick.site/wiki/tools/free/"/>
+    <id>http://wiki.yanick.site/wiki/tools/free/</id>
+    <published>2022-02-22T16:27:50.000Z</published>
+    <updated>2022-06-29T08:20:19.253Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="IP"><a href="#IP" class="headerlink" title="IP"></a>IP</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl <span class="string">'https://api.ipify.org?format=json'</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;IP&quot;&gt;&lt;a href=&quot;#IP&quot; class=&quot;headerlink&quot; title=&quot;IP&quot;&gt;&lt;/a&gt;IP&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span c
       
     
     </summary>
@@ -453,54 +501,6 @@
     </summary>
     
       <category term="rust" scheme="http://wiki.yanick.site/categories/rust/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>构建与调试 Linux 内核</title>
-    <link href="http://wiki.yanick.site/wiki/linux/build-and-debug-kernel-simple/"/>
-    <id>http://wiki.yanick.site/wiki/linux/build-and-debug-kernel-simple/</id>
-    <published>2021-03-19T16:09:25.000Z</published>
-    <updated>2021-10-21T06:55:16.548Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Linux-Kenrel"><a href="#Linux-Kenrel" class="headerlink" title="Linux Kenrel"></a>Linux Kenrel</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget http://mirrors.ustc.edu.cn/kernel.org/linux/kernel/v4.x/linux-4.19.171.tar.gz</span><br><span class="line">tar -xvf linux-4.19.171.tar.gz</span><br></pre></td></tr></table></figure><h2 id="Install-Build"><a href="#Install-Build" class="headerlink" title="Install Build"></a>Install Build</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install -y libncurses5-dev libssl-dev bison flex libelf-dev gcc make openssl libc6-dev bc</span><br></pre></td></tr></table></figure><h2 id="CP-Old-Config"><a href="#CP-Old-Config" class="headerlink" title="CP Old Config"></a>CP Old Config</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cp /boot/config-4.19.0-14-amd64 .config</span><br><span class="line">make oldconfig</span><br><span class="line"><span class="comment"># for debian</span></span><br><span class="line">sed -ri <span class="string">'/CONFIG_SYSTEM_TRUSTED_KEYS/s/=.+/=""/g'</span> .config</span><br></pre></td></tr></table></figure><h2 id="Build"><a href="#Build" class="headerlink" title="Build"></a>Build</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">make -j8</span><br><span class="line">make bzImage</span><br><span class="line">make modules</span><br><span class="line">make modules_install</span><br><span class="line">make install</span><br></pre></td></tr></table></figure><h2 id="disable-kaslr"><a href="#disable-kaslr" class="headerlink" title="disable kaslr"></a>disable kaslr</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/default/grub</span><br><span class="line"><span class="comment"># append nokaslr</span></span><br><span class="line">update-grub</span><br></pre></td></tr></table></figure><h2 id="gdb-stub"><a href="#gdb-stub" class="headerlink" title="gdb stub"></a>gdb stub</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim xxx.vmx</span><br><span class="line">debugStub.listen.guest64.remote = <span class="string">"TRUE"</span></span><br><span class="line">debugStub.listen.guest64 = <span class="string">"TRUE"</span></span><br><span class="line">monitor.debugOnStartGuest64 = <span class="string">"TRUE"</span></span><br></pre></td></tr></table></figure><h2 id="debug"><a href="#debug" class="headerlink" title="debug"></a>debug</h2><pre><code class="bash"></code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Linux-Kenrel&quot;&gt;&lt;a href=&quot;#Linux-Kenrel&quot; class=&quot;headerlink&quot; title=&quot;Linux Kenrel&quot;&gt;&lt;/a&gt;Linux Kenrel&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;t
-      
-    
-    </summary>
-    
-      <category term="linux" scheme="http://wiki.yanick.site/categories/linux/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>SSL 证书查看</title>
-    <link href="http://wiki.yanick.site/wiki/linux/rsa/"/>
-    <id>http://wiki.yanick.site/wiki/linux/rsa/</id>
-    <published>2021-03-12T16:09:25.000Z</published>
-    <updated>2021-10-21T06:55:16.548Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="查看服务器-SSL-证书详情"><a href="#查看服务器-SSL-证书详情" class="headerlink" title="查看服务器 SSL 证书详情"></a>查看服务器 SSL 证书详情</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> | openssl s_client -showcerts -servername &lt;SERVER_NAME&gt; -connect &lt;ADDRESS&gt; 2&gt;/dev/null | openssl x509 -inform pem -noout -text</span><br></pre></td></tr></table></figure><h2 id="查询证书"><a href="#查询证书" class="headerlink" title="查询证书"></a>查询证书</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openssl x509 -<span class="keyword">in</span> &lt;INPUT.pem&gt; -noout -text</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;查看服务器-SSL-证书详情&quot;&gt;&lt;a href=&quot;#查看服务器-SSL-证书详情&quot; class=&quot;headerlink&quot; title=&quot;查看服务器 SSL 证书详情&quot;&gt;&lt;/a&gt;查看服务器 SSL 证书详情&lt;/h2&gt;&lt;figure class=&quot;highlight 
-      
-    
-    </summary>
-    
-      <category term="linux" scheme="http://wiki.yanick.site/categories/linux/"/>
-    
-      <category term="ssl" scheme="http://wiki.yanick.site/categories/linux/ssl/"/>
     
     
   </entry>

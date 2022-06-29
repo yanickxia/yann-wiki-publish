@@ -1,5 +1,5 @@
+http://wiki.yanick.site/wiki/tools/ssh/ssh/
 http://wiki.yanick.site/wiki/tools/tools/
 http://wiki.yanick.site/wiki/istio/istio-common/
 http://wiki.yanick.site/wiki/git/git/
 http://wiki.yanick.site/wiki/java/mirros/maven/
-http://wiki.yanick.site/wiki/tools/linux/ubuntu/

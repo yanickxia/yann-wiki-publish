@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wiki.yanick.site/"/>
-  <updated>2022-08-01T03:20:20.044Z</updated>
+  <updated>2022-08-02T09:40:17.794Z</updated>
   <id>http://wiki.yanick.site/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>kubectl tips</title>
+    <link href="http://wiki.yanick.site/wiki/k8s/kubectl-tips/"/>
+    <id>http://wiki.yanick.site/wiki/k8s/kubectl-tips/</id>
+    <published>2022-08-02T17:31:50.000Z</published>
+    <updated>2022-08-02T09:40:17.794Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="更新-CR-Status-字段"><a href="#更新-CR-Status-字段" class="headerlink" title="更新 CR Status 字段"></a>更新 CR Status 字段</h2><p>参考 <a href="https://simondrake.dev/microblog/update-k8s-crd-status" rel="external nofollow noopener noreferrer" target="_blank">Update K8s CR Status</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;更新-CR-Status-字段&quot;&gt;&lt;a href=&quot;#更新-CR-Status-字段&quot; class=&quot;headerlink&quot; title=&quot;更新 CR Status 字段&quot;&gt;&lt;/a&gt;更新 CR Status 字段&lt;/h2&gt;&lt;p&gt;参考 &lt;a href=&quot;https:
+      
+    
+    </summary>
+    
+      <category term="network" scheme="http://wiki.yanick.site/categories/network/"/>
+    
+      <category term="kubernetes" scheme="http://wiki.yanick.site/categories/network/kubernetes/"/>
+    
+      <category term="kubectl" scheme="http://wiki.yanick.site/categories/network/kubernetes/kubectl/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>tmux 使用指南</title>
@@ -473,37 +500,6 @@
     
       <category term="tips" scheme="http://wiki.yanick.site/categories/tips/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>计算机缩写之 Call/CC</title>
-    <link href="http://wiki.yanick.site/wiki/cs/call/cc/"/>
-    <id>http://wiki.yanick.site/wiki/cs/call/cc/</id>
-    <published>2021-03-23T17:28:41.000Z</published>
-    <updated>2021-10-21T06:55:16.544Z</updated>
-    
-    <content type="html"><![CDATA[<p><code>call/cc</code> 即 <code>call with current continuation</code>，完整的定义是 </p><blockquote><p>captures the current continuation, and applies its argument to this continuation </p></blockquote><p><code>continuation</code> 就是程序剩下的部分，举个例子，对于表达式 <code>(+ 4 (+ 1 2))</code> 来说，(+ 1 2) 这个的剩下来就是如下</p><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">lambda</span> (<span class="name">v</span>) (<span class="name">+</span> <span class="number">4</span> v))</span><br></pre></td></tr></table></figure><p>对于 4 来说，剩下来就是 </p><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">lambda</span> (<span class="name">v</span>) (<span class="name">+</span> v (<span class="name">+</span> <span class="number">1</span> <span class="number">2</span>)))</span><br></pre></td></tr></table></figure><p>那这个 <code>call/cc</code> 的定义是</p><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(... (<span class="name">call/cc</span> (<span class="name">lambda</span> (<span class="name">cc</span>) </span><br><span class="line">                      (<span class="name">&lt;body&gt;</span>))) ...)</span><br></pre></td></tr></table></figure><p><code>body</code> 是指当前 <code>continuation</code>， <code>cc</code> 就是某个函数。</p><hr><p>回到抽象定义来 <code>(call/cc f)</code> ，接受一个 <code>f</code> 而这个 <code>f</code> 的实参是 <code>continuation</code><br>比如说 <code>((call/cc f) e2)</code> 对于 <code>f</code> 接受是 <code>continuation</code>，假设当前的 <code>continuation</code> 是一个 <code>c</code><br>那么<code>current continuation</code> 为 <code>(lambda (c) (c e2))</code> 这个对于 <code>e2</code> 来说的，加上 f 就会变成 <code>(f (lambda (c) (c e2)))</code></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;code&gt;call/cc&lt;/code&gt; 即 &lt;code&gt;call with current continuation&lt;/code&gt;，完整的定义是 &lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;captures the current continuation, and app
-      
-    
-    </summary>
-    
-      <category term="cs" scheme="http://wiki.yanick.site/categories/cs/"/>
-    
-      <category term="call/cc" scheme="http://wiki.yanick.site/categories/cs/call-cc/"/>
-    
-    
-      <category term="cs" scheme="http://wiki.yanick.site/tags/cs/"/>
-    
-      <category term="call/cc" scheme="http://wiki.yanick.site/tags/call-cc/"/>
     
   </entry>
   

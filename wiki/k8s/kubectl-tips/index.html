@@ -3,25 +3,23 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     
-    <title>服务发现 | Yanick&#39;s Wiki</title>
+    <title>kubectl tips | Yanick&#39;s Wiki</title>
     
     
-        <meta name="keywords" content="服务发现">
+        <meta name="keywords" content="kubectl tips">
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="关于服务发现的定义 服务发现 Wiki-Service_discovery  这部分稍微要注意的是服务发现分为 客户端发现模式，服务端发现模式，Eureka 采用的是客户端发现的模式，这样职责单一，对于服务端的要求也不会太高。 关于服务发现的实现 Eureka: Netflix 开源的服务发现，当前的1.0版本有几个问题  全量更新 无一致性保证 非长连接，轮询保证服务健康   Zookeeper">
+    <meta name="description" content="更新 CR Status 字段参考 Update K8s CR Status">
 <meta property="og:type" content="article">
-<meta property="og:title" content="服务发现">
-<meta property="og:url" content="http://wiki.yanick.site/wiki/microservice/service_discovery/index.html">
+<meta property="og:title" content="kubectl tips">
+<meta property="og:url" content="http://wiki.yanick.site/wiki/k8s/kubectl-tips/index.html">
 <meta property="og:site_name" content="Yanick&#39;s Wiki">
-<meta property="og:description" content="关于服务发现的定义 服务发现 Wiki-Service_discovery  这部分稍微要注意的是服务发现分为 客户端发现模式，服务端发现模式，Eureka 采用的是客户端发现的模式，这样职责单一，对于服务端的要求也不会太高。 关于服务发现的实现 Eureka: Netflix 开源的服务发现，当前的1.0版本有几个问题  全量更新 无一致性保证 非长连接，轮询保证服务健康   Zookeeper">
+<meta property="og:description" content="更新 CR Status 字段参考 Update K8s CR Status">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://coreos.com/sites/default/files/inline-images/2017Q1-00-cpu-1M-client-scaling.png">
-<meta property="og:updated_time" content="2021-10-21T06:55:16.548Z">
+<meta property="og:updated_time" content="2022-08-02T09:40:17.794Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="服务发现">
-<meta name="twitter:description" content="关于服务发现的定义 服务发现 Wiki-Service_discovery  这部分稍微要注意的是服务发现分为 客户端发现模式，服务端发现模式，Eureka 采用的是客户端发现的模式，这样职责单一，对于服务端的要求也不会太高。 关于服务发现的实现 Eureka: Netflix 开源的服务发现，当前的1.0版本有几个问题  全量更新 无一致性保证 非长连接，轮询保证服务健康   Zookeeper">
-<meta name="twitter:image" content="https://coreos.com/sites/default/files/inline-images/2017Q1-00-cpu-1M-client-scaling.png">
+<meta name="twitter:title" content="kubectl tips">
+<meta name="twitter:description" content="更新 CR Status 字段参考 Update K8s CR Status">
     
 
     
@@ -162,20 +160,20 @@
         
         
          <ul class="unstyled" id="tree"> 
-                    <li class="directory open">
+                    <li class="directory">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder-open"></i>
+                            <i class="fa fa-folder"></i>
                             &nbsp;
                             architecture
                         </a>
                          <ul class="unstyled" id="tree"> 
-                    <li class="directory open">
+                    <li class="directory">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder-open"></i>
+                            <i class="fa fa-folder"></i>
                             &nbsp;
                             microservices
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file active"><a href="/wiki/microservice/service_discovery/">服务发现</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/microservice/service_discovery/">服务发现</a></li>  </ul> 
                     </li> 
                      <li class="file"><a href="/wiki/arch/bottleneck/">常见中间件性能瓶颈</a></li>  </ul> 
                     </li> 
@@ -333,27 +331,27 @@
                      <li class="file"><a href="/wiki/linux/build-and-debug-kernel/">构建与调试 Linux 内核</a></li>  <li class="file"><a href="/wiki/linux/ldd/">Linux Device Driver 笔记</a></li>  <li class="file"><a href="/wiki/linux/tcpdump/">TCPDUMP</a></li>  <li class="file"><a href="/wiki/linux/build-and-debug-kernel-simple/">构建与调试 Linux 内核</a></li>  <li class="file"><a href="/wiki/linux/nc/">NC 使用指南</a></li>  <li class="file"><a href="/wiki/linux/linux-force-reboot/">Linux 强制重启</a></li>  <li class="file"><a href="/wiki/linux/tips/repair/">修复系统</a></li>  <li class="file"><a href="/wiki/linux/tips/netese-cloud/">使用侧边键控制网易云音乐</a></li>  </ul> 
                     </li> 
                     
-                    <li class="directory">
+                    <li class="directory open">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder"></i>
+                            <i class="fa fa-folder-open"></i>
                             &nbsp;
                             network
                         </a>
                          <ul class="unstyled" id="tree"> 
-                    <li class="directory">
+                    <li class="directory open">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder"></i>
+                            <i class="fa fa-folder-open"></i>
                             &nbsp;
                             kubernetes
                         </a>
                          <ul class="unstyled" id="tree"> 
-                    <li class="directory">
+                    <li class="directory open">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder"></i>
+                            <i class="fa fa-folder-open"></i>
                             &nbsp;
                             kubectl
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/k8s/kubectl-tips/">kubectl tips</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file active"><a href="/wiki/k8s/kubectl-tips/">kubectl tips</a></li>  </ul> 
                     </li> 
                      <li class="file"><a href="/wiki/k8s/network-troubleshooting/">kubernetes network troubleshooting</a></li>  </ul> 
                     </li> 
@@ -680,7 +678,7 @@
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
             
-            <section id="main"><article id="post-microservice/service_discovery" class="article article-type-post" itemscope="" itemprop="blogPost">
+            <section id="main"><article id="post-k8s/kubectl-tips" class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -690,15 +688,15 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/architecture/">architecture</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/architecture/microservices/">microservices</a>
+        <a class="article-category-link" href="/categories/network/">network</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/network/kubernetes/">kubernetes</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/network/kubernetes/kubectl/">kubectl</a>
     </div>
 
                         
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/wiki/microservice/service_discovery/">
-            <time datetime="2018-05-04T16:27:50.000Z" itemprop="datePublished">2018-05-04</time>
+        <a href="/wiki/k8s/kubectl-tips/">
+            <time datetime="2022-08-02T17:31:50.000Z" itemprop="datePublished">2022-08-02</time>
         </a>
     </div>
 
@@ -709,13 +707,13 @@
                         
                         
                             <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/raw/master/source/_posts/microservice/service_discovery.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
+                                <a href="https://github.com/yanickxia/yann-wiki/raw/master/source/_posts/k8s/kubectl-tips.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
                             </div>
                             <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/edit/master/source/_posts/microservice/service_discovery.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
+                                <a href="https://github.com/yanickxia/yann-wiki/edit/master/source/_posts/k8s/kubectl-tips.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
                             </div>
                             <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/commits/master/source/_posts/microservice/service_discovery.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
+                                <a href="https://github.com/yanickxia/yann-wiki/commits/master/source/_posts/k8s/kubectl-tips.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
                             </div>
                         
                     </div>
@@ -723,7 +721,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            服务发现
+            kubectl tips
         </h1>
     
 
@@ -736,40 +734,12 @@
             
                 <div id="toc" class="toc-article">
                 <strong class="toc-title">Catalogue</strong>
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关于服务发现的定义"><span class="toc-number">1.</span> <span class="toc-text">关于服务发现的定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于服务发现的实现"><span class="toc-number">2.</span> <span class="toc-text">关于服务发现的实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#性能测试"><span class="toc-number">3.</span> <span class="toc-text">性能测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-number">4.</span> <span class="toc-text">参考资料</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#更新-CR-Status-字段"><span class="toc-number">1.</span> <span class="toc-text">更新 CR Status 字段</span></a></li></ol>
                 </div>
             
         
         
-            <h2 id="关于服务发现的定义"><a href="#关于服务发现的定义" class="headerlink" title="关于服务发现的定义"></a>关于服务发现的定义</h2><ul>
-<li><a href="https://github.com/DocsHome/microservices/blob/master/4-service-discovery.md" rel="external nofollow noopener noreferrer" target="_blank">服务发现</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Service_discovery" rel="external nofollow noopener noreferrer" target="_blank">Wiki-Service_discovery</a></li>
-</ul>
-<p>这部分稍微要注意的是服务发现分为 <code>客户端发现模式</code>，<code>服务端发现模式</code>，Eureka 采用的是客户端发现的模式，这样职责单一，对于<br>服务端的要求也不会太高。</p>
-<h2 id="关于服务发现的实现"><a href="#关于服务发现的实现" class="headerlink" title="关于服务发现的实现"></a>关于服务发现的实现</h2><ul>
-<li><p>Eureka: Netflix 开源的服务发现，当前的1.0版本有几个问题</p>
-<ul>
-<li>全量更新</li>
-<li>无一致性保证</li>
-<li>非长连接，轮询保证服务健康</li>
-</ul>
-</li>
-<li><p>Zookeeper: 很多老点的系统会使用这个，优点是有一致性协议保证，缺点也就是不太友好，需要理解它的概念。<br>主要通过虚节点来实现。</p>
-</li>
-<li><p>etcd: 本质上一个KeyValue的储存，这个也需要自己实现一个轮训的接口。</p>
-</li>
-<li><p>Consul: 我觉得这是最为完美的方案，有一致性协议保证，consul 自己实现了Client 和 Server</p>
-</li>
-</ul>
-<p>SpringCloud对Eureka支持最好，Consul也有支持，其他的就完全需要自己搞一套了。</p>
-<h2 id="性能测试"><a href="#性能测试" class="headerlink" title="性能测试"></a>性能测试</h2><p>其实作为底层服务，性能是需要重要考虑的特性。官网有一个performance。见参考资料</p>
-<p><img src="https://coreos.com/sites/default/files/inline-images/2017Q1-00-cpu-1M-client-scaling.png" alt="2017Q1-00-cpu-1M-client-scaling"></p>
-<p>整体看起来 Consul 和 etcd 是接近的，Zoo在大量的节点连接的时候CPU和内存都需要大量的占用，在微服务设计的时候需要考虑。</p>
-<p>最后补充一个 <a href="https://home1-oss.github.io/home1-oss-gitbook/release/docs/oss-eureka/PERFORMANCE.html" rel="external nofollow noopener noreferrer" target="_blank">Eureka的性能测试</a></p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="https://coreos.com/blog/performance-of-etcd.html" rel="external nofollow noopener noreferrer" target="_blank">performance-of-etcd</a></li>
-<li><a href="https://home1-oss.github.io/home1-oss-gitbook/release/docs/oss-eureka/PERFORMANCE.html" rel="external nofollow noopener noreferrer" target="_blank">performance-of-eureka</a></li>
-</ul>
+            <h2 id="更新-CR-Status-字段"><a href="#更新-CR-Status-字段" class="headerlink" title="更新 CR Status 字段"></a>更新 CR Status 字段</h2><p>参考 <a href="https://simondrake.dev/microblog/update-k8s-crd-status" rel="external nofollow noopener noreferrer" target="_blank">Update K8s CR Status</a></p>
 
             </div>
         
@@ -782,19 +752,10 @@
     
 <nav id="article-nav">
     
-        <a href="/wiki/learn/book-review/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Newer</strong>
-            <div class="article-nav-title">
-                
-                    阅读回顾模板
-                
-            </div>
-        </a>
     
-    
-        <a href="/wiki/java/classloader/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/wiki/tools/tmux/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">ClassLoader</div>
+            <div class="article-nav-title">tmux 使用指南</div>
         </a>
     
 </nav>
@@ -842,9 +803,9 @@
     <script>
     var disqus_config = function () {
         
-            this.page.url = 'http://wiki.yanick.site/wiki/microservice/service_discovery/';
+            this.page.url = 'http://wiki.yanick.site/wiki/k8s/kubectl-tips/';
         
-        this.page.identifier = 'microservice/service_discovery';
+        this.page.identifier = 'k8s/kubectl-tips';
     };
     (function() { 
         var d = document, s = d.createElement('script');  

@@ -1,5 +1,5 @@
 http://wiki.yanick.site/wiki/linux/tips/desktop/
+http://wiki.yanick.site/wiki/linux/notes/ubuntu-22-04/
 http://wiki.yanick.site/wiki/database/mongodb/mongodb/
 http://wiki.yanick.site/wiki/k8s/kubectl-tips/
 http://wiki.yanick.site/wiki/tools/tmux/
-http://wiki.yanick.site/wiki/tools/ssh/ssh/

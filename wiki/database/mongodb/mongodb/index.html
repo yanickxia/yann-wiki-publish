@@ -3,24 +3,23 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     
-    <title>Gist | Yanick&#39;s Wiki</title>
+    <title>MongoDB Tips | Yanick&#39;s Wiki</title>
     
     
-        <meta name="keywords" content="gist">
+        <meta name="keywords" content="MongoDB Tips">
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="为Kube Object增加Type信息因为 Client-GO 返回的 TypeMeta 永远为 Null，因此需要自己添加 addTypeInformationToObjectsource_code12345678910111213141516171819func addTypeInformationToObject(obj runtime.Object) error &amp;#123;    gv">
-<meta name="keywords" content="gist">
+    <meta name="description" content="关联查询123456789101112131415161718db.task.aggregate([  &amp;#123; $lookup: &amp;#123;    let: &amp;#123; &amp;quot;modeId&amp;quot;:&amp;#123; &amp;quot;$toObjectId&amp;quot;: &amp;quot;$modem&amp;quot; &amp;#125; &amp;#125;,    from: &amp;quot;modem&amp;quot">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Gist">
-<meta property="og:url" content="http://wiki.yanick.site/wiki/gist/gist/index.html">
+<meta property="og:title" content="MongoDB Tips">
+<meta property="og:url" content="http://wiki.yanick.site/wiki/database/mongodb/mongodb/index.html">
 <meta property="og:site_name" content="Yanick&#39;s Wiki">
-<meta property="og:description" content="为Kube Object增加Type信息因为 Client-GO 返回的 TypeMeta 永远为 Null，因此需要自己添加 addTypeInformationToObjectsource_code12345678910111213141516171819func addTypeInformationToObject(obj runtime.Object) error &amp;#123;    gv">
+<meta property="og:description" content="关联查询123456789101112131415161718db.task.aggregate([  &amp;#123; $lookup: &amp;#123;    let: &amp;#123; &amp;quot;modeId&amp;quot;:&amp;#123; &amp;quot;$toObjectId&amp;quot;: &amp;quot;$modem&amp;quot; &amp;#125; &amp;#125;,    from: &amp;quot;modem&amp;quot">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2021-10-21T06:55:16.544Z">
+<meta property="og:updated_time" content="2022-08-22T09:40:15.352Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Gist">
-<meta name="twitter:description" content="为Kube Object增加Type信息因为 Client-GO 返回的 TypeMeta 永远为 Null，因此需要自己添加 addTypeInformationToObjectsource_code12345678910111213141516171819func addTypeInformationToObject(obj runtime.Object) error &amp;#123;    gv">
+<meta name="twitter:title" content="MongoDB Tips">
+<meta name="twitter:description" content="关联查询123456789101112131415161718db.task.aggregate([  &amp;#123; $lookup: &amp;#123;    let: &amp;#123; &amp;quot;modeId&amp;quot;:&amp;#123; &amp;quot;$toObjectId&amp;quot;: &amp;quot;$modem&amp;quot; &amp;#125; &amp;#125;,    from: &amp;quot;modem&amp;quot">
     
 
     
@@ -215,20 +214,20 @@
                      </ul> 
                     </li> 
                     
-                    <li class="directory">
+                    <li class="directory open">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder"></i>
+                            <i class="fa fa-folder-open"></i>
                             &nbsp;
                             database
                         </a>
                          <ul class="unstyled" id="tree"> 
-                    <li class="directory">
+                    <li class="directory open">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder"></i>
+                            <i class="fa fa-folder-open"></i>
                             &nbsp;
                             mongodb
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/database/mongodb/mongodb/">MongoDB Tips</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file active"><a href="/wiki/database/mongodb/mongodb/">MongoDB Tips</a></li>  </ul> 
                     </li> 
                      </ul> 
                     </li> 
@@ -251,13 +250,13 @@
                          <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/envoy/build-debug-envoy/">Build & Debug Envoy</a></li>  </ul> 
                     </li> 
                     
-                    <li class="directory open">
+                    <li class="directory">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder-open"></i>
+                            <i class="fa fa-folder"></i>
                             &nbsp;
                             gist
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file active"><a href="/wiki/gist/gist/">Gist</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/gist/gist/">Gist</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -706,7 +705,7 @@
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
             
-            <section id="main"><article id="post-gist/gist" class="article article-type-post" itemscope="" itemprop="blogPost">
+            <section id="main"><article id="post-database/mongodb/mongodb" class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -716,20 +715,15 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/gist/">gist</a>
+        <a class="article-category-link" href="/categories/database/">database</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/database/mongodb/">mongodb</a>
     </div>
 
                         
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/gist/">gist</a>
-    </div>
-
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/wiki/gist/gist/">
-            <time datetime="2020-11-22T17:28:41.000Z" itemprop="datePublished">2020-11-22</time>
+        <a href="/wiki/database/mongodb/mongodb/">
+            <time datetime="2022-08-22T16:09:25.000Z" itemprop="datePublished">2022-08-22</time>
         </a>
     </div>
 
@@ -740,13 +734,13 @@
                         
                         
                             <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/raw/master/source/_posts/gist/gist.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
+                                <a href="https://github.com/yanickxia/yann-wiki/raw/master/source/_posts/database/mongodb/mongodb.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
                             </div>
                             <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/edit/master/source/_posts/gist/gist.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
+                                <a href="https://github.com/yanickxia/yann-wiki/edit/master/source/_posts/database/mongodb/mongodb.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
                             </div>
                             <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/commits/master/source/_posts/gist/gist.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
+                                <a href="https://github.com/yanickxia/yann-wiki/commits/master/source/_posts/database/mongodb/mongodb.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
                             </div>
                         
                     </div>
@@ -754,7 +748,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            Gist
+            MongoDB Tips
         </h1>
     
 
@@ -767,15 +761,12 @@
             
                 <div id="toc" class="toc-article">
                 <strong class="toc-title">Catálogo</strong>
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#为Kube-Object增加Type信息"><span class="toc-number">1.</span> <span class="toc-text">为Kube Object增加Type信息</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关联查询"><span class="toc-number">1.</span> <span class="toc-text">关联查询</span></a></li></ol>
                 </div>
             
         
         
-            <h2 id="为Kube-Object增加Type信息"><a href="#为Kube-Object增加Type信息" class="headerlink" title="为Kube Object增加Type信息"></a>为Kube Object增加Type信息</h2><p>因为 <code>Client-GO</code> 返回的 <code>TypeMeta</code> 永远为 <code>Null</code>，因此需要自己添加</p>
-<figure class="highlight go"><figcaption><span>addTypeInformationToObject</span><a href="https://gist.github.com/yanickxia/8a5306ab555034cb862eda5e0f12399a" rel="external nofollow noopener noreferrer" target="_blank">source_code</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">addTypeInformationToObject</span><span class="params">(obj runtime.Object)</span> <span class="title">error</span></span> &#123;</span><br><span class="line">    gvks, _, err := scheme.Scheme.ObjectKinds(obj)</span><br><span class="line">    <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> fmt.Errorf(<span class="string">"missing apiVersion or kind and cannot assign it; %w"</span>, err)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> _, gvk := <span class="keyword">range</span> gvks &#123;</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(gvk.Kind) == <span class="number">0</span> &#123;</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(gvk.Version) == <span class="number">0</span> || gvk.Version == runtime.APIVersionInternal &#123;</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        &#125;</span><br><span class="line">        obj.GetObjectKind().SetGroupVersionKind(gvk)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+            <h2 id="关联查询"><a href="#关联查询" class="headerlink" title="关联查询"></a>关联查询</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">db.task.aggregate([</span><br><span class="line">  &#123; $lookup: &#123;</span><br><span class="line">    let: &#123; &quot;modeId&quot;:&#123; &quot;$toObjectId&quot;: &quot;$modem&quot; &#125; &#125;,</span><br><span class="line">    from: &quot;modem&quot;,</span><br><span class="line">    pipeline: [</span><br><span class="line">      &#123; &quot;$match&quot;: &#123; &quot;$expr&quot;: &#123; &quot;$eq&quot;: [ &quot;$_id&quot;, &quot;$$modeId&quot; ] &#125; &#125; &#125;</span><br><span class="line">    ],</span><br><span class="line">    as: &quot;output&quot;</span><br><span class="line">  &#125;&#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    $set: &#123;</span><br><span class="line">      modem_name: &#123; $arrayElemAt: [&quot;$output.name&quot;, 0] &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,&#123;</span><br><span class="line">  $project: &#123;</span><br><span class="line">    output: 0</span><br><span class="line">  &#125;</span><br><span class="line">&#125;])</span><br></pre></td></tr></table></figure>
             </div>
         
         <footer class="article-footer">
@@ -787,19 +778,19 @@
     
 <nav id="article-nav">
     
-        <a href="/wiki/tools/os/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/wiki/linux/tips/desktop/" id="article-nav-newer" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Más nuevo</strong>
             <div class="article-nav-title">
                 
-                    OS 初始化工具安装
+                    桌面图标
                 
             </div>
         </a>
     
     
-        <a href="/wiki/istio/isito-dev-env/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/wiki/k8s/kubectl-tips/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Más viejo</strong>
-            <div class="article-nav-title">搭建 Istio 开发测试环境</div>
+            <div class="article-nav-title">kubectl tips</div>
         </a>
     
 </nav>
@@ -847,9 +838,9 @@
     <script>
     var disqus_config = function () {
         
-            this.page.url = 'http://wiki.yanick.site/wiki/gist/gist/';
+            this.page.url = 'http://wiki.yanick.site/wiki/database/mongodb/mongodb/';
         
-        this.page.identifier = 'gist/gist';
+        this.page.identifier = 'database/mongodb/mongodb';
     };
     (function() { 
         var d = document, s = d.createElement('script');  

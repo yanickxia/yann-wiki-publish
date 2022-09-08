@@ -148,9 +148,9 @@
     <link href="http://wiki.yanick.site/wiki/tools/ssh/ssh/"/>
     <id>http://wiki.yanick.site/wiki/tools/ssh/ssh/</id>
     <published>2022-06-29T16:27:50.000Z</published>
-    <updated>2022-06-29T08:20:19.253Z</updated>
+    <updated>2022-09-08T02:45:17.060Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="SSH-Keep-Alive"><a href="#SSH-Keep-Alive" class="headerlink" title="SSH Keep Alive"></a>SSH Keep Alive</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ~/.ssh/config</span></span><br><span class="line">Host *</span><br><span class="line">    ServerAliveInterval 30</span><br><span class="line">    ServerAliveCountMax 2</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h2 id="SSH-Keep-Alive"><a href="#SSH-Keep-Alive" class="headerlink" title="SSH Keep Alive"></a>SSH Keep Alive</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ~/.ssh/config</span></span><br><span class="line">Host *</span><br><span class="line">    ServerAliveInterval 30</span><br><span class="line">    ServerAliveCountMax 2</span><br></pre></td></tr></table></figure><h2 id="自动输入密码"><a href="#自动输入密码" class="headerlink" title="自动输入密码"></a>自动输入密码</h2><p>尝试使用 <code>sshpass</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install sshpass</span><br></pre></td></tr></table></figure><h2 id="忽略Host-Key"><a href="#忽略Host-Key" class="headerlink" title="忽略Host Key"></a>忽略Host Key</h2><p>在第一次访问的时候，需要统一，CI的时候就很麻烦，可以直接忽略</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -o StrictHostKeyChecking=no  root@xxx</span><br></pre></td></tr></table></figure><p>可以配置到 config 文件内，全局的忽略</p>]]></content>
     
     <summary type="html">
     

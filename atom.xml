@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wiki.yanick.site/"/>
-  <updated>2022-09-01T06:50:20.286Z</updated>
+  <updated>2022-09-18T02:25:20.370Z</updated>
   <id>http://wiki.yanick.site/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>netfilter 速查</title>
+    <link href="http://wiki.yanick.site/wiki/linux/network/netfilter/"/>
+    <id>http://wiki.yanick.site/wiki/linux/network/netfilter/</id>
+    <published>2022-09-18T10:30:25.000Z</published>
+    <updated>2022-09-18T02:25:20.370Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Netfilter-packet-flow.svg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/3/37/Netfilter-packet-flow.svg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="linux" scheme="http://wiki.yanick.site/categories/linux/"/>
+    
+      <category term="netfilter" scheme="http://wiki.yanick.site/categories/linux/netfilter/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Ubuntu 升级 22.04 故障记录</title>
@@ -471,31 +497,6 @@
       
         &lt;p&gt;当系统无法使用 &lt;code&gt;shutdown&lt;/code&gt; &lt;code&gt;reboot&lt;/code&gt; 无法使用的是清空下，我们需要使用另外一种方式进行重启。&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gu
-      
-    
-    </summary>
-    
-      <category term="linux" scheme="http://wiki.yanick.site/categories/linux/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>NC 使用指南</title>
-    <link href="http://wiki.yanick.site/wiki/linux/nc/"/>
-    <id>http://wiki.yanick.site/wiki/linux/nc/</id>
-    <published>2021-06-09T13:09:25.000Z</published>
-    <updated>2021-10-21T06:55:16.548Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="传输文件"><a href="#传输文件" class="headerlink" title="传输文件"></a>传输文件</h2><p>目标服务器</p><p>nc -q0 -lp <port> | tar xvf -</port></p><p>文件所在服务器</p><p>tar cvf - dir | nc -q0 <ip> <port></port></ip></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;传输文件&quot;&gt;&lt;a href=&quot;#传输文件&quot; class=&quot;headerlink&quot; title=&quot;传输文件&quot;&gt;&lt;/a&gt;传输文件&lt;/h2&gt;&lt;p&gt;目标服务器&lt;/p&gt;
-&lt;p&gt;nc -q0 -lp &lt;port&gt; | tar xvf -&lt;/port&gt;&lt;/p&gt;
-&lt;p&gt;文件所在服
       
     
     </summary>

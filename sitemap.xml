@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wiki.yanick.site/wiki/tips/curl/</loc>
+    
+    <lastmod>2023-02-14T08:10:18.680Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wiki.yanick.site/wiki/cpp/cmake/cmake/</loc>
     
     <lastmod>2023-02-07T09:10:18.884Z</lastmod>
@@ -86,14 +93,14 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/istio/istio-common/</loc>
+    <loc>http://wiki.yanick.site/wiki/git/git/</loc>
     
     <lastmod>2022-06-07T02:45:16.027Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/git/git/</loc>
+    <loc>http://wiki.yanick.site/wiki/istio/istio-common/</loc>
     
     <lastmod>2022-06-07T02:45:16.027Z</lastmod>
     
@@ -184,7 +191,7 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/microservice/service_discovery/</loc>
+    <loc>http://wiki.yanick.site/wiki/links/kotlin/</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
@@ -198,14 +205,14 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/linux/build-and-debug-kernel/</loc>
+    <loc>http://wiki.yanick.site/wiki/linux/nc/</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/linux/ldd/</loc>
+    <loc>http://wiki.yanick.site/wiki/linux/build-and-debug-kernel/</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
@@ -219,14 +226,7 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/linux/nc/</loc>
-    
-    <lastmod>2021-10-21T06:55:16.548Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/linux/rsa/</loc>
+    <loc>http://wiki.yanick.site/wiki/linux/ldd/</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
@@ -240,7 +240,7 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/links/kotlin/</loc>
+    <loc>http://wiki.yanick.site/wiki/linux/rsa/</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
@@ -254,6 +254,20 @@
   </url>
   
   <url>
+    <loc>http://wiki.yanick.site/wiki/microservice/service_discovery/</loc>
+    
+    <lastmod>2021-10-21T06:55:16.548Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/os/debug-linux/</loc>
+    
+    <lastmod>2021-10-21T06:55:16.548Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wiki.yanick.site/wiki/os/qemu/</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
@@ -261,14 +275,7 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/rust/rust/</loc>
-    
-    <lastmod>2021-10-21T06:55:16.548Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/proxy/proxy/</loc>
+    <loc>http://wiki.yanick.site/wiki/tips/dns/</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
@@ -282,7 +289,28 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/os/debug-linux/</loc>
+    <loc>http://wiki.yanick.site/wiki/rust/rust/</loc>
+    
+    <lastmod>2021-10-21T06:55:16.548Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/tips/inoreader-can-not-show-pic/</loc>
+    
+    <lastmod>2021-10-21T06:55:16.548Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/proxy/proxy/</loc>
+    
+    <lastmod>2021-10-21T06:55:16.548Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/tools/mirrors/</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
@@ -297,27 +325,6 @@
   
   <url>
     <loc>http://wiki.yanick.site/wiki/tools/rustup/</loc>
-    
-    <lastmod>2021-10-21T06:55:16.548Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/tools/mirrors/</loc>
-    
-    <lastmod>2021-10-21T06:55:16.548Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/tips/inoreader-can-not-show-pic/</loc>
-    
-    <lastmod>2021-10-21T06:55:16.548Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/tips/dns/</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
@@ -345,14 +352,21 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/categories/index.html</loc>
+    <loc>http://wiki.yanick.site/about/index.html</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/about/index.html</loc>
+    <loc>http://wiki.yanick.site/books/index.html</loc>
+    
+    <lastmod>2021-10-21T06:55:16.548Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/categories/index.html</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
@@ -373,16 +387,16 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/books/index.html</loc>
+    <loc>http://wiki.yanick.site/map/embed_page/index.html</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/map/embed_page/index.html</loc>
+    <loc>http://wiki.yanick.site/wiki/arch/bottleneck/</loc>
     
-    <lastmod>2021-10-21T06:55:16.548Z</lastmod>
+    <lastmod>2021-10-21T06:55:16.544Z</lastmod>
     
   </url>
   
@@ -394,7 +408,7 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/istio/isito-dev-env/</loc>
+    <loc>http://wiki.yanick.site/wiki/gist/gist/</loc>
     
     <lastmod>2021-10-21T06:55:16.544Z</lastmod>
     
@@ -408,7 +422,7 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/arch/bottleneck/</loc>
+    <loc>http://wiki.yanick.site/wiki/istio/isito-dev-env/</loc>
     
     <lastmod>2021-10-21T06:55:16.544Z</lastmod>
     
@@ -416,13 +430,6 @@
   
   <url>
     <loc>http://wiki.yanick.site/wiki/istio/isito-tips/</loc>
-    
-    <lastmod>2021-10-21T06:55:16.544Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/gist/gist/</loc>
     
     <lastmod>2021-10-21T06:55:16.544Z</lastmod>
     

@@ -4,7 +4,21 @@
   <url>
     <loc>http://wiki.yanick.site/wiki/tools/os/</loc>
     
-    <lastmod>2023-02-20T09:10:21.350Z</lastmod>
+    <lastmod>2023-02-28T02:20:20.152Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/tips/macos/macos/</loc>
+    
+    <lastmod>2023-02-28T02:20:20.152Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/tips/docker/docker/</loc>
+    
+    <lastmod>2023-02-28T02:20:20.152Z</lastmod>
     
   </url>
   
@@ -198,7 +212,7 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/learn/how-to-work/</loc>
+    <loc>http://wiki.yanick.site/wiki/learn/book-review/</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
@@ -206,6 +220,13 @@
   
   <url>
     <loc>http://wiki.yanick.site/wiki/learn/how-to-learn/</loc>
+    
+    <lastmod>2021-10-21T06:55:16.548Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/learn/how-to-work/</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
@@ -220,13 +241,6 @@
   
   <url>
     <loc>http://wiki.yanick.site/wiki/linux/build-and-debug-kernel-simple/</loc>
-    
-    <lastmod>2021-10-21T06:55:16.548Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/learn/book-review/</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
@@ -275,14 +289,14 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/microservice/service_discovery/</loc>
+    <loc>http://wiki.yanick.site/wiki/os/debug-linux/</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/os/debug-linux/</loc>
+    <loc>http://wiki.yanick.site/wiki/microservice/service_discovery/</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
@@ -373,14 +387,14 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/about/index.html</loc>
+    <loc>http://wiki.yanick.site/books/index.html</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/books/index.html</loc>
+    <loc>http://wiki.yanick.site/about/index.html</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     

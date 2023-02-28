@@ -3,23 +3,23 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     
-    <title>kubernetes network troubleshooting | Yanick&#39;s Wiki</title>
+    <title>Docker Tips | Yanick&#39;s Wiki</title>
     
     
-        <meta name="keywords" content="kubernetes network troubleshooting">
+        <meta name="keywords" content="Docker Tips">
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="API 无法访问其他服务最近安装了一个 kube 但是 api server，但是无法访问 mertics server 等组件，经排查  api server 运行在 master 节点上  其他 组件运行在 worker 节点上核心原因是因为 flannel 打开了 DirectRouting 选项，导致了将宿主机网卡作为 host-gw 直接将 二层 数据包转发出去，并没有进行封装，在云上的">
+    <meta name="description" content="ofelia - a job scheduler一个基于 Label 的 docker job 工具 12345678910111213141516171819version: &quot;3&quot;services:  ofelia:    image: mcuadros/ofelia:latest    depends_on:      - nginx    command: daemon --docker">
 <meta property="og:type" content="article">
-<meta property="og:title" content="kubernetes network troubleshooting">
-<meta property="og:url" content="http://wiki.yanick.site/wiki/k8s/network-troubleshooting/index.html">
+<meta property="og:title" content="Docker Tips">
+<meta property="og:url" content="http://wiki.yanick.site/wiki/tips/docker/docker/index.html">
 <meta property="og:site_name" content="Yanick&#39;s Wiki">
-<meta property="og:description" content="API 无法访问其他服务最近安装了一个 kube 但是 api server，但是无法访问 mertics server 等组件，经排查  api server 运行在 master 节点上  其他 组件运行在 worker 节点上核心原因是因为 flannel 打开了 DirectRouting 选项，导致了将宿主机网卡作为 host-gw 直接将 二层 数据包转发出去，并没有进行封装，在云上的">
+<meta property="og:description" content="ofelia - a job scheduler一个基于 Label 的 docker job 工具 12345678910111213141516171819version: &quot;3&quot;services:  ofelia:    image: mcuadros/ofelia:latest    depends_on:      - nginx    command: daemon --docker">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2021-10-21T06:55:16.548Z">
+<meta property="og:updated_time" content="2023-02-28T02:20:20.152Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="kubernetes network troubleshooting">
-<meta name="twitter:description" content="API 无法访问其他服务最近安装了一个 kube 但是 api server，但是无法访问 mertics server 等组件，经排查  api server 运行在 master 节点上  其他 组件运行在 worker 节点上核心原因是因为 flannel 打开了 DirectRouting 选项，导致了将宿主机网卡作为 host-gw 直接将 二层 数据包转发出去，并没有进行封装，在云上的">
+<meta name="twitter:title" content="Docker Tips">
+<meta name="twitter:description" content="ofelia - a job scheduler一个基于 Label 的 docker job 工具 12345678910111213141516171819version: &quot;3&quot;services:  ofelia:    image: mcuadros/ofelia:latest    depends_on:      - nginx    command: daemon --docker">
     
 
     
@@ -412,16 +412,16 @@
                      <li class="file"><a href="/wiki/linux/build-and-debug-kernel/">构建与调试 Linux 内核</a></li>  <li class="file"><a href="/wiki/linux/ldd/">Linux Device Driver 笔记</a></li>  <li class="file"><a href="/wiki/linux/tcpdump/">TCPDUMP</a></li>  <li class="file"><a href="/wiki/linux/build-and-debug-kernel-simple/">构建与调试 Linux 内核</a></li>  <li class="file"><a href="/wiki/linux/nc/">NC 使用指南</a></li>  <li class="file"><a href="/wiki/linux/linux-force-reboot/">Linux 强制重启</a></li>  <li class="file"><a href="/wiki/linux/tips/repair/">修复系统</a></li>  <li class="file"><a href="/wiki/linux/tips/netese-cloud/">使用侧边键控制网易云音乐</a></li>  </ul> 
                     </li> 
                     
-                    <li class="directory open">
+                    <li class="directory">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder-open"></i>
+                            <i class="fa fa-folder"></i>
                             &nbsp;
                             network
                         </a>
                          <ul class="unstyled" id="tree"> 
-                    <li class="directory open">
+                    <li class="directory">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder-open"></i>
+                            <i class="fa fa-folder"></i>
                             &nbsp;
                             kubernetes
                         </a>
@@ -434,7 +434,7 @@
                         </a>
                          <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/k8s/kubectl-tips/">kubectl tips</a></li>  </ul> 
                     </li> 
-                     <li class="file active"><a href="/wiki/k8s/network-troubleshooting/">kubernetes network troubleshooting</a></li>  </ul> 
+                     <li class="file"><a href="/wiki/k8s/network-troubleshooting/">kubernetes network troubleshooting</a></li>  </ul> 
                     </li> 
                      </ul> 
                     </li> 
@@ -493,20 +493,20 @@
                          <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/learn/how-to-learn/">如何学习</a></li>  <li class="file"><a href="/wiki/learn/how-to-work/">如何工作</a></li>  <li class="file"><a href="/wiki/learn/book-review/">阅读回顾模板</a></li>  </ul> 
                     </li> 
                     
-                    <li class="directory">
+                    <li class="directory open">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder"></i>
+                            <i class="fa fa-folder-open"></i>
                             &nbsp;
                             tips
                         </a>
                          <ul class="unstyled" id="tree"> 
-                    <li class="directory">
+                    <li class="directory open">
                         <a href="#" data-role="directory">
-                            <i class="fa fa-folder"></i>
+                            <i class="fa fa-folder-open"></i>
                             &nbsp;
                             docker
                         </a>
-                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/tips/docker/docker/">Docker Tips</a></li>  </ul> 
+                         <ul class="unstyled" id="tree">  <li class="file active"><a href="/wiki/tips/docker/docker/">Docker Tips</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -786,7 +786,7 @@
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
             
-            <section id="main"><article id="post-k8s/network-troubleshooting" class="article article-type-post" itemscope="" itemprop="blogPost">
+            <section id="main"><article id="post-tips/docker/docker" class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -796,15 +796,15 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/network/">network</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/network/kubernetes/">kubernetes</a>
+        <a class="article-category-link" href="/categories/tips/">tips</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/tips/docker/">docker</a>
     </div>
 
                         
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/wiki/k8s/network-troubleshooting/">
-            <time datetime="2021-04-16T16:27:50.000Z" itemprop="datePublished">2021-04-16</time>
+        <a href="/wiki/tips/docker/docker/">
+            <time datetime="2023-02-28T15:10:08.000Z" itemprop="datePublished">2023-02-28</time>
         </a>
     </div>
 
@@ -815,13 +815,13 @@
                         
                         
                             <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/raw/master/source/_posts/k8s/network-troubleshooting.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
+                                <a href="https://github.com/yanickxia/yann-wiki/raw/master/source/_posts/tips/docker/docker.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
                             </div>
                             <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/edit/master/source/_posts/k8s/network-troubleshooting.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
+                                <a href="https://github.com/yanickxia/yann-wiki/edit/master/source/_posts/tips/docker/docker.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
                             </div>
                             <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/commits/master/source/_posts/k8s/network-troubleshooting.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
+                                <a href="https://github.com/yanickxia/yann-wiki/commits/master/source/_posts/tips/docker/docker.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
                             </div>
                         
                     </div>
@@ -829,7 +829,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            kubernetes network troubleshooting
+            Docker Tips
         </h1>
     
 
@@ -840,23 +840,10 @@
         
         
             
-                <div id="toc" class="toc-article">
-                <strong class="toc-title">Catalogue</strong>
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#API-无法访问其他服务"><span class="toc-number">1.</span> <span class="toc-text">API 无法访问其他服务</span></a></li></ol>
-                </div>
-            
         
         
-            <h2 id="API-无法访问其他服务"><a href="#API-无法访问其他服务" class="headerlink" title="API 无法访问其他服务"></a>API 无法访问其他服务</h2><p>最近安装了一个 <code>kube</code> 但是 <code>api server</code>，但是无法访问 <code>mertics server</code> 等组件，经排查</p>
-<ul>
-<li><p><code>api server</code> 运行在 <code>master</code> 节点上</p>
-</li>
-<li><p><code>其他</code> 组件运行在 <code>worker</code> 节点上<br>核心原因是因为 <code>flannel</code> 打开了 <code>DirectRouting</code> 选项，导致了将宿主机网卡作为 <code>host-gw</code> 直接将 二层 数据包转发出去，并没有进行封装，在云上的网络（火山引擎）禁止此转发行为，表现为</p>
-</li>
-<li><p><code>api server</code> 访问其他服务都是 <code>timeout</code></p>
-</li>
-</ul>
-
+            <h2 id="ofelia-a-job-scheduler"><a href="#ofelia-a-job-scheduler" class="headerlink" title="ofelia - a job scheduler"></a>ofelia - a job scheduler</h2><p>一个基于 Label 的 docker job 工具</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">"3"</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line"><span class="attr">  ofelia:</span></span><br><span class="line"><span class="attr">    image:</span> <span class="string">mcuadros/ofelia:latest</span></span><br><span class="line"><span class="attr">    depends_on:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">nginx</span></span><br><span class="line"><span class="attr">    command:</span> <span class="string">daemon</span> <span class="bullet">--docker</span></span><br><span class="line"><span class="attr">    volumes:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">/var/run/docker.sock:/var/run/docker.sock:ro</span></span><br><span class="line"><span class="attr">    labels:</span></span><br><span class="line">      <span class="string">ofelia.job-local.my-test-job.schedule:</span> <span class="string">"@every 5s"</span></span><br><span class="line">      <span class="string">ofelia.job-local.my-test-job.command:</span> <span class="string">"date"</span></span><br><span class="line"></span><br><span class="line"><span class="attr">  nginx:</span></span><br><span class="line"><span class="attr">    image:</span> <span class="string">nginx</span></span><br><span class="line"><span class="attr">    labels:</span></span><br><span class="line">      <span class="string">ofelia.enabled:</span> <span class="string">"true"</span></span><br><span class="line">      <span class="string">ofelia.job-exec.datecron.schedule:</span> <span class="string">"@every 5s"</span></span><br><span class="line">      <span class="string">ofelia.job-exec.datecron.command:</span> <span class="string">"uname -</span></span><br></pre></td></tr></table></figure>
             </div>
         
         <footer class="article-footer">
@@ -868,19 +855,19 @@
     
 <nav id="article-nav">
     
-        <a href="/wiki/linux/network/listen-and-print/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/wiki/tips/macos/macos/" id="article-nav-newer" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Newer</strong>
             <div class="article-nav-title">
                 
-                    监听并打印接收到的数据
+                    Macos Tips
                 
             </div>
         </a>
     
     
-        <a href="/wiki/tips/dns/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/wiki/linux/tips/jq/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">Seal VPN Not Working in ubuntu 18+</div>
+            <div class="article-nav-title">JQ 使用指南</div>
         </a>
     
 </nav>
@@ -928,9 +915,9 @@
     <script>
     var disqus_config = function () {
         
-            this.page.url = 'http://wiki.yanick.site/wiki/k8s/network-troubleshooting/';
+            this.page.url = 'http://wiki.yanick.site/wiki/tips/docker/docker/';
         
-        this.page.identifier = 'k8s/network-troubleshooting';
+        this.page.identifier = 'tips/docker/docker';
     };
     (function() { 
         var d = document, s = d.createElement('script');  

@@ -4,19 +4,26 @@
   <url>
     <loc>http://wiki.yanick.site/wiki/tools/os/</loc>
     
-    <lastmod>2023-02-28T02:20:20.152Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/tips/macos/macos/</loc>
-    
-    <lastmod>2023-02-28T02:20:20.152Z</lastmod>
+    <lastmod>2023-03-16T13:35:15.880Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://wiki.yanick.site/wiki/tips/docker/docker/</loc>
+    
+    <lastmod>2023-03-16T13:35:15.880Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/tips/python/python/</loc>
+    
+    <lastmod>2023-03-16T13:35:15.880Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/tips/macos/macos/</loc>
     
     <lastmod>2023-02-28T02:20:20.152Z</lastmod>
     
@@ -247,14 +254,14 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/linux/build-and-debug-kernel/</loc>
+    <loc>http://wiki.yanick.site/wiki/linux/ldd/</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/linux/ldd/</loc>
+    <loc>http://wiki.yanick.site/wiki/linux/build-and-debug-kernel/</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
@@ -289,14 +296,14 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/os/debug-linux/</loc>
+    <loc>http://wiki.yanick.site/wiki/microservice/service_discovery/</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/microservice/service_discovery/</loc>
+    <loc>http://wiki.yanick.site/wiki/os/debug-linux/</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
@@ -387,14 +394,14 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/books/index.html</loc>
+    <loc>http://wiki.yanick.site/about/index.html</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/about/index.html</loc>
+    <loc>http://wiki.yanick.site/books/index.html</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
@@ -450,21 +457,7 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/istio/isito-debug/</loc>
-    
-    <lastmod>2021-10-21T06:55:16.544Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://wiki.yanick.site/wiki/istio/isito-dev-env/</loc>
-    
-    <lastmod>2021-10-21T06:55:16.544Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/istio/isito-tips/</loc>
     
     <lastmod>2021-10-21T06:55:16.544Z</lastmod>
     
@@ -478,7 +471,21 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/java/cyclic-barrier/</loc>
+    <loc>http://wiki.yanick.site/wiki/istio/isito-debug/</loc>
+    
+    <lastmod>2021-10-21T06:55:16.544Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/istio/isito-tips/</loc>
+    
+    <lastmod>2021-10-21T06:55:16.544Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/k8s/kubectl-in-remote/</loc>
     
     <lastmod>2021-10-21T06:55:16.544Z</lastmod>
     
@@ -492,7 +499,7 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/k8s/kubectl-in-remote/</loc>
+    <loc>http://wiki.yanick.site/wiki/java/cyclic-barrier/</loc>
     
     <lastmod>2021-10-21T06:55:16.544Z</lastmod>
     

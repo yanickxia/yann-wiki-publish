@@ -76,7 +76,7 @@
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -95,10 +95,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Posts',
+            POSTS: 'Entradas',
             PAGES: 'Pages',
-            CATEGORIES: 'Categories',
-            TAGS: 'Tags',
+            CATEGORIES: 'Categorias',
+            TAGS: 'Etiquetas',
             UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
@@ -129,7 +129,7 @@
                 <td>
                     
     <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
     </div>
 
                 </td>
@@ -146,7 +146,7 @@
         
     <div class="widget-wrap" id="categories">
         <h3 class="widget-title">
-            <span>categories</span>
+            <span>Categorias</span>
             &nbsp;
             <a id="allExpand" href="#">
                 <i class="fa fa-angle-double-down fa-2x"></i>
@@ -513,6 +513,15 @@
                         </a>
                          <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/tips/macos/macos/">Macos Tips</a></li>  </ul> 
                     </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            python
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/tips/python/python/">Python Tips</a></li>  </ul> 
+                    </li> 
                      <li class="file"><a href="/wiki/tips/inoreader-can-not-show-pic/">inoreader 无法显示图片</a></li>  <li class="file"><a href="/wiki/tips/dns/">Seal VPN Not Working in ubuntu 18+</a></li>  <li class="file"><a href="/wiki/tips/curl/">Curl 使用姿势</a></li>  <li class="file"><a href="/wiki/dev/vscode/">Vscode 搭建开发环境</a></li>  </ul> 
                     </li> 
                     
@@ -657,14 +666,14 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title"><span>recent</span></h3>
+        <h3 class="widget-title"><span>Recientes</span></h3>
         <div class="widget">
             <ul id="recent-post" class="">
                 
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/wiki/tips/macos/macos/" class="thumbnail">
+                            <a href="/wiki/tips/python/python/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -674,9 +683,9 @@
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/tips/">tips</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/tips/macos/">macos</a></p>
-                            <p class="item-title"><a href="/wiki/tips/macos/macos/" class="title">Macos Tips</a></p>
-                            <p class="item-date"><time datetime="2023-02-28T15:10:08.000Z" itemprop="datePublished">2023-02-28</time></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/tips/">tips</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/tips/python/">python</a></p>
+                            <p class="item-title"><a href="/wiki/tips/python/python/" class="title">Python Tips</a></p>
+                            <p class="item-date"><time datetime="2023-03-09T15:10:08.000Z" itemprop="datePublished">2023-03-09</time></p>
                         </div>
                     </li>
                 
@@ -695,6 +704,25 @@
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/tips/">tips</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/tips/docker/">docker</a></p>
                             <p class="item-title"><a href="/wiki/tips/docker/docker/" class="title">Docker Tips</a></p>
+                            <p class="item-date"><time datetime="2023-02-28T15:10:08.000Z" itemprop="datePublished">2023-02-28</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/wiki/tips/macos/macos/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/tips/">tips</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/tips/macos/">macos</a></p>
+                            <p class="item-title"><a href="/wiki/tips/macos/macos/" class="title">Macos Tips</a></p>
                             <p class="item-date"><time datetime="2023-02-28T15:10:08.000Z" itemprop="datePublished">2023-02-28</time></p>
                         </div>
                     </li>
@@ -737,25 +765,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/wiki/tips/curl/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/tips/">tips</a></p>
-                            <p class="item-title"><a href="/wiki/tips/curl/" class="title">Curl 使用姿势</a></p>
-                            <p class="item-date"><time datetime="2023-02-14T16:05:41.000Z" itemprop="datePublished">2023-02-14</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -763,16 +772,16 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title"><span>archives</span></h3>
+        <h3 class="widget-title"><span>Archivos</span></h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">February 2023</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">3</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">February 2023</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">3</span></li></ul>
         </div>
     </div>
 
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title"><span>tags</span></h3>
+        <h3 class="widget-title"><span>Etiquetas</span></h3>
         <div class="widget">
             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/call-cc/">call/cc</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cmake/">cmake</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpp/">cpp</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cs/">cs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gist/">gist</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/isito/">isito</a><span class="tag-list-count">5</span></li></ul>
         </div>
@@ -783,7 +792,7 @@
 </aside>
             
             <section id="main">
-        <article id="post-tips/macos/macos" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-tips/python/python" class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -793,15 +802,15 @@
                         
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/tips/">tips</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/tips/macos/">macos</a>
+        <a class="article-category-link" href="/categories/tips/">tips</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/tips/python/">python</a>
     </div>
 
                         
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/wiki/tips/macos/macos/">
-            <time datetime="2023-02-28T15:10:08.000Z" itemprop="datePublished">2023-02-28</time>
+        <a href="/wiki/tips/python/python/">
+            <time datetime="2023-03-09T15:10:08.000Z" itemprop="datePublished">2023-03-09</time>
         </a>
     </div>
 
@@ -812,13 +821,13 @@
                         
                         
                             <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/raw/master/source/_posts/tips/macos/macos.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
+                                <a href="https://github.com/yanickxia/yann-wiki/raw/master/source/_posts/tips/python/python.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
                             </div>
                             <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/edit/master/source/_posts/tips/macos/macos.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
+                                <a href="https://github.com/yanickxia/yann-wiki/edit/master/source/_posts/tips/python/python.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
                             </div>
                             <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/commits/master/source/_posts/tips/macos/macos.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
+                                <a href="https://github.com/yanickxia/yann-wiki/commits/master/source/_posts/tips/python/python.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
                             </div>
                         
                     </div>
@@ -826,7 +835,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/wiki/tips/macos/macos/">Macos Tips</a>
+            <a class="article-title" href="/wiki/tips/python/python/">Python Tips</a>
         </h1>
     
 
@@ -842,14 +851,10 @@
                     
                     
                 
-                    
-                    
-                
             
         
         
-            <h2 id="pbcopy"><a href="#pbcopy" class="headerlink" title="pbcopy"></a>pbcopy</h2><p>pbcopy 可以将 terimal 中的输出重定向到剪切板中</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"Copy this into Mac's clipboard"</span> | pbcopy</span><br></pre></td></tr></table></figure>
+            <h2 id="使用-Python-运行一个简单-Web"><a href="#使用-Python-运行一个简单-Web" class="headerlink" title="使用 Python 运行一个简单 Web"></a>使用 Python 运行一个简单 Web</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m http.server 8080</span><br></pre></td></tr></table></figure>
             </div>
         
         <footer class="article-footer">
@@ -925,11 +930,103 @@
                     
                     
                 
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
             
         
         
             <h2 id="ofelia-a-job-scheduler"><a href="#ofelia-a-job-scheduler" class="headerlink" title="ofelia - a job scheduler"></a>ofelia - a job scheduler</h2><p>一个基于 Label 的 docker job 工具</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">"3"</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line"><span class="attr">  ofelia:</span></span><br><span class="line"><span class="attr">    image:</span> <span class="string">mcuadros/ofelia:latest</span></span><br><span class="line"><span class="attr">    depends_on:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">nginx</span></span><br><span class="line"><span class="attr">    command:</span> <span class="string">daemon</span> <span class="bullet">--docker</span></span><br><span class="line"><span class="attr">    volumes:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">/var/run/docker.sock:/var/run/docker.sock:ro</span></span><br><span class="line"><span class="attr">    labels:</span></span><br><span class="line">      <span class="string">ofelia.job-local.my-test-job.schedule:</span> <span class="string">"@every 5s"</span></span><br><span class="line">      <span class="string">ofelia.job-local.my-test-job.command:</span> <span class="string">"date"</span></span><br><span class="line"></span><br><span class="line"><span class="attr">  nginx:</span></span><br><span class="line"><span class="attr">    image:</span> <span class="string">nginx</span></span><br><span class="line"><span class="attr">    labels:</span></span><br><span class="line">      <span class="string">ofelia.enabled:</span> <span class="string">"true"</span></span><br><span class="line">      <span class="string">ofelia.job-exec.datecron.schedule:</span> <span class="string">"@every 5s"</span></span><br><span class="line">      <span class="string">ofelia.job-exec.datecron.command:</span> <span class="string">"uname -</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="guacamole"><a href="#guacamole" class="headerlink" title="guacamole"></a>guacamole</h2><p>一个 SSH 的 Web 平台，不过有个中文问题需要解决，解决的是 guacd 部分，不是 guacamole 部分，参考 <a href="https://xmsg.org/wordpress/2018/12/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Edocker%E7%9A%84guacamole%E7%8E%AF%E5%A2%83%E5%B9%B6%E5%AE%9E%E7%8E%B0%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA/" rel="external nofollow noopener noreferrer" target="_blank">快速搭建基于Docker的Guacamole环境并实现中文显示</a></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">guacd:</span></span><br><span class="line"><span class="attr">  container_name:</span> <span class="string">guacd_compose</span></span><br><span class="line"><span class="attr">  image:</span> <span class="string">guacamole/guacd</span></span><br><span class="line"><span class="attr">  restart:</span> <span class="string">always</span></span><br><span class="line"><span class="attr">  volumes:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">$PWD/data/guacd/drive:/drive:rw</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">$PWD/data/guacd/record:/record:rw</span></span><br><span class="line"><span class="attr">guacamole:</span></span><br><span class="line"><span class="attr">  image:</span> <span class="string">guacamole/guacamole</span></span><br><span class="line"><span class="attr">  container_name:</span> <span class="string">guacamole_compose</span></span><br><span class="line"><span class="attr">  depends_on:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">mysql</span></span><br><span class="line"><span class="attr">  environment:</span></span><br><span class="line"><span class="attr">    GUACD_HOSTNAME:</span> </span><br><span class="line"><span class="attr">    MYSQL_DATABASE:</span> </span><br><span class="line"><span class="attr">    MYSQL_USER:</span> </span><br><span class="line"><span class="attr">    MYSQL_PORT:</span> </span><br><span class="line"><span class="attr">    MYSQL_HOSTNAME:</span> </span><br><span class="line"><span class="attr">    MYSQL_PASSWORD:</span> </span><br><span class="line"><span class="attr">  links:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">guacd</span></span><br><span class="line"><span class="attr">  ports:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="number">8080</span><span class="string">/tcp</span></span><br><span class="line"><span class="attr">  restart:</span> <span class="string">always</span></span><br></pre></td></tr></table></figure>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-tips/macos/macos" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/tips/">tips</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/tips/macos/">macos</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/tips/macos/macos/">
+            <time datetime="2023-02-28T15:10:08.000Z" itemprop="datePublished">2023-02-28</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a href="https://github.com/yanickxia/yann-wiki/raw/master/source/_posts/tips/macos/macos.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/yanickxia/yann-wiki/edit/master/source/_posts/tips/macos/macos.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/yanickxia/yann-wiki/commits/master/source/_posts/tips/macos/macos.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/wiki/tips/macos/macos/">Macos Tips</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+            
+        
+        
+            <h2 id="pbcopy"><a href="#pbcopy" class="headerlink" title="pbcopy"></a>pbcopy</h2><p>pbcopy 可以将 terimal 中的输出重定向到剪切板中</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"Copy this into Mac's clipboard"</span> | pbcopy</span><br></pre></td></tr></table></figure>
             </div>
         
         <footer class="article-footer">
@@ -1604,107 +1701,8 @@
 
 
     
-        <article id="post-linux/notes/ubuntu-22-04" class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-                    <div class="article-meta">
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/ubuntu/">ubuntu</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/ubuntu/22-04/">22.04</a>
-    </div>
-
-                        
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/wiki/linux/notes/ubuntu-22-04/">
-            <time datetime="2022-09-01T11:19:25.000Z" itemprop="datePublished">2022-09-01</time>
-        </a>
-    </div>
-
-
-                        
-                            <i class="fa fa-bar-chart"></i>
-                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
-                        
-                        
-                            <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/raw/master/source/_posts/linux/notes/ubuntu-22-04.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/edit/master/source/_posts/linux/notes/ubuntu-22-04.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/commits/master/source/_posts/linux/notes/ubuntu-22-04.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
-                            </div>
-                        
-                    </div>
-                
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/wiki/linux/notes/ubuntu-22-04/">Ubuntu 升级 22.04 故障记录</a>
-        </h1>
-    
-
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-        
-            
-                
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                
-                    
-                    <p></p><h2 id="Jenkins-JCP-无法连接"><a href="#Jenkins-JCP-无法连接" class="headerlink" title="Jenkins JCP 无法连接"></a>Jenkins JCP 无法连接</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BapSshHostConfiguration<span class="comment">#connect: Failed to connect session for config</span></span><br></pre></td></tr></table></figure>
-
-<p>查找了下 <code>stackoverflow</code></p>
-<p>在 <code>/etc/ssh/sshd.confi</code> 增加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PubkeyAcceptedKeyTypes=+ssh-rsa</span><br></pre></td></tr></table></figure>
-<p>
-                
-            
-        
-        
-            </p></div>   
-            <div class="article-more-link">
-                <a href="/wiki/linux/notes/ubuntu-22-04/#more">Read More</a>
-            </div>
-        
-        <footer class="article-footer">
-        </footer>
-    </div>
-</article>
-
-
-
-
-
-
-    
         <nav id="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/">Siguiente  &raquo;</a>
         </nav>
     
 </section>

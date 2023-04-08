@@ -1,5 +1,5 @@
+http://wiki.yanick.site/wiki/hack/smartgit/
 http://wiki.yanick.site/wiki/tips/python/python/
-http://wiki.yanick.site/wiki/tips/docker/docker/
 http://wiki.yanick.site/wiki/tips/macos/macos/
+http://wiki.yanick.site/wiki/tips/docker/docker/
 http://wiki.yanick.site/wiki/linux/tips/jq/
-http://wiki.yanick.site/wiki/dev/vscode/

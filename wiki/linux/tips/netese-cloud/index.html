@@ -3,23 +3,23 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     
-    <title>使用侧边键控制网易云音乐 | Yanick&#39;s Wiki</title>
+    <title>网易云音乐 IN Liunux | Yanick&#39;s Wiki</title>
     
     
-        <meta name="keywords" content="使用侧边键控制网易云音乐">
+        <meta name="keywords" content="网易云音乐 IN Liunux">
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="12345sudo apt install xbindkeys xautomation# 生成默认配置xbindkeys --defaults &amp;gt; $HOME/.xbindkeysrc  添加配置.xbindkeysrc123456#KeyboardPre&amp;quot;dbus-send --print-reply --dest=org.mpris.MediaPlayer2.netease-c">
+    <meta name="description" content="22.04 安装网易云音乐下载链接 12cd /opt/netease/netease-cloud-musicsudo vim ./netease-cloud-music.bash  1234567#!/bin/shHERE=&quot;$(dirname &quot;$(readlink -f &quot;$&amp;#123;0&amp;#125;&quot;)&quot;)&quot;export LD_LIBRARY_PATH=&quot;$&amp;#123;HERE&amp;#125;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用侧边键控制网易云音乐">
+<meta property="og:title" content="网易云音乐 IN Liunux">
 <meta property="og:url" content="http://wiki.yanick.site/wiki/linux/tips/netese-cloud/index.html">
 <meta property="og:site_name" content="Yanick&#39;s Wiki">
-<meta property="og:description" content="12345sudo apt install xbindkeys xautomation# 生成默认配置xbindkeys --defaults &amp;gt; $HOME/.xbindkeysrc  添加配置.xbindkeysrc123456#KeyboardPre&amp;quot;dbus-send --print-reply --dest=org.mpris.MediaPlayer2.netease-c">
+<meta property="og:description" content="22.04 安装网易云音乐下载链接 12cd /opt/netease/netease-cloud-musicsudo vim ./netease-cloud-music.bash  1234567#!/bin/shHERE=&quot;$(dirname &quot;$(readlink -f &quot;$&amp;#123;0&amp;#125;&quot;)&quot;)&quot;export LD_LIBRARY_PATH=&quot;$&amp;#123;HERE&amp;#125;">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2021-11-21T06:20:17.077Z">
+<meta property="og:updated_time" content="2023-05-12T06:40:14.890Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用侧边键控制网易云音乐">
-<meta name="twitter:description" content="12345sudo apt install xbindkeys xautomation# 生成默认配置xbindkeys --defaults &amp;gt; $HOME/.xbindkeysrc  添加配置.xbindkeysrc123456#KeyboardPre&amp;quot;dbus-send --print-reply --dest=org.mpris.MediaPlayer2.netease-c">
+<meta name="twitter:title" content="网易云音乐 IN Liunux">
+<meta name="twitter:description" content="22.04 安装网易云音乐下载链接 12cd /opt/netease/netease-cloud-musicsudo vim ./netease-cloud-music.bash  1234567#!/bin/shHERE=&quot;$(dirname &quot;$(readlink -f &quot;$&amp;#123;0&amp;#125;&quot;)&quot;)&quot;export LD_LIBRARY_PATH=&quot;$&amp;#123;HERE&amp;#125;">
     
 
     
@@ -422,7 +422,7 @@
                         </a>
                          <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/linux/xbindkey/">Xbindkey</a></li>  </ul> 
                     </li> 
-                     <li class="file"><a href="/wiki/linux/build-and-debug-kernel/">构建与调试 Linux 内核</a></li>  <li class="file"><a href="/wiki/linux/ldd/">Linux Device Driver 笔记</a></li>  <li class="file"><a href="/wiki/linux/tcpdump/">TCPDUMP</a></li>  <li class="file"><a href="/wiki/linux/build-and-debug-kernel-simple/">构建与调试 Linux 内核</a></li>  <li class="file"><a href="/wiki/linux/nc/">NC 使用指南</a></li>  <li class="file"><a href="/wiki/linux/linux-force-reboot/">Linux 强制重启</a></li>  <li class="file"><a href="/wiki/linux/tips/repair/">修复系统</a></li>  <li class="file active"><a href="/wiki/linux/tips/netese-cloud/">使用侧边键控制网易云音乐</a></li>  </ul> 
+                     <li class="file"><a href="/wiki/linux/build-and-debug-kernel/">构建与调试 Linux 内核</a></li>  <li class="file"><a href="/wiki/linux/ldd/">Linux Device Driver 笔记</a></li>  <li class="file"><a href="/wiki/linux/tcpdump/">TCPDUMP</a></li>  <li class="file"><a href="/wiki/linux/build-and-debug-kernel-simple/">构建与调试 Linux 内核</a></li>  <li class="file"><a href="/wiki/linux/nc/">NC 使用指南</a></li>  <li class="file"><a href="/wiki/linux/linux-force-reboot/">Linux 强制重启</a></li>  <li class="file"><a href="/wiki/linux/tips/repair/">修复系统</a></li>  <li class="file active"><a href="/wiki/linux/tips/netese-cloud/">网易云音乐 IN Liunux</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -851,7 +851,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            使用侧边键控制网易云音乐
+            网易云音乐 IN Liunux
         </h1>
     
 
@@ -864,16 +864,30 @@
             
                 <div id="toc" class="toc-article">
                 <strong class="toc-title">Catalogue</strong>
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#添加配置"><span class="toc-number">1.</span> <span class="toc-text">添加配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看按键编号"><span class="toc-number">2.</span> <span class="toc-text">查看按键编号</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#22-04-安装网易云音乐"><span class="toc-number">1.</span> <span class="toc-text">22.04 安装网易云音乐</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#无法播放-无损"><span class="toc-number">2.</span> <span class="toc-text">无法播放 无损</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#网易云原因强制缩放"><span class="toc-number">3.</span> <span class="toc-text">网易云原因强制缩放</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#使用侧边键控制网易云音乐"><span class="toc-number">4.</span> <span class="toc-text">使用侧边键控制网易云音乐</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#添加配置"><span class="toc-number">4.1.</span> <span class="toc-text">添加配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看按键编号"><span class="toc-number">4.2.</span> <span class="toc-text">查看按键编号</span></a></li></ol></li></ol>
                 </div>
             
         
         
-            <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install xbindkeys xautomation</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成默认配置</span></span><br><span class="line">xbindkeys --defaults &gt; <span class="variable">$HOME</span>/.xbindkeysrc</span><br></pre></td></tr></table></figure>
+            <h1 id="22-04-安装网易云音乐"><a href="#22-04-安装网易云音乐" class="headerlink" title="22.04 安装网易云音乐"></a>22.04 安装网易云音乐</h1><p><a href="https://music.163.com/api/appcustomconfig/get?key=linux_download_links" rel="external nofollow noopener noreferrer" target="_blank">下载链接</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/netease/netease-cloud-music</span><br><span class="line">sudo vim ./netease-cloud-music.bash</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line">HERE=<span class="string">"<span class="variable">$(dirname "$(readlink -f "$&#123;0&#125;")</span>"</span>)<span class="string">"</span></span><br><span class="line"><span class="string">export LD_LIBRARY_PATH="</span><span class="variable">$&#123;HERE&#125;</span><span class="string">"/libs:<span class="variable">$LD_LIBRARY_PATH</span></span></span><br><span class="line"><span class="string">export QT_PLUGIN_PATH="</span><span class="variable">$&#123;HERE&#125;</span><span class="string">"/plugins</span></span><br><span class="line"><span class="string">export QT_QPA_PLATFORM_PLUGIN_PATH="</span><span class="variable">$&#123;HERE&#125;</span><span class="string">"/plugins/platforms</span></span><br><span class="line"><span class="string">cd /lib/x86_64-linux-gnu/</span></span><br><span class="line"><span class="string">exec "</span><span class="variable">$&#123;HERE&#125;</span><span class="string">"/netease-cloud-music <span class="variable">$@</span></span></span><br></pre></td></tr></table></figure>
+
+<h1 id="无法播放-无损"><a href="#无法播放-无损" class="headerlink" title="无法播放 无损"></a>无法播放 无损</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://blog.csdn.net/leibris/article/details/124895824</span><br></pre></td></tr></table></figure>
+
+<h1 id="网易云原因强制缩放"><a href="#网易云原因强制缩放" class="headerlink" title="网易云原因强制缩放"></a>网易云原因强制缩放</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /usr/share/applications/netease-cloud-music.desktop</span><br></pre></td></tr></table></figure>
+
+<p>在 <code>Exec</code> 的 <code>%u</code> 前面加</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--force-device-scale-factor=2</span><br></pre></td></tr></table></figure>
+
+<h1 id="使用侧边键控制网易云音乐"><a href="#使用侧边键控制网易云音乐" class="headerlink" title="使用侧边键控制网易云音乐"></a>使用侧边键控制网易云音乐</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install xbindkeys xautomation</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成默认配置</span></span><br><span class="line">xbindkeys --defaults &gt; <span class="variable">$HOME</span>/.xbindkeysrc</span><br></pre></td></tr></table></figure>
 
 <h2 id="添加配置"><a href="#添加配置" class="headerlink" title="添加配置"></a>添加配置</h2><figure class="highlight plain"><figcaption><span>.xbindkeysrc</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#KeyboardPre</span><br><span class="line">&quot;dbus-send --print-reply --dest=org.mpris.MediaPlayer2.netease-cloud-music  /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous&quot;</span><br><span class="line">  b:9 + Release</span><br><span class="line">#KeyboardNext</span><br><span class="line">&quot;dbus-send --print-reply --dest=org.mpris.MediaPlayer2.netease-cloud-music  /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next&quot;</span><br><span class="line">  b:8 + Release</span><br></pre></td></tr></table></figure>
 
 <h2 id="查看按键编号"><a href="#查看按键编号" class="headerlink" title="查看按键编号"></a>查看按键编号</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xev | grep button</span><br></pre></td></tr></table></figure>
+
+
             </div>
         
         <footer class="article-footer">

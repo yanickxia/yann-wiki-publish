@@ -418,7 +418,7 @@
                         </a>
                          <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/linux/xbindkey/">Xbindkey</a></li>  </ul> 
                     </li> 
-                     <li class="file"><a href="/wiki/linux/build-and-debug-kernel/">构建与调试 Linux 内核</a></li>  <li class="file"><a href="/wiki/linux/ldd/">Linux Device Driver 笔记</a></li>  <li class="file"><a href="/wiki/linux/tcpdump/">TCPDUMP</a></li>  <li class="file"><a href="/wiki/linux/build-and-debug-kernel-simple/">构建与调试 Linux 内核</a></li>  <li class="file"><a href="/wiki/linux/nc/">NC 使用指南</a></li>  <li class="file"><a href="/wiki/linux/linux-force-reboot/">Linux 强制重启</a></li>  <li class="file"><a href="/wiki/linux/tips/repair/">修复系统</a></li>  <li class="file"><a href="/wiki/linux/tips/netese-cloud/">使用侧边键控制网易云音乐</a></li>  </ul> 
+                     <li class="file"><a href="/wiki/linux/build-and-debug-kernel/">构建与调试 Linux 内核</a></li>  <li class="file"><a href="/wiki/linux/ldd/">Linux Device Driver 笔记</a></li>  <li class="file"><a href="/wiki/linux/tcpdump/">TCPDUMP</a></li>  <li class="file"><a href="/wiki/linux/build-and-debug-kernel-simple/">构建与调试 Linux 内核</a></li>  <li class="file"><a href="/wiki/linux/nc/">NC 使用指南</a></li>  <li class="file"><a href="/wiki/linux/linux-force-reboot/">Linux 强制重启</a></li>  <li class="file"><a href="/wiki/linux/tips/repair/">修复系统</a></li>  <li class="file"><a href="/wiki/linux/tips/netese-cloud/">网易云音乐 IN Liunux</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -1298,7 +1298,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/wiki/linux/tips/netese-cloud/">使用侧边键控制网易云音乐</a>
+            <a class="article-title" href="/wiki/linux/tips/netese-cloud/">网易云音乐 IN Liunux</a>
         </h1>
     
 
@@ -1326,14 +1326,21 @@
                     
                     
                 
+                
+                    
+                    <p></p><h1 id="22-04-安装网易云音乐"><a href="#22-04-安装网易云音乐" class="headerlink" title="22.04 安装网易云音乐"></a>22.04 安装网易云音乐</h1><p><a href="https://music.163.com/api/appcustomconfig/get?key=linux_download_links" rel="external nofollow noopener noreferrer" target="_blank">下载链接</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /opt/netease/netease-cloud-music</span><br><span class="line">sudo vim ./netease-cloud-music.bash</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line">HERE=<span class="string">"<span class="variable">$(dirname "$(readlink -f "$&#123;0&#125;")</span>"</span>)<span class="string">"</span></span><br><span class="line"><span class="string">export LD_LIBRARY_PATH="</span><span class="variable">$&#123;HERE&#125;</span><span class="string">"/libs:<span class="variable">$LD_LIBRARY_PATH</span></span></span><br><span class="line"><span class="string">export QT_PLUGIN_PATH="</span><span class="variable">$&#123;HERE&#125;</span><span class="string">"/plugins</span></span><br><span class="line"><span class="string">export QT_QPA_PLATFORM_PLUGIN_PATH="</span><span class="variable">$&#123;HERE&#125;</span><span class="string">"/plugins/platforms</span></span><br><span class="line"><span class="string">cd /lib/x86_64-linux-gnu/</span></span><br><span class="line"><span class="string">exec "</span><span class="variable">$&#123;HERE&#125;</span><span class="string">"/netease-cloud-music <span class="variable">$@</span></span></span><br></pre></td></tr></table></figure>
+
+<p>
+                
             
         
         
-            <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install xbindkeys xautomation</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成默认配置</span></span><br><span class="line">xbindkeys --defaults &gt; <span class="variable">$HOME</span>/.xbindkeysrc</span><br></pre></td></tr></table></figure>
-
-<h2 id="添加配置"><a href="#添加配置" class="headerlink" title="添加配置"></a>添加配置</h2><figure class="highlight plain"><figcaption><span>.xbindkeysrc</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#KeyboardPre</span><br><span class="line">&quot;dbus-send --print-reply --dest=org.mpris.MediaPlayer2.netease-cloud-music  /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous&quot;</span><br><span class="line">  b:9 + Release</span><br><span class="line">#KeyboardNext</span><br><span class="line">&quot;dbus-send --print-reply --dest=org.mpris.MediaPlayer2.netease-cloud-music  /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next&quot;</span><br><span class="line">  b:8 + Release</span><br></pre></td></tr></table></figure>
-
-<h2 id="查看按键编号"><a href="#查看按键编号" class="headerlink" title="查看按键编号"></a>查看按键编号</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xev | grep button</span><br></pre></td></tr></table></figure>
+            </p></div>   
+            <div class="article-more-link">
+                <a href="/wiki/linux/tips/netese-cloud/#more">Read More</a>
             </div>
         
         <footer class="article-footer">

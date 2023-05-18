@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wiki.yanick.site/"/>
-  <updated>2023-04-08T02:00:18.717Z</updated>
+  <updated>2023-05-18T08:40:18.297Z</updated>
   <id>http://wiki.yanick.site/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux 测速</title>
+    <link href="http://wiki.yanick.site/wiki/linux/network/speed-test/"/>
+    <id>http://wiki.yanick.site/wiki/linux/network/speed-test/</id>
+    <published>2023-05-18T10:30:25.000Z</published>
+    <updated>2023-05-18T08:40:18.297Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="互联网测速"><a href="#互联网测速" class="headerlink" title="互联网测速"></a>互联网测速</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wget https://raw.github.com/sivel/speedtest-cli/master/speedtest.py</span><br><span class="line">chmod a+rx speedtest.py</span><br><span class="line">mv speedtest.py /usr/<span class="built_in">local</span>/bin/speedtest</span><br><span class="line">chown root:root /usr/<span class="built_in">local</span>/bin/speedtest</span><br><span class="line"></span><br><span class="line">speedtest</span><br></pre></td></tr></table></figure><h2 id="节点间测速"><a href="#节点间测速" class="headerlink" title="节点间测速"></a>节点间测速</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install iperf</span><br><span class="line"></span><br><span class="line"><span class="comment"># service</span></span><br><span class="line">iperf -s</span><br><span class="line"></span><br><span class="line"><span class="comment"># client</span></span><br><span class="line"></span><br><span class="line">iperf -c &lt;SERVER_IP&gt;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;互联网测速&quot;&gt;&lt;a href=&quot;#互联网测速&quot; class=&quot;headerlink&quot; title=&quot;互联网测速&quot;&gt;&lt;/a&gt;互联网测速&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;
+      
+    
+    </summary>
+    
+      <category term="linux" scheme="http://wiki.yanick.site/categories/linux/"/>
+    
+      <category term="speedtest" scheme="http://wiki.yanick.site/categories/linux/speedtest/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>SmartGit 22 破解记</title>
@@ -488,31 +513,6 @@
     
     
       <category term="isito" scheme="http://wiki.yanick.site/tags/isito/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git</title>
-    <link href="http://wiki.yanick.site/wiki/git/git/"/>
-    <id>http://wiki.yanick.site/wiki/git/git/</id>
-    <published>2022-04-27T14:32:50.000Z</published>
-    <updated>2022-06-07T02:45:16.027Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Git-无法拉去-Go-私有仓库"><a href="#Git-无法拉去-Go-私有仓库" class="headerlink" title="Git 无法拉去 Go 私有仓库"></a>Git 无法拉去 Go 私有仓库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --add url.<span class="string">"git@xxxxx.org:"</span>.insteadOf <span class="string">"https://xxxxx.org/"</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Git-无法拉去-Go-私有仓库&quot;&gt;&lt;a href=&quot;#Git-无法拉去-Go-私有仓库&quot; class=&quot;headerlink&quot; title=&quot;Git 无法拉去 Go 私有仓库&quot;&gt;&lt;/a&gt;Git 无法拉去 Go 私有仓库&lt;/h2&gt;&lt;figure class=&quot;hi
-      
-    
-    </summary>
-    
-      <category term="java" scheme="http://wiki.yanick.site/categories/java/"/>
-    
-      <category term="mirros" scheme="http://wiki.yanick.site/categories/java/mirros/"/>
-    
     
   </entry>
   

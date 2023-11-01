@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wiki.yanick.site/wiki/linux/build-and-debug-kernel-simple/</loc>
+    
+    <lastmod>2023-11-01T06:05:18.941Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wiki.yanick.site/wiki/linux/network/speed-test/</loc>
     
     <lastmod>2023-05-18T08:40:18.297Z</lastmod>
@@ -240,7 +247,7 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/learn/how-to-learn/</loc>
+    <loc>http://wiki.yanick.site/wiki/k8s/quick-start/</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
@@ -254,13 +261,6 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/k8s/quick-start/</loc>
-    
-    <lastmod>2021-10-21T06:55:16.548Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://wiki.yanick.site/wiki/learn/how-to-work/</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
@@ -268,21 +268,7 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/linux/build-and-debug-kernel/</loc>
-    
-    <lastmod>2021-10-21T06:55:16.548Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/linux/build-and-debug-kernel-simple/</loc>
-    
-    <lastmod>2021-10-21T06:55:16.548Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wiki.yanick.site/wiki/linux/ldd/</loc>
+    <loc>http://wiki.yanick.site/wiki/learn/how-to-learn/</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
@@ -303,7 +289,7 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/linux/xbindkey/</loc>
+    <loc>http://wiki.yanick.site/wiki/linux/build-and-debug-kernel/</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
@@ -317,14 +303,28 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/os/debug-linux/</loc>
+    <loc>http://wiki.yanick.site/wiki/linux/tcpdump/</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/linux/tcpdump/</loc>
+    <loc>http://wiki.yanick.site/wiki/linux/xbindkey/</loc>
+    
+    <lastmod>2021-10-21T06:55:16.548Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/linux/ldd/</loc>
+    
+    <lastmod>2021-10-21T06:55:16.548Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/rust/rust/</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
@@ -338,14 +338,21 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/proxy/proxy/</loc>
+    <loc>http://wiki.yanick.site/wiki/tips/dns/</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/rust/rust/</loc>
+    <loc>http://wiki.yanick.site/wiki/os/debug-linux/</loc>
+    
+    <lastmod>2021-10-21T06:55:16.548Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wiki.yanick.site/wiki/proxy/proxy/</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
@@ -366,13 +373,6 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/tips/dns/</loc>
-    
-    <lastmod>2021-10-21T06:55:16.548Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://wiki.yanick.site/wiki/tools/mirrors/</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
@@ -387,14 +387,14 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/virtualmachine/mount-file/</loc>
+    <loc>http://wiki.yanick.site/wiki/tools/rustup/</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/tools/rustup/</loc>
+    <loc>http://wiki.yanick.site/wiki/virtualmachine/mount-file/</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
@@ -422,14 +422,14 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/books/index.html</loc>
+    <loc>http://wiki.yanick.site/categories/index.html</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/categories/index.html</loc>
+    <loc>http://wiki.yanick.site/books/index.html</loc>
     
     <lastmod>2021-10-21T06:55:16.548Z</lastmod>
     
@@ -485,14 +485,14 @@
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/istio/isito-debug/</loc>
+    <loc>http://wiki.yanick.site/wiki/istio/isito-tips/</loc>
     
     <lastmod>2021-10-21T06:55:16.544Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wiki.yanick.site/wiki/istio/isito-tips/</loc>
+    <loc>http://wiki.yanick.site/wiki/istio/isito-debug/</loc>
     
     <lastmod>2021-10-21T06:55:16.544Z</lastmod>
     

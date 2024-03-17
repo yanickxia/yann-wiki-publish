@@ -1261,86 +1261,6 @@
 
 
     
-        <article id="post-tips/macos/macos" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-                    <div class="article-meta">
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/tips/">tips</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/tips/macos/">macos</a>
-    </div>
-
-                        
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/wiki/tips/macos/macos/">
-            <time datetime="2023-02-28T15:10:08.000Z" itemprop="datePublished">2023-02-28</time>
-        </a>
-    </div>
-
-
-                        
-                            <i class="fa fa-bar-chart"></i>
-                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
-                        
-                        
-                            <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/raw/master/source/_posts/tips/macos/macos.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/edit/master/source/_posts/tips/macos/macos.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
-                            </div>
-                            <div class="article-meta-button">
-                                <a href="https://github.com/yanickxia/yann-wiki/commits/master/source/_posts/tips/macos/macos.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
-                            </div>
-                        
-                    </div>
-                
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/wiki/tips/macos/macos/">Macos Tips</a>
-        </h1>
-    
-
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-        
-            
-                
-                
-                    
-                    
-                
-                    
-                    
-                
-            
-        
-        
-            <h2 id="pbcopy"><a href="#pbcopy" class="headerlink" title="pbcopy"></a>pbcopy</h2><p>pbcopy 可以将 terimal 中的输出重定向到剪切板中</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"Copy this into Mac's clipboard"</span> | pbcopy</span><br></pre></td></tr></table></figure>
-            </div>
-        
-        <footer class="article-footer">
-        </footer>
-    </div>
-</article>
-
-
-
-
-
-
-    
         <article id="post-tips/docker/docker" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -1420,6 +1340,86 @@
 
 <h2 id="guacamole"><a href="#guacamole" class="headerlink" title="guacamole"></a>guacamole</h2><p>一个 SSH 的 Web 平台，不过有个中文问题需要解决，解决的是 guacd 部分，不是 guacamole 部分，参考 <a href="https://xmsg.org/wordpress/2018/12/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Edocker%E7%9A%84guacamole%E7%8E%AF%E5%A2%83%E5%B9%B6%E5%AE%9E%E7%8E%B0%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA/" rel="external nofollow noopener noreferrer" target="_blank">快速搭建基于Docker的Guacamole环境并实现中文显示</a></p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">guacd:</span></span><br><span class="line">  <span class="attr">container_name:</span> <span class="string">guacd_compose</span></span><br><span class="line">  <span class="attr">image:</span> <span class="string">guacamole/guacd</span></span><br><span class="line">  <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">  <span class="attr">volumes:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">$PWD/data/guacd/drive:/drive:rw</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">$PWD/data/guacd/record:/record:rw</span></span><br><span class="line"><span class="attr">guacamole:</span></span><br><span class="line">  <span class="attr">image:</span> <span class="string">guacamole/guacamole</span></span><br><span class="line">  <span class="attr">container_name:</span> <span class="string">guacamole_compose</span></span><br><span class="line">  <span class="attr">depends_on:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">mysql</span></span><br><span class="line">  <span class="attr">environment:</span></span><br><span class="line">    <span class="attr">GUACD_HOSTNAME:</span> </span><br><span class="line">    <span class="attr">MYSQL_DATABASE:</span> </span><br><span class="line">    <span class="attr">MYSQL_USER:</span> </span><br><span class="line">    <span class="attr">MYSQL_PORT:</span> </span><br><span class="line">    <span class="attr">MYSQL_HOSTNAME:</span> </span><br><span class="line">    <span class="attr">MYSQL_PASSWORD:</span> </span><br><span class="line">  <span class="attr">links:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">guacd</span></span><br><span class="line">  <span class="attr">ports:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="number">8080</span><span class="string">/tcp</span></span><br><span class="line">  <span class="attr">restart:</span> <span class="string">always</span></span><br></pre></td></tr></table></figure>
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    
+        <article id="post-tips/macos/macos" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/tips/">tips</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/tips/macos/">macos</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/tips/macos/macos/">
+            <time datetime="2023-02-28T15:10:08.000Z" itemprop="datePublished">2023-02-28</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a href="https://github.com/yanickxia/yann-wiki/raw/master/source/_posts/tips/macos/macos.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/yanickxia/yann-wiki/edit/master/source/_posts/tips/macos/macos.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/yanickxia/yann-wiki/commits/master/source/_posts/tips/macos/macos.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/wiki/tips/macos/macos/">Macos Tips</a>
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+            
+        
+        
+            <h2 id="pbcopy"><a href="#pbcopy" class="headerlink" title="pbcopy"></a>pbcopy</h2><p>pbcopy 可以将 terimal 中的输出重定向到剪切板中</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"Copy this into Mac's clipboard"</span> | pbcopy</span><br></pre></td></tr></table></figure>
             </div>
         
         <footer class="article-footer">

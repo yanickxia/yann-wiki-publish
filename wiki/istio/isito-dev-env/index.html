@@ -695,7 +695,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title"><span>recent</span></h3>
         <div class="widget">
-            <ul id="recent-post" class="">
+            <ul id="recent-post" class>
                 
                     <li>
                         
@@ -818,7 +818,7 @@
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
             
-            <section id="main"><article id="post-istio/isito-dev-env" class="article article-type-post" itemscope="" itemprop="blogPost">
+            <section id="main"><article id="post-istio/isito-dev-env" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -905,7 +905,7 @@
 <ul>
 <li>创建 Mesh 配置， mesh.yaml</li>
 </ul>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">enableTracing:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">ingressService:</span> <span class="string">istio-ingress</span></span><br><span class="line"><span class="attr">defaultConfig:</span></span><br><span class="line"><span class="attr">  connectTimeout:</span> <span class="number">1</span><span class="string">s</span></span><br><span class="line"><span class="attr">  configPath:</span> <span class="string">"/etc/istio/proxy"</span></span><br><span class="line"><span class="attr">  binaryPath:</span> <span class="string">"&lt;YOUR ENVOY BIN&gt;"</span></span><br><span class="line"><span class="attr">  serviceCluster:</span> <span class="string">istio-proxy</span></span><br><span class="line"><span class="attr">  drainDuration:</span> <span class="number">2</span><span class="string">s</span></span><br><span class="line"><span class="attr">  parentShutdownDuration:</span> <span class="number">3</span><span class="string">s</span></span><br><span class="line"><span class="attr">  proxyAdminPort:</span> <span class="number">15000</span></span><br><span class="line"><span class="attr">  statsdUdpAddress:</span> <span class="string">""</span></span><br><span class="line"><span class="attr">  discoveryAddress:</span> <span class="string">istiod-remote.istio-system.svc:15012</span> <span class="string">&lt;建议修改</span> <span class="string">Host</span> <span class="string">将</span> <span class="string">istiod-remote.istio-system.svc</span> <span class="string">映射到</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span><span class="string">&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">enableTracing:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">ingressService:</span> <span class="string">istio-ingress</span></span><br><span class="line"><span class="attr">defaultConfig:</span></span><br><span class="line">  <span class="attr">connectTimeout:</span> <span class="string">1s</span></span><br><span class="line">  <span class="attr">configPath:</span> <span class="string">"/etc/istio/proxy"</span></span><br><span class="line">  <span class="attr">binaryPath:</span> <span class="string">"&lt;YOUR ENVOY BIN&gt;"</span></span><br><span class="line">  <span class="attr">serviceCluster:</span> <span class="string">istio-proxy</span></span><br><span class="line">  <span class="attr">drainDuration:</span> <span class="string">2s</span></span><br><span class="line">  <span class="attr">parentShutdownDuration:</span> <span class="string">3s</span></span><br><span class="line">  <span class="attr">proxyAdminPort:</span> <span class="number">15000</span></span><br><span class="line">  <span class="attr">statsdUdpAddress:</span> <span class="string">""</span></span><br><span class="line">  <span class="attr">discoveryAddress:</span> <span class="string">istiod-remote.istio-system.svc:15012</span> <span class="string">&lt;建议修改</span> <span class="string">Host</span> <span class="string">将</span> <span class="string">istiod-remote.istio-system.svc</span> <span class="string">映射到</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span><span class="string">&gt;</span></span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>创建 Kube Token</li>

@@ -690,7 +690,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title"><span>recent</span></h3>
         <div class="widget">
-            <ul id="recent-post" class="">
+            <ul id="recent-post" class>
                 
                     <li>
                         
@@ -814,7 +814,7 @@
 </aside>
             
             <section id="main">
-        <article id="post-istio/istio-build" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-istio/istio-build" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -918,7 +918,7 @@
 
 
     
-        <article id="post-selfhosted/confluence" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-selfhosted/confluence" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -994,7 +994,7 @@
                     <p></p><h2 id="Docker-化-Confluence"><a href="#Docker-化-Confluence" class="headerlink" title="Docker 化 Confluence"></a>Docker 化 Confluence</h2><figure class="highlight plain"><figcaption><span>Dockerfile</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">FROM atlassian/confluence-server:7.13</span><br><span class="line"># 使用 Mysql，PG 默认不需要</span><br><span class="line">ADD mysql-connector-java-8.0.19.jar /opt/atlassian/confluence/lib/ </span><br><span class="line">ADD atlassian-agent-v1.3.1/atlassian-agent.jar /opt/atlassian/atlassian-agent.jar</span><br></pre></td></tr></table></figure>
 
 <p><code>atlassian-agent</code> <a href="https://gitee.com/pengzhile/atlassian-agent" rel="external nofollow noopener noreferrer" target="_blank">点此获取</a></p>
-<h2 id="Docker-Compose"><a href="#Docker-Compose" class="headerlink" title="Docker-Compose"></a>Docker-Compose</h2><figure class="highlight yaml"><figcaption><span>docker-compose.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">confluence:</span></span><br><span class="line"><span class="attr">    build:</span> <span class="string">.</span></span><br><span class="line"><span class="attr">    container_name:</span> <span class="string">confluence</span></span><br><span class="line"><span class="attr">    depends_on:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">mysql</span></span><br><span class="line"><span class="attr">    environment:</span></span><br><span class="line"><span class="attr">    JAVA_OPTS:</span> <span class="attr">-javaagent:/opt/atlassian/atlassian-agent.jar</span>  <span class="comment"># 挂入破解插件</span></span><br><span class="line"><span class="attr">    JVM_MAXIMUM_MEMORY:</span> <span class="number">4096</span><span class="string">m</span></span><br><span class="line"><span class="attr">    volumes:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">/mnt/confluence/data/:/var/atlassian/application-data/confluence/</span></span><br><span class="line"><span class="attr">    ports:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">"8090:8090"</span></span><br><span class="line"><span class="attr">    logging:</span></span><br><span class="line"><span class="attr">    driver:</span> <span class="string">"json-file"</span></span><br><span class="line"><span class="attr">    options:</span></span><br><span class="line"><span class="attr">        max-size:</span> <span class="number">50</span><span class="string">m</span></span><br><span class="line"><span class="attr">    restart:</span> <span class="string">unless-stopped</span></span><br></pre></td></tr></table></figure>
+<h2 id="Docker-Compose"><a href="#Docker-Compose" class="headerlink" title="Docker-Compose"></a>Docker-Compose</h2><figure class="highlight yaml"><figcaption><span>docker-compose.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">confluence:</span></span><br><span class="line">    <span class="attr">build:</span> <span class="string">.</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">confluence</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">mysql</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">    <span class="attr">JAVA_OPTS:</span> <span class="string">-javaagent:/opt/atlassian/atlassian-agent.jar</span>  <span class="comment"># 挂入破解插件</span></span><br><span class="line">    <span class="attr">JVM_MAXIMUM_MEMORY:</span> <span class="string">4096m</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">/mnt/confluence/data/:/var/atlassian/application-data/confluence/</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">"8090:8090"</span></span><br><span class="line">    <span class="attr">logging:</span></span><br><span class="line">    <span class="attr">driver:</span> <span class="string">"json-file"</span></span><br><span class="line">    <span class="attr">options:</span></span><br><span class="line">        <span class="attr">max-size:</span> <span class="string">50m</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">unless-stopped</span></span><br></pre></td></tr></table></figure>
 
 <p>
                 
@@ -1017,7 +1017,7 @@
 
 
     
-        <article id="post-linux/linux-force-reboot" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-linux/linux-force-reboot" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -1116,7 +1116,7 @@
 
 
     
-        <article id="post-linux/nc" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-linux/nc" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -1208,7 +1208,7 @@
 
 
     
-        <article id="post-linux/network/listen-and-print" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-linux/network/listen-and-print" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -1307,7 +1307,7 @@
 
 
     
-        <article id="post-k8s/network-troubleshooting" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-k8s/network-troubleshooting" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -1406,7 +1406,7 @@
 
 
     
-        <article id="post-tips/dns" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-tips/dns" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -1482,7 +1482,7 @@
 
 
     
-        <article id="post-cs/call/cc" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-cs/call/cc" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -1586,7 +1586,7 @@
 
 
     
-        <article id="post-rust/rust" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-rust/rust" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -1674,7 +1674,7 @@
 
 
     
-        <article id="post-linux/build-and-debug-kernel-simple" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <article id="post-linux/build-and-debug-kernel-simple" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wiki.yanick.site/"/>
-  <updated>2024-03-07T07:50:19.892Z</updated>
+  <updated>2024-03-18T06:05:20.870Z</updated>
   <id>http://wiki.yanick.site/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>修改 Chrome 插件图标</title>
+    <link href="http://wiki.yanick.site/wiki/troubleshooting/modify-chrome-extension-icon/"/>
+    <id>http://wiki.yanick.site/wiki/troubleshooting/modify-chrome-extension-icon/</id>
+    <published>2024-04-18T16:27:50.000Z</published>
+    <updated>2024-03-18T06:05:20.870Z</updated>
+    
+    <content type="html"><![CDATA[<p>参考 <a href="https://stackoverflow.com/questions/14543896/where-does-chrome-store-extensions" rel="external nofollow noopener noreferrer" target="_blank">Where does Chrome store extensions?</a></p><ol><li>打开插件目录</li><li>从插件页面找到插件 ID，比如 <code>ajfhocnnncognkminddbfadkgdjnlmln</code></li><li>替换 images 里面的 icon 就可以了。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;参考 &lt;a href=&quot;https://stackoverflow.com/questions/14543896/where-does-chrome-store-extensions&quot; rel=&quot;external nofollow noopener noreferrer&quot; 
+      
+    
+    </summary>
+    
+      <category term="troubleshooting" scheme="http://wiki.yanick.site/categories/troubleshooting/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Tab Sync Pro 无法登录</title>
+    <link href="http://wiki.yanick.site/wiki/troubleshooting/tab-sync-pro-not-work/"/>
+    <id>http://wiki.yanick.site/wiki/troubleshooting/tab-sync-pro-not-work/</id>
+    <published>2024-04-18T16:27:50.000Z</published>
+    <updated>2024-03-18T06:05:20.870Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://chrome.google.com/webstore/detail/jdlfehkflgfmniokcligbfdjobgapehn" rel="external nofollow noopener noreferrer" target="_blank">https://chrome.google.com/webstore/detail/jdlfehkflgfmniokcligbfdjobgapehn</a> </p><p>点击插件，然后Debug，会发现发送一个 Account 请求，但是没有携带 Bearer Token，所以无法登录。根据请求的发起地方，设置一个断点。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">Q</span>(<span class="params">t, e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> s = <span class="keyword">new</span> URLSearchParams(e);</span><br><span class="line">    <span class="keyword">return</span> (<span class="keyword">await</span> fetch(<span class="string">`<span class="subst">$&#123;F&#125;</span>/api/<span class="subst">$&#123;t&#125;</span>`</span> + (s ? <span class="string">`?<span class="subst">$&#123;s&#125;</span>`</span> : <span class="string">""</span>), &#123;</span><br><span class="line">        headers: &#123;</span><br><span class="line">            Authorization: <span class="string">`Bearer <span class="subst">$&#123;K&#125;</span>`</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)).json()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>设置一个断点，等一会就好，应该是没有等待拿到值。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/jdlfehkflgfmniokcligbfdjobgapehn&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;
+      
+    
+    </summary>
+    
+      <category term="troubleshooting" scheme="http://wiki.yanick.site/categories/troubleshooting/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Chrome 工具选择</title>
@@ -365,31 +411,6 @@
   </entry>
   
   <entry>
-    <title>Ubuntu 升级 22.04 故障记录</title>
-    <link href="http://wiki.yanick.site/wiki/linux/notes/ubuntu-22-04/"/>
-    <id>http://wiki.yanick.site/wiki/linux/notes/ubuntu-22-04/</id>
-    <published>2022-09-01T11:19:25.000Z</published>
-    <updated>2022-09-29T06:30:18.262Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Jenkins-JCP-无法连接"><a href="#Jenkins-JCP-无法连接" class="headerlink" title="Jenkins JCP 无法连接"></a>Jenkins JCP 无法连接</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BapSshHostConfiguration<span class="comment">#connect: Failed to connect session for config</span></span><br></pre></td></tr></table></figure><p>查找了下 <code>stackoverflow</code></p><p>在 <code>/etc/ssh/sshd.confi</code> 增加</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PubkeyAcceptedKeyTypes=+ssh-rsa</span><br></pre></td></tr></table></figure><p>即可。</p><h2 id="guacamole-无法连接"><a href="#guacamole-无法连接" class="headerlink" title="guacamole 无法连接"></a>guacamole 无法连接</h2><p>参考 <a href="https://www.reddit.com/r/selfhosted/comments/qh7u5x/guacamole_ssh_not_working/" rel="external nofollow noopener noreferrer" target="_blank">https://www.reddit.com/r/selfhosted/comments/qh7u5x/guacamole_ssh_not_working/</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HostKeyAlgorithms +ssh-rsa</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Jenkins-JCP-无法连接&quot;&gt;&lt;a href=&quot;#Jenkins-JCP-无法连接&quot; class=&quot;headerlink&quot; title=&quot;Jenkins JCP 无法连接&quot;&gt;&lt;/a&gt;Jenkins JCP 无法连接&lt;/h2&gt;&lt;figure class=&quot;hi
-      
-    
-    </summary>
-    
-      <category term="ubuntu" scheme="http://wiki.yanick.site/categories/ubuntu/"/>
-    
-      <category term="22.04" scheme="http://wiki.yanick.site/categories/ubuntu/22-04/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>桌面图标</title>
     <link href="http://wiki.yanick.site/wiki/linux/tips/desktop/"/>
     <id>http://wiki.yanick.site/wiki/linux/tips/desktop/</id>
@@ -410,6 +431,31 @@
     </summary>
     
       <category term="desktop" scheme="http://wiki.yanick.site/categories/desktop/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu 升级 22.04 故障记录</title>
+    <link href="http://wiki.yanick.site/wiki/linux/notes/ubuntu-22-04/"/>
+    <id>http://wiki.yanick.site/wiki/linux/notes/ubuntu-22-04/</id>
+    <published>2022-09-01T11:19:25.000Z</published>
+    <updated>2022-09-29T06:30:18.262Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Jenkins-JCP-无法连接"><a href="#Jenkins-JCP-无法连接" class="headerlink" title="Jenkins JCP 无法连接"></a>Jenkins JCP 无法连接</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BapSshHostConfiguration<span class="comment">#connect: Failed to connect session for config</span></span><br></pre></td></tr></table></figure><p>查找了下 <code>stackoverflow</code></p><p>在 <code>/etc/ssh/sshd.confi</code> 增加</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PubkeyAcceptedKeyTypes=+ssh-rsa</span><br></pre></td></tr></table></figure><p>即可。</p><h2 id="guacamole-无法连接"><a href="#guacamole-无法连接" class="headerlink" title="guacamole 无法连接"></a>guacamole 无法连接</h2><p>参考 <a href="https://www.reddit.com/r/selfhosted/comments/qh7u5x/guacamole_ssh_not_working/" rel="external nofollow noopener noreferrer" target="_blank">https://www.reddit.com/r/selfhosted/comments/qh7u5x/guacamole_ssh_not_working/</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HostKeyAlgorithms +ssh-rsa</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Jenkins-JCP-无法连接&quot;&gt;&lt;a href=&quot;#Jenkins-JCP-无法连接&quot; class=&quot;headerlink&quot; title=&quot;Jenkins JCP 无法连接&quot;&gt;&lt;/a&gt;Jenkins JCP 无法连接&lt;/h2&gt;&lt;figure class=&quot;hi
+      
+    
+    </summary>
+    
+      <category term="ubuntu" scheme="http://wiki.yanick.site/categories/ubuntu/"/>
+    
+      <category term="22.04" scheme="http://wiki.yanick.site/categories/ubuntu/22-04/"/>
     
     
   </entry>
@@ -462,56 +508,6 @@
       <category term="kubernetes" scheme="http://wiki.yanick.site/categories/network/kubernetes/"/>
     
       <category term="kubectl" scheme="http://wiki.yanick.site/categories/network/kubernetes/kubectl/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>tmux 使用指南</title>
-    <link href="http://wiki.yanick.site/wiki/tools/tmux/"/>
-    <id>http://wiki.yanick.site/wiki/tools/tmux/</id>
-    <published>2022-08-01T11:09:25.000Z</published>
-    <updated>2022-08-01T03:20:20.044Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Tmux"><a href="#Tmux" class="headerlink" title="Tmux"></a>Tmux</h2><h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ul><li><a href="http://www.ruanyifeng.com/blog/2019/10/tmux.html" rel="external nofollow noopener noreferrer" target="_blank">Tmux 使用教程</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Tmux&quot;&gt;&lt;a href=&quot;#Tmux&quot; class=&quot;headerlink&quot; title=&quot;Tmux&quot;&gt;&lt;/a&gt;Tmux&lt;/h2&gt;&lt;h2 id=&quot;参考文档&quot;&gt;&lt;a href=&quot;#参考文档&quot; class=&quot;headerlink&quot; title=&quot;参考文档&quot;&gt;&lt;/a
-      
-    
-    </summary>
-    
-      <category term="linux" scheme="http://wiki.yanick.site/categories/linux/"/>
-    
-      <category term="tmux" scheme="http://wiki.yanick.site/categories/linux/tmux/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>SSH Tips</title>
-    <link href="http://wiki.yanick.site/wiki/tools/ssh/ssh/"/>
-    <id>http://wiki.yanick.site/wiki/tools/ssh/ssh/</id>
-    <published>2022-06-29T16:27:50.000Z</published>
-    <updated>2022-09-08T02:45:17.060Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="SSH-Keep-Alive"><a href="#SSH-Keep-Alive" class="headerlink" title="SSH Keep Alive"></a>SSH Keep Alive</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ~/.ssh/config</span></span><br><span class="line">Host *</span><br><span class="line">    ServerAliveInterval 30</span><br><span class="line">    ServerAliveCountMax 2</span><br></pre></td></tr></table></figure><h2 id="自动输入密码"><a href="#自动输入密码" class="headerlink" title="自动输入密码"></a>自动输入密码</h2><p>尝试使用 <code>sshpass</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install sshpass</span><br></pre></td></tr></table></figure><h2 id="忽略Host-Key"><a href="#忽略Host-Key" class="headerlink" title="忽略Host Key"></a>忽略Host Key</h2><p>在第一次访问的时候，需要统一，CI的时候就很麻烦，可以直接忽略</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -o StrictHostKeyChecking=no  root@xxx</span><br></pre></td></tr></table></figure><p>可以配置到 config 文件内，全局的忽略</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;SSH-Keep-Alive&quot;&gt;&lt;a href=&quot;#SSH-Keep-Alive&quot; class=&quot;headerlink&quot; title=&quot;SSH Keep Alive&quot;&gt;&lt;/a&gt;SSH Keep Alive&lt;/h2&gt;&lt;figure class=&quot;highlight 
-      
-    
-    </summary>
-    
-      <category term="tools" scheme="http://wiki.yanick.site/categories/tools/"/>
-    
-      <category term="ssh" scheme="http://wiki.yanick.site/categories/tools/ssh/"/>
     
     
   </entry>

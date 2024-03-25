@@ -1,5 +1,5 @@
-http://wiki.yanick.site/wiki/troubleshooting/modify-chrome-extension-icon/
 http://wiki.yanick.site/wiki/troubleshooting/tab-sync-pro-not-work/
+http://wiki.yanick.site/wiki/troubleshooting/modify-chrome-extension-icon/
+http://wiki.yanick.site/wiki/kubernetes/light-kube/
 http://wiki.yanick.site/wiki/tools/chrome/chrome/
 http://wiki.yanick.site/wiki/tips/ubuntu/add-action-for-nautilus/
-http://wiki.yanick.site/wiki/linux/network/speed-test/

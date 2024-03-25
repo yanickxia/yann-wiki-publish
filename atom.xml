@@ -17,6 +17,29 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Tab Sync Pro 无法登录</title>
+    <link href="http://wiki.yanick.site/wiki/troubleshooting/tab-sync-pro-not-work/"/>
+    <id>http://wiki.yanick.site/wiki/troubleshooting/tab-sync-pro-not-work/</id>
+    <published>2024-04-18T16:27:50.000Z</published>
+    <updated>2024-03-18T06:05:20.870Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://chrome.google.com/webstore/detail/jdlfehkflgfmniokcligbfdjobgapehn" rel="external nofollow noopener noreferrer" target="_blank">https://chrome.google.com/webstore/detail/jdlfehkflgfmniokcligbfdjobgapehn</a> </p><p>点击插件，然后Debug，会发现发送一个 Account 请求，但是没有携带 Bearer Token，所以无法登录。根据请求的发起地方，设置一个断点。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">Q</span>(<span class="params">t, e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> s = <span class="keyword">new</span> URLSearchParams(e);</span><br><span class="line">    <span class="keyword">return</span> (<span class="keyword">await</span> fetch(<span class="string">`<span class="subst">$&#123;F&#125;</span>/api/<span class="subst">$&#123;t&#125;</span>`</span> + (s ? <span class="string">`?<span class="subst">$&#123;s&#125;</span>`</span> : <span class="string">""</span>), &#123;</span><br><span class="line">        headers: &#123;</span><br><span class="line">            Authorization: <span class="string">`Bearer <span class="subst">$&#123;K&#125;</span>`</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)).json()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>设置一个断点，等一会就好，应该是没有等待拿到值。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/jdlfehkflgfmniokcligbfdjobgapehn&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;
+      
+    
+    </summary>
+    
+      <category term="troubleshooting" scheme="http://wiki.yanick.site/categories/troubleshooting/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>修改 Chrome 插件图标</title>
     <link href="http://wiki.yanick.site/wiki/troubleshooting/modify-chrome-extension-icon/"/>
     <id>http://wiki.yanick.site/wiki/troubleshooting/modify-chrome-extension-icon/</id>
@@ -40,24 +63,26 @@
   </entry>
   
   <entry>
-    <title>Tab Sync Pro 无法登录</title>
-    <link href="http://wiki.yanick.site/wiki/troubleshooting/tab-sync-pro-not-work/"/>
-    <id>http://wiki.yanick.site/wiki/troubleshooting/tab-sync-pro-not-work/</id>
-    <published>2024-04-18T16:27:50.000Z</published>
-    <updated>2024-03-18T06:05:20.870Z</updated>
+    <title>轻量级 kubernetes 安装指南</title>
+    <link href="http://wiki.yanick.site/wiki/kubernetes/light-kube/"/>
+    <id>http://wiki.yanick.site/wiki/kubernetes/light-kube/</id>
+    <published>2024-03-25T16:27:50.000Z</published>
+    <updated>2024-03-25T08:50:17.389Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://chrome.google.com/webstore/detail/jdlfehkflgfmniokcligbfdjobgapehn" rel="external nofollow noopener noreferrer" target="_blank">https://chrome.google.com/webstore/detail/jdlfehkflgfmniokcligbfdjobgapehn</a> </p><p>点击插件，然后Debug，会发现发送一个 Account 请求，但是没有携带 Bearer Token，所以无法登录。根据请求的发起地方，设置一个断点。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">Q</span>(<span class="params">t, e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> s = <span class="keyword">new</span> URLSearchParams(e);</span><br><span class="line">    <span class="keyword">return</span> (<span class="keyword">await</span> fetch(<span class="string">`<span class="subst">$&#123;F&#125;</span>/api/<span class="subst">$&#123;t&#125;</span>`</span> + (s ? <span class="string">`?<span class="subst">$&#123;s&#125;</span>`</span> : <span class="string">""</span>), &#123;</span><br><span class="line">        headers: &#123;</span><br><span class="line">            Authorization: <span class="string">`Bearer <span class="subst">$&#123;K&#125;</span>`</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)).json()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>设置一个断点，等一会就好，应该是没有等待拿到值。</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="K3S"><a href="#K3S" class="headerlink" title="K3S"></a>K3S</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sfL https://get.k3s.io | sh -</span><br></pre></td></tr></table></figure><p>国内的加速</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sfL https://rancher-mirror.rancher.cn/k3s/k3s-install.sh | INSTALL_K3S_MIRROR=cn sh -</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/jdlfehkflgfmniokcligbfdjobgapehn&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;
+        &lt;h2 id=&quot;K3S&quot;&gt;&lt;a href=&quot;#K3S&quot; class=&quot;headerlink&quot; title=&quot;K3S&quot;&gt;&lt;/a&gt;K3S&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;sp
       
     
     </summary>
     
-      <category term="troubleshooting" scheme="http://wiki.yanick.site/categories/troubleshooting/"/>
+      <category term="cncf" scheme="http://wiki.yanick.site/categories/cncf/"/>
+    
+      <category term="kubernetes" scheme="http://wiki.yanick.site/categories/cncf/kubernetes/"/>
     
     
   </entry>
@@ -188,31 +213,6 @@
   </entry>
   
   <entry>
-    <title>Docker Tips</title>
-    <link href="http://wiki.yanick.site/wiki/tips/docker/docker/"/>
-    <id>http://wiki.yanick.site/wiki/tips/docker/docker/</id>
-    <published>2023-02-28T15:10:08.000Z</published>
-    <updated>2023-03-16T13:35:15.880Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="ofelia-a-job-scheduler"><a href="#ofelia-a-job-scheduler" class="headerlink" title="ofelia - a job scheduler"></a>ofelia - a job scheduler</h2><p>一个基于 Label 的 docker job 工具</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">"3"</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">ofelia:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">mcuadros/ofelia:latest</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">nginx</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">daemon</span> <span class="string">--docker</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/var/run/docker.sock:/var/run/docker.sock:ro</span></span><br><span class="line">    <span class="attr">labels:</span></span><br><span class="line">      <span class="attr">ofelia.job-local.my-test-job.schedule:</span> <span class="string">"@every 5s"</span></span><br><span class="line">      <span class="attr">ofelia.job-local.my-test-job.command:</span> <span class="string">"date"</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">nginx:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">nginx</span></span><br><span class="line">    <span class="attr">labels:</span></span><br><span class="line">      <span class="attr">ofelia.enabled:</span> <span class="string">"true"</span></span><br><span class="line">      <span class="attr">ofelia.job-exec.datecron.schedule:</span> <span class="string">"@every 5s"</span></span><br><span class="line">      <span class="attr">ofelia.job-exec.datecron.command:</span> <span class="string">"uname -</span></span><br></pre></td></tr></table></figure><h2 id="guacamole"><a href="#guacamole" class="headerlink" title="guacamole"></a>guacamole</h2><p>一个 SSH 的 Web 平台，不过有个中文问题需要解决，解决的是 guacd 部分，不是 guacamole 部分，参考 <a href="https://xmsg.org/wordpress/2018/12/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Edocker%E7%9A%84guacamole%E7%8E%AF%E5%A2%83%E5%B9%B6%E5%AE%9E%E7%8E%B0%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA/" rel="external nofollow noopener noreferrer" target="_blank">快速搭建基于Docker的Guacamole环境并实现中文显示</a></p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">guacd:</span></span><br><span class="line">  <span class="attr">container_name:</span> <span class="string">guacd_compose</span></span><br><span class="line">  <span class="attr">image:</span> <span class="string">guacamole/guacd</span></span><br><span class="line">  <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">  <span class="attr">volumes:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">$PWD/data/guacd/drive:/drive:rw</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">$PWD/data/guacd/record:/record:rw</span></span><br><span class="line"><span class="attr">guacamole:</span></span><br><span class="line">  <span class="attr">image:</span> <span class="string">guacamole/guacamole</span></span><br><span class="line">  <span class="attr">container_name:</span> <span class="string">guacamole_compose</span></span><br><span class="line">  <span class="attr">depends_on:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">mysql</span></span><br><span class="line">  <span class="attr">environment:</span></span><br><span class="line">    <span class="attr">GUACD_HOSTNAME:</span> </span><br><span class="line">    <span class="attr">MYSQL_DATABASE:</span> </span><br><span class="line">    <span class="attr">MYSQL_USER:</span> </span><br><span class="line">    <span class="attr">MYSQL_PORT:</span> </span><br><span class="line">    <span class="attr">MYSQL_HOSTNAME:</span> </span><br><span class="line">    <span class="attr">MYSQL_PASSWORD:</span> </span><br><span class="line">  <span class="attr">links:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">guacd</span></span><br><span class="line">  <span class="attr">ports:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="number">8080</span><span class="string">/tcp</span></span><br><span class="line">  <span class="attr">restart:</span> <span class="string">always</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;ofelia-a-job-scheduler&quot;&gt;&lt;a href=&quot;#ofelia-a-job-scheduler&quot; class=&quot;headerlink&quot; title=&quot;ofelia - a job scheduler&quot;&gt;&lt;/a&gt;ofelia - a job sch
-      
-    
-    </summary>
-    
-      <category term="tips" scheme="http://wiki.yanick.site/categories/tips/"/>
-    
-      <category term="docker" scheme="http://wiki.yanick.site/categories/tips/docker/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Macos Tips</title>
     <link href="http://wiki.yanick.site/wiki/tips/macos/macos/"/>
     <id>http://wiki.yanick.site/wiki/tips/macos/macos/</id>
@@ -234,6 +234,31 @@
       <category term="tips" scheme="http://wiki.yanick.site/categories/tips/"/>
     
       <category term="macos" scheme="http://wiki.yanick.site/categories/tips/macos/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Docker Tips</title>
+    <link href="http://wiki.yanick.site/wiki/tips/docker/docker/"/>
+    <id>http://wiki.yanick.site/wiki/tips/docker/docker/</id>
+    <published>2023-02-28T15:10:08.000Z</published>
+    <updated>2023-03-16T13:35:15.880Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="ofelia-a-job-scheduler"><a href="#ofelia-a-job-scheduler" class="headerlink" title="ofelia - a job scheduler"></a>ofelia - a job scheduler</h2><p>一个基于 Label 的 docker job 工具</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">"3"</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">ofelia:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">mcuadros/ofelia:latest</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">nginx</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">daemon</span> <span class="string">--docker</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/var/run/docker.sock:/var/run/docker.sock:ro</span></span><br><span class="line">    <span class="attr">labels:</span></span><br><span class="line">      <span class="attr">ofelia.job-local.my-test-job.schedule:</span> <span class="string">"@every 5s"</span></span><br><span class="line">      <span class="attr">ofelia.job-local.my-test-job.command:</span> <span class="string">"date"</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">nginx:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">nginx</span></span><br><span class="line">    <span class="attr">labels:</span></span><br><span class="line">      <span class="attr">ofelia.enabled:</span> <span class="string">"true"</span></span><br><span class="line">      <span class="attr">ofelia.job-exec.datecron.schedule:</span> <span class="string">"@every 5s"</span></span><br><span class="line">      <span class="attr">ofelia.job-exec.datecron.command:</span> <span class="string">"uname -</span></span><br></pre></td></tr></table></figure><h2 id="guacamole"><a href="#guacamole" class="headerlink" title="guacamole"></a>guacamole</h2><p>一个 SSH 的 Web 平台，不过有个中文问题需要解决，解决的是 guacd 部分，不是 guacamole 部分，参考 <a href="https://xmsg.org/wordpress/2018/12/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8Edocker%E7%9A%84guacamole%E7%8E%AF%E5%A2%83%E5%B9%B6%E5%AE%9E%E7%8E%B0%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA/" rel="external nofollow noopener noreferrer" target="_blank">快速搭建基于Docker的Guacamole环境并实现中文显示</a></p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">guacd:</span></span><br><span class="line">  <span class="attr">container_name:</span> <span class="string">guacd_compose</span></span><br><span class="line">  <span class="attr">image:</span> <span class="string">guacamole/guacd</span></span><br><span class="line">  <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">  <span class="attr">volumes:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">$PWD/data/guacd/drive:/drive:rw</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">$PWD/data/guacd/record:/record:rw</span></span><br><span class="line"><span class="attr">guacamole:</span></span><br><span class="line">  <span class="attr">image:</span> <span class="string">guacamole/guacamole</span></span><br><span class="line">  <span class="attr">container_name:</span> <span class="string">guacamole_compose</span></span><br><span class="line">  <span class="attr">depends_on:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">mysql</span></span><br><span class="line">  <span class="attr">environment:</span></span><br><span class="line">    <span class="attr">GUACD_HOSTNAME:</span> </span><br><span class="line">    <span class="attr">MYSQL_DATABASE:</span> </span><br><span class="line">    <span class="attr">MYSQL_USER:</span> </span><br><span class="line">    <span class="attr">MYSQL_PORT:</span> </span><br><span class="line">    <span class="attr">MYSQL_HOSTNAME:</span> </span><br><span class="line">    <span class="attr">MYSQL_PASSWORD:</span> </span><br><span class="line">  <span class="attr">links:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">guacd</span></span><br><span class="line">  <span class="attr">ports:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="number">8080</span><span class="string">/tcp</span></span><br><span class="line">  <span class="attr">restart:</span> <span class="string">always</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;ofelia-a-job-scheduler&quot;&gt;&lt;a href=&quot;#ofelia-a-job-scheduler&quot; class=&quot;headerlink&quot; title=&quot;ofelia - a job scheduler&quot;&gt;&lt;/a&gt;ofelia - a job sch
+      
+    
+    </summary>
+    
+      <category term="tips" scheme="http://wiki.yanick.site/categories/tips/"/>
+    
+      <category term="docker" scheme="http://wiki.yanick.site/categories/tips/docker/"/>
     
     
   </entry>
@@ -360,10 +385,10 @@
   
   <entry>
     <title>kubernetes 安装工具指南</title>
-    <link href="http://wiki.yanick.site/wiki/k8s/install/"/>
-    <id>http://wiki.yanick.site/wiki/k8s/install/</id>
+    <link href="http://wiki.yanick.site/wiki/kubernetes/install/"/>
+    <id>http://wiki.yanick.site/wiki/kubernetes/install/</id>
     <published>2023-02-02T17:31:50.000Z</published>
-    <updated>2023-02-20T09:10:21.346Z</updated>
+    <updated>2024-03-25T08:50:17.385Z</updated>
     
     <content type="html"><![CDATA[<p>kubernetes 有很多安装工具，这里有几个使用的做点链接记录</p><h2 id="KubeSphere"><a href="#KubeSphere" class="headerlink" title="KubeSphere"></a>KubeSphere</h2><p><a href="https://kubesphere.io/zh/docs/v3.3/quick-start/all-in-one-on-linux/" rel="external nofollow noopener noreferrer" target="_blank"><code>kubekey</code></a> </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> KKZONE=cn</span><br><span class="line">curl -sfL https://get-kk.kubesphere.io | VERSION=v3.0.2 sh -</span><br><span class="line"></span><br><span class="line">chmod +x kk</span><br><span class="line">./kk create cluster</span><br></pre></td></tr></table></figure><p>非常的稳定，还有国内的镜像，安装很方便</p><h2 id="SealOS"><a href="#SealOS" class="headerlink" title="SealOS"></a>SealOS</h2><p><a href="https://github.com/labring/sealos" rel="external nofollow noopener noreferrer" target="_blank">sealos</a> 属于越做越差的类型，这里就不推荐了</p><h2 id="Kind"><a href="#Kind" class="headerlink" title="Kind"></a>Kind</h2><p><a href="https://kind.sigs.k8s.io/" rel="external nofollow noopener noreferrer" target="_blank">kind</a> 也是一个非常好的单机k8s 安装工具。</p><h2 id="k3s"><a href="#k3s" class="headerlink" title="k3s"></a>k3s</h2><p><a href="https://docs.k3s.io/zh/quick-start" rel="external nofollow noopener noreferrer" target="_blank">k3s</a> 是一个阉割版本的 k8s，但是本地启动可能有一些组件无法安装，也不知道为什么，还是推荐第一个</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># curl -sfL https://get.k3s.io | sh -</span></span><br><span class="line">curl -sfL https://rancher-mirror.rancher.cn/k3s/k3s-install.sh | INSTALL_K3S_MIRROR=cn sh -</span><br></pre></td></tr></table></figure><h2 id="minikube"><a href="#minikube" class="headerlink" title="minikube"></a>minikube</h2><p><a href="https://minikube.sigs.k8s.io/docs/start/" rel="external nofollow noopener noreferrer" target="_blank">minikube</a> 是社区官方的单机安装版本，非常的简单也很健壮</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64</span><br><span class="line">sudo install minikube-darwin-amd64 /usr/<span class="built_in">local</span>/bin/minikube</span><br><span class="line">minikube start</span><br></pre></td></tr></table></figure><p>但是暴露的方式有点复杂，从远端访问比较的麻烦。</p><h2 id="kuboard"><a href="#kuboard" class="headerlink" title="kuboard"></a>kuboard</h2><p><a href="https://kuboard.cn/install/install-kubernetes.html" rel="external nofollow noopener noreferrer" target="_blank">kuboard</a> 一个全图形化的安装系统，感觉如果需要运维大量的机器这个还是蛮适合的，功能强大。</p><h2 id="kubeasz"><a href="#kubeasz" class="headerlink" title="kubeasz"></a>kubeasz</h2><p><a href="https://github.com/easzlab/kubeasz" rel="external nofollow noopener noreferrer" target="_blank">kubeasz</a> anisbe 脚本一把嗦。</p><h2 id="rancher"><a href="#rancher" class="headerlink" title="rancher"></a>rancher</h2><p><a href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/quick-start-guides" rel="external nofollow noopener noreferrer" target="_blank">rancher</a> 使用 rancher 来跑。</p>]]></content>
     
@@ -411,31 +436,6 @@
   </entry>
   
   <entry>
-    <title>桌面图标</title>
-    <link href="http://wiki.yanick.site/wiki/linux/tips/desktop/"/>
-    <id>http://wiki.yanick.site/wiki/linux/tips/desktop/</id>
-    <published>2022-09-01T11:19:25.000Z</published>
-    <updated>2022-09-01T03:20:15.685Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="桌面图标"><a href="#桌面图标" class="headerlink" title="桌面图标"></a>桌面图标</h2><ol><li>/usr/share/applications/</li><li>~/.local/share/applications/</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;桌面图标&quot;&gt;&lt;a href=&quot;#桌面图标&quot; class=&quot;headerlink&quot; title=&quot;桌面图标&quot;&gt;&lt;/a&gt;桌面图标&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;/usr/share/applications/&lt;/li&gt;
-&lt;li&gt;~/.local/share/applica
-      
-    
-    </summary>
-    
-      <category term="desktop" scheme="http://wiki.yanick.site/categories/desktop/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Ubuntu 升级 22.04 故障记录</title>
     <link href="http://wiki.yanick.site/wiki/linux/notes/ubuntu-22-04/"/>
     <id>http://wiki.yanick.site/wiki/linux/notes/ubuntu-22-04/</id>
@@ -461,6 +461,31 @@
   </entry>
   
   <entry>
+    <title>桌面图标</title>
+    <link href="http://wiki.yanick.site/wiki/linux/tips/desktop/"/>
+    <id>http://wiki.yanick.site/wiki/linux/tips/desktop/</id>
+    <published>2022-09-01T11:19:25.000Z</published>
+    <updated>2022-09-01T03:20:15.685Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="桌面图标"><a href="#桌面图标" class="headerlink" title="桌面图标"></a>桌面图标</h2><ol><li>/usr/share/applications/</li><li>~/.local/share/applications/</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;桌面图标&quot;&gt;&lt;a href=&quot;#桌面图标&quot; class=&quot;headerlink&quot; title=&quot;桌面图标&quot;&gt;&lt;/a&gt;桌面图标&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;/usr/share/applications/&lt;/li&gt;
+&lt;li&gt;~/.local/share/applica
+      
+    
+    </summary>
+    
+      <category term="desktop" scheme="http://wiki.yanick.site/categories/desktop/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>MongoDB Tips</title>
     <link href="http://wiki.yanick.site/wiki/database/mongodb/mongodb/"/>
     <id>http://wiki.yanick.site/wiki/database/mongodb/mongodb/</id>
@@ -481,33 +506,6 @@
       <category term="database" scheme="http://wiki.yanick.site/categories/database/"/>
     
       <category term="mongodb" scheme="http://wiki.yanick.site/categories/database/mongodb/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>kubectl tips</title>
-    <link href="http://wiki.yanick.site/wiki/k8s/kubectl-tips/"/>
-    <id>http://wiki.yanick.site/wiki/k8s/kubectl-tips/</id>
-    <published>2022-08-02T17:31:50.000Z</published>
-    <updated>2022-09-27T02:55:17.573Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="更新-CR-Status-字段"><a href="#更新-CR-Status-字段" class="headerlink" title="更新 CR Status 字段"></a>更新 CR Status 字段</h2><p>参考 <a href="https://simondrake.dev/microblog/update-k8s-crd-status" rel="external nofollow noopener noreferrer" target="_blank">Update K8s CR Status</a></p><h2 id="强制删除-Namespace"><a href="#强制删除-Namespace" class="headerlink" title="强制删除 Namespace"></a>强制删除 Namespace</h2><p>参考 <a href="https://gist.github.com/renuka-fernando/2cf4420c5460cfd965f3b891091af4c2" rel="external nofollow noopener noreferrer" target="_blank">force-delete-namespace.sh</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> -e</span><br><span class="line"><span class="built_in">set</span> -o pipefail</span><br><span class="line"></span><br><span class="line">kubectl proxy &amp;</span><br><span class="line">proxy_pid=<span class="string">"$!"</span></span><br><span class="line"><span class="built_in">trap</span> <span class="string">'kill "$proxy_pid"'</span> EXIT</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ns <span class="keyword">in</span> $(kubectl get namespace --field-selector=status.phase=Terminating --output=jsonpath=<span class="string">"&#123;.items[*].metadata.name&#125;"</span>); <span class="keyword">do</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"Removing finalizers from namespace '<span class="variable">$ns</span>'..."</span></span><br><span class="line">    curl -H <span class="string">"Content-Type: application/json"</span> -X PUT <span class="string">"127.0.0.1:8001/api/v1/namespaces/<span class="variable">$ns</span>/finalize"</span> -d @- \</span><br><span class="line">        &lt; &lt;(kubectl get namespace <span class="string">"<span class="variable">$ns</span>"</span> --output=json | jq <span class="string">'.spec = &#123; "finalizers": [] &#125;'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">echo</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"Force-deleting namespace '<span class="variable">$ns</span>'..."</span></span><br><span class="line">    kubectl delete namespace <span class="string">"<span class="variable">$ns</span>"</span> --force --grace-period=0 --ignore-not-found=<span class="literal">true</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;更新-CR-Status-字段&quot;&gt;&lt;a href=&quot;#更新-CR-Status-字段&quot; class=&quot;headerlink&quot; title=&quot;更新 CR Status 字段&quot;&gt;&lt;/a&gt;更新 CR Status 字段&lt;/h2&gt;&lt;p&gt;参考 &lt;a href=&quot;https:
-      
-    
-    </summary>
-    
-      <category term="network" scheme="http://wiki.yanick.site/categories/network/"/>
-    
-      <category term="kubernetes" scheme="http://wiki.yanick.site/categories/network/kubernetes/"/>
-    
-      <category term="kubectl" scheme="http://wiki.yanick.site/categories/network/kubernetes/kubectl/"/>
     
     
   </entry>

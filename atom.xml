@@ -17,29 +17,6 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Tab Sync Pro 无法登录</title>
-    <link href="http://wiki.yanick.site/wiki/troubleshooting/tab-sync-pro-not-work/"/>
-    <id>http://wiki.yanick.site/wiki/troubleshooting/tab-sync-pro-not-work/</id>
-    <published>2024-04-18T16:27:50.000Z</published>
-    <updated>2024-03-18T06:05:20.870Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://chrome.google.com/webstore/detail/jdlfehkflgfmniokcligbfdjobgapehn" rel="external nofollow noopener noreferrer" target="_blank">https://chrome.google.com/webstore/detail/jdlfehkflgfmniokcligbfdjobgapehn</a> </p><p>点击插件，然后Debug，会发现发送一个 Account 请求，但是没有携带 Bearer Token，所以无法登录。根据请求的发起地方，设置一个断点。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">Q</span>(<span class="params">t, e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> s = <span class="keyword">new</span> URLSearchParams(e);</span><br><span class="line">    <span class="keyword">return</span> (<span class="keyword">await</span> fetch(<span class="string">`<span class="subst">$&#123;F&#125;</span>/api/<span class="subst">$&#123;t&#125;</span>`</span> + (s ? <span class="string">`?<span class="subst">$&#123;s&#125;</span>`</span> : <span class="string">""</span>), &#123;</span><br><span class="line">        headers: &#123;</span><br><span class="line">            Authorization: <span class="string">`Bearer <span class="subst">$&#123;K&#125;</span>`</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)).json()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>设置一个断点，等一会就好，应该是没有等待拿到值。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/jdlfehkflgfmniokcligbfdjobgapehn&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;
-      
-    
-    </summary>
-    
-      <category term="troubleshooting" scheme="http://wiki.yanick.site/categories/troubleshooting/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>修改 Chrome 插件图标</title>
     <link href="http://wiki.yanick.site/wiki/troubleshooting/modify-chrome-extension-icon/"/>
     <id>http://wiki.yanick.site/wiki/troubleshooting/modify-chrome-extension-icon/</id>
@@ -63,11 +40,34 @@
   </entry>
   
   <entry>
+    <title>Tab Sync Pro 无法登录</title>
+    <link href="http://wiki.yanick.site/wiki/troubleshooting/tab-sync-pro-not-work/"/>
+    <id>http://wiki.yanick.site/wiki/troubleshooting/tab-sync-pro-not-work/</id>
+    <published>2024-04-18T16:27:50.000Z</published>
+    <updated>2024-03-18T06:05:20.870Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://chrome.google.com/webstore/detail/jdlfehkflgfmniokcligbfdjobgapehn" rel="external nofollow noopener noreferrer" target="_blank">https://chrome.google.com/webstore/detail/jdlfehkflgfmniokcligbfdjobgapehn</a> </p><p>点击插件，然后Debug，会发现发送一个 Account 请求，但是没有携带 Bearer Token，所以无法登录。根据请求的发起地方，设置一个断点。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">Q</span>(<span class="params">t, e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> s = <span class="keyword">new</span> URLSearchParams(e);</span><br><span class="line">    <span class="keyword">return</span> (<span class="keyword">await</span> fetch(<span class="string">`<span class="subst">$&#123;F&#125;</span>/api/<span class="subst">$&#123;t&#125;</span>`</span> + (s ? <span class="string">`?<span class="subst">$&#123;s&#125;</span>`</span> : <span class="string">""</span>), &#123;</span><br><span class="line">        headers: &#123;</span><br><span class="line">            Authorization: <span class="string">`Bearer <span class="subst">$&#123;K&#125;</span>`</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)).json()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>设置一个断点，等一会就好，应该是没有等待拿到值。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/jdlfehkflgfmniokcligbfdjobgapehn&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;
+      
+    
+    </summary>
+    
+      <category term="troubleshooting" scheme="http://wiki.yanick.site/categories/troubleshooting/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>轻量级 kubernetes 安装指南</title>
     <link href="http://wiki.yanick.site/wiki/kubernetes/light-kube/"/>
     <id>http://wiki.yanick.site/wiki/kubernetes/light-kube/</id>
     <published>2024-03-25T16:27:50.000Z</published>
-    <updated>2024-03-25T08:50:17.389Z</updated>
+    <updated>2024-03-25T11:45:17.475Z</updated>
     
     <content type="html"><![CDATA[<h2 id="K3S"><a href="#K3S" class="headerlink" title="K3S"></a>K3S</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sfL https://get.k3s.io | sh -</span><br></pre></td></tr></table></figure><p>国内的加速</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sfL https://rancher-mirror.rancher.cn/k3s/k3s-install.sh | INSTALL_K3S_MIRROR=cn sh -</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -388,9 +388,9 @@
     <link href="http://wiki.yanick.site/wiki/kubernetes/install/"/>
     <id>http://wiki.yanick.site/wiki/kubernetes/install/</id>
     <published>2023-02-02T17:31:50.000Z</published>
-    <updated>2024-03-25T08:50:17.385Z</updated>
+    <updated>2024-03-25T11:45:17.475Z</updated>
     
-    <content type="html"><![CDATA[<p>kubernetes 有很多安装工具，这里有几个使用的做点链接记录</p><h2 id="KubeSphere"><a href="#KubeSphere" class="headerlink" title="KubeSphere"></a>KubeSphere</h2><p><a href="https://kubesphere.io/zh/docs/v3.3/quick-start/all-in-one-on-linux/" rel="external nofollow noopener noreferrer" target="_blank"><code>kubekey</code></a> </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> KKZONE=cn</span><br><span class="line">curl -sfL https://get-kk.kubesphere.io | VERSION=v3.0.2 sh -</span><br><span class="line"></span><br><span class="line">chmod +x kk</span><br><span class="line">./kk create cluster</span><br></pre></td></tr></table></figure><p>非常的稳定，还有国内的镜像，安装很方便</p><h2 id="SealOS"><a href="#SealOS" class="headerlink" title="SealOS"></a>SealOS</h2><p><a href="https://github.com/labring/sealos" rel="external nofollow noopener noreferrer" target="_blank">sealos</a> 属于越做越差的类型，这里就不推荐了</p><h2 id="Kind"><a href="#Kind" class="headerlink" title="Kind"></a>Kind</h2><p><a href="https://kind.sigs.k8s.io/" rel="external nofollow noopener noreferrer" target="_blank">kind</a> 也是一个非常好的单机k8s 安装工具。</p><h2 id="k3s"><a href="#k3s" class="headerlink" title="k3s"></a>k3s</h2><p><a href="https://docs.k3s.io/zh/quick-start" rel="external nofollow noopener noreferrer" target="_blank">k3s</a> 是一个阉割版本的 k8s，但是本地启动可能有一些组件无法安装，也不知道为什么，还是推荐第一个</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># curl -sfL https://get.k3s.io | sh -</span></span><br><span class="line">curl -sfL https://rancher-mirror.rancher.cn/k3s/k3s-install.sh | INSTALL_K3S_MIRROR=cn sh -</span><br></pre></td></tr></table></figure><h2 id="minikube"><a href="#minikube" class="headerlink" title="minikube"></a>minikube</h2><p><a href="https://minikube.sigs.k8s.io/docs/start/" rel="external nofollow noopener noreferrer" target="_blank">minikube</a> 是社区官方的单机安装版本，非常的简单也很健壮</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64</span><br><span class="line">sudo install minikube-darwin-amd64 /usr/<span class="built_in">local</span>/bin/minikube</span><br><span class="line">minikube start</span><br></pre></td></tr></table></figure><p>但是暴露的方式有点复杂，从远端访问比较的麻烦。</p><h2 id="kuboard"><a href="#kuboard" class="headerlink" title="kuboard"></a>kuboard</h2><p><a href="https://kuboard.cn/install/install-kubernetes.html" rel="external nofollow noopener noreferrer" target="_blank">kuboard</a> 一个全图形化的安装系统，感觉如果需要运维大量的机器这个还是蛮适合的，功能强大。</p><h2 id="kubeasz"><a href="#kubeasz" class="headerlink" title="kubeasz"></a>kubeasz</h2><p><a href="https://github.com/easzlab/kubeasz" rel="external nofollow noopener noreferrer" target="_blank">kubeasz</a> anisbe 脚本一把嗦。</p><h2 id="rancher"><a href="#rancher" class="headerlink" title="rancher"></a>rancher</h2><p><a href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/quick-start-guides" rel="external nofollow noopener noreferrer" target="_blank">rancher</a> 使用 rancher 来跑。</p>]]></content>
+    <content type="html"><![CDATA[<p>kubernetes 有很多安装工具，这里有几个使用的做点链接记录</p><h2 id="KubeSphere"><a href="#KubeSphere" class="headerlink" title="KubeSphere"></a>KubeSphere</h2><p><a href="https://kubesphere.io/zh/docs/v3.3/quick-start/all-in-one-on-linux/" rel="external nofollow noopener noreferrer" target="_blank"><code>kubekey</code></a> </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> KKZONE=cn</span><br><span class="line">curl -sfL https://get-kk.kubesphere.io | VERSION=v3.0.2 sh -</span><br><span class="line"></span><br><span class="line">chmod +x kk</span><br><span class="line">./kk create cluster</span><br></pre></td></tr></table></figure><p>非常的稳定，还有国内的镜像，安装很方便</p><h2 id="SealOS"><a href="#SealOS" class="headerlink" title="SealOS"></a>SealOS</h2><p><a href="https://github.com/labring/sealos" rel="external nofollow noopener noreferrer" target="_blank">sealos</a> 属于越做越差的类型，这里就不推荐了</p><h2 id="Kind"><a href="#Kind" class="headerlink" title="Kind"></a>Kind</h2><p><a href="https://kind.sigs.k8s.io/" rel="external nofollow noopener noreferrer" target="_blank">kind</a> 也是一个非常好的单机k8s 安装工具。</p><h2 id="k3s"><a href="#k3s" class="headerlink" title="k3s"></a>k3s</h2><p><a href="https://docs.k3s.io/zh/quick-start" rel="external nofollow noopener noreferrer" target="_blank">k3s</a> 是一个阉割版本的 k8s，但是本地启动可能有一些组件无法安装，也不知道为什么，还是推荐第一个</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># curl -sfL https://get.k3s.io | sh -</span></span><br><span class="line">curl -sfL https://rancher-mirror.rancher.cn/k3s/k3s-install.sh | INSTALL_K3S_MIRROR=cn sh -</span><br></pre></td></tr></table></figure><h2 id="minikube"><a href="#minikube" class="headerlink" title="minikube"></a>minikube</h2><p><a href="https://minikube.sigs.k8s.io/docs/start/" rel="external nofollow noopener noreferrer" target="_blank">minikube</a> 是社区官方的单机安装版本，非常的简单也很健壮</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64</span><br><span class="line">sudo install minikube-darwin-amd64 /usr/<span class="built_in">local</span>/bin/minikube</span><br><span class="line">minikube start --apiserver-ips &lt;YOUR-IP&gt; --force --listen-address 0.0.0.0</span><br></pre></td></tr></table></figure><p>但是暴露的方式有点复杂，从远端访问比较的麻烦。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root:~<span class="comment"># docker ps</span></span><br><span class="line">CONTAINER ID   IMAGE                    COMMAND                  CREATED          STATUS          PORTS                                                                                                                        NAMES</span><br><span class="line">c2a724165d6d   kicbase/stable:v0.0.42   <span class="string">"/usr/local/bin/entr…"</span>   50 seconds ago   Up 49 seconds   0.0.0.0:10004-&gt;22/tcp, 0.0.0.0:10003-&gt;2376/tcp, 0.0.0.0:10002-&gt;5000/tcp, 0.0.0.0:10001-&gt;8443/tcp, 0.0.0.0:10000-&gt;32443/tcp   minikube</span><br></pre></td></tr></table></figure><h2 id="kuboard"><a href="#kuboard" class="headerlink" title="kuboard"></a>kuboard</h2><p><a href="https://kuboard.cn/install/install-kubernetes.html" rel="external nofollow noopener noreferrer" target="_blank">kuboard</a> 一个全图形化的安装系统，感觉如果需要运维大量的机器这个还是蛮适合的，功能强大。</p><h2 id="kubeasz"><a href="#kubeasz" class="headerlink" title="kubeasz"></a>kubeasz</h2><p><a href="https://github.com/easzlab/kubeasz" rel="external nofollow noopener noreferrer" target="_blank">kubeasz</a> anisbe 脚本一把嗦。</p><h2 id="rancher"><a href="#rancher" class="headerlink" title="rancher"></a>rancher</h2><p><a href="https://ranchermanager.docs.rancher.com/pages-for-subheaders/quick-start-guides" rel="external nofollow noopener noreferrer" target="_blank">rancher</a> 使用 rancher 来跑。</p>]]></content>
     
     <summary type="html">
     
